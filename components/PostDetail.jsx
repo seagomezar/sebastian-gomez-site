@@ -43,6 +43,12 @@ const PostDetail = ({ post }) => {
             src={obj.src}
           />
         );
+      case 'link':
+              return (
+                  <Link href={obj.href}>
+                      <span className="cursor-pointer font-semibold text-blue-400">{obj.children[0].text}</span>
+                  </Link>
+              );
       case 'code-block':
         return (
           <pre className="language-javascript" >
