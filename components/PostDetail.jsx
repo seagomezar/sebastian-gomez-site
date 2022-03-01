@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import moment from 'moment';
 import Prism from 'prismjs';
+import SocialShare from './SocialShare';
 
 const PostDetail = ({ post }) => {
   useEffect(() => {
@@ -59,7 +60,7 @@ const PostDetail = ({ post }) => {
     <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
-          <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
+          <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
@@ -87,6 +88,7 @@ const PostDetail = ({ post }) => {
 
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
+          <SocialShare url={post.slug} />
         </div>
       </div>
 

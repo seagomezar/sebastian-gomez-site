@@ -255,4 +255,32 @@ export const getRecentPosts = async () => {
   return result.posts;
 };
 
+export const getSite = async () => {
+  const query = gql`
+    query GetSite() {
+      site(where: {url: "www.sebastian-gomez.com"}) {
+        url
+        name
+        description
+        keywords
+        publishedAt
+        stage
+        talks {
+          raw
+        }
+        image {
+          url
+        }
+        about {
+          raw
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.site;
+};
+
 //https://github.com/adrianhajdin/project_graphql_blog

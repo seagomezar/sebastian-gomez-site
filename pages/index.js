@@ -1,8 +1,8 @@
 import { FeaturedPosts } from '../sections/index';
-import { PostCard, Categories, PostWidget } from '../components';
-import { getPosts } from '../services';
+import { PostCard, Categories, PostWidget, SiteWidget } from '../components';
+import { getPosts, getSite } from '../services';
 
-export default function Home({ posts }) {
+export default function Home({ posts, site }) {
   return (
     <div className="container mx-auto px-10 mb-8">
       <FeaturedPosts />
@@ -14,6 +14,7 @@ export default function Home({ posts }) {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
+            <SiteWidget site={site} />
             <PostWidget />
             <Categories />
           </div>
@@ -26,8 +27,9 @@ export default function Home({ posts }) {
 // Fetch data at build time
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
+  const site = (await getSite()) || [];
   return {
-    props: { posts },
+    props: { posts, site },
   };
 }
 
