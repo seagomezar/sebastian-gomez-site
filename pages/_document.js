@@ -5,7 +5,6 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
-  
 
   render() {
     return (
@@ -13,12 +12,12 @@ class MyDocument extends Document {
         <Head>
           {/* <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1" /> */}
           <script
-                        async
-                        src={`https://www.googletagmanager.com/gtag/js?id=G-HM718Q7C20`}
-                    />
-                    <script
-                        dangerouslySetInnerHTML={{
-                            __html: `
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-HM718Q7C20"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag('js', new Date());
@@ -26,8 +25,8 @@ class MyDocument extends Document {
                                 page_path: window.location.pathname,
                                 });
                             `,
-                        }}
-                    />
+            }}
+          />
         </Head>
         <body>
           <Main />

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import moment from 'moment';
 import Prism from 'prismjs';
 import SocialShare from './SocialShare';
@@ -6,9 +6,9 @@ import SocialShare from './SocialShare';
 const PostDetail = ({ post }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-        Prism.highlightAll();
+      Prism.highlightAll();
     }
-}, []);
+  }, []);
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -44,14 +44,14 @@ const PostDetail = ({ post }) => {
           />
         );
       case 'link':
-              return (
-                  <Link href={obj.href}>
-                      <span className="cursor-pointer font-semibold text-blue-400">{obj.children[0].text}</span>
-                  </Link>
-              );
+        return (
+          <Link href={obj.href}>
+            <span className="cursor-pointer font-semibold text-blue-400">{obj.children[0].text}</span>
+          </Link>
+        );
       case 'code-block':
         return (
-          <pre className="language-javascript" >
+          <pre className="language-javascript">
             <code>
               {text}
             </code>
@@ -89,7 +89,7 @@ const PostDetail = ({ post }) => {
           </div>
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
           {post.content.raw.children.map((typeObj, index) => {
-            console.log(typeObj)
+            console.log(typeObj);
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
 
             return getContentFragment(index, children, typeObj, typeObj.type);
