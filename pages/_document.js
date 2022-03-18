@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import Script from "next/script";
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -28,9 +28,12 @@ class MyDocument extends Document {
                             `,
             }}
           />
-          <Script id="Adsense-id" data-ad-client="ca-pub-5241677876798110"
-            async strategy="afterInteractive"
-            onError={ (e) => { console.error('Script failed to load', e) }}
+          <Script
+            id="Adsense-id"
+            data-ad-client="ca-pub-5241677876798110"
+            async
+            strategy="afterInteractive"
+            onError={(e) => { console.error('Script failed to load', e); }}
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
         </Head>
