@@ -27,18 +27,18 @@ const Header = () => {
         </div>
       </div>
       <div className="w-full flex text-center justify-start ">
-        <Link href={`/post/}`}>
+        <Link href="/about">
           <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">Sobre mí</span>
         </Link>
-        <Link href={`/post/`}>
+        <Link href="/talks">
           <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">Charlas Recientes</span>
         </Link>
-        <Link href={`/post/`}>
+        <a href="https://twitter.com/sebasgojs" target="_blank">
           <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">@sebasgojs</span>
-        </Link>
-        <Link href={`/post/`}>
+        </a>
+        <a href="https://www.linkedin.com/in/sebastian-gomez-frontend/"  target="_blank">
           <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">LinkedIn</span>
-        </Link>
+        </a>
       </div>
     </div>
   );
