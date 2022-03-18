@@ -28,13 +28,13 @@ const Header = () => {
       </div>
       <div className="w-full flex text-center justify-start ">
         <Link href="/about">
-          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">Sobre mí</span>
+          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">About</span>
         </Link>
         <Link href="/talks">
-          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">Charlas Recientes</span>
+          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">Conferencias</span>
         </Link>
         <a href="https://twitter.com/sebasgojs" target="_blank" rel="noreferrer">
-          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">@sebasgojs</span>
+          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">Twitter</span>
         </a>
         <a href="https://www.linkedin.com/in/sebastian-gomez-frontend/" target="_blank" rel="noreferrer">
           <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">LinkedIn</span>
