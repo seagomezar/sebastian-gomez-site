@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 import moment from 'moment';
 import Prism from 'prismjs';
 import SocialShare from './SocialShare';

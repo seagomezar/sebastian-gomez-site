@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { FeaturedPosts } from '../sections/index';
-import { PostCard, Categories, PostWidget, SiteWidget } from '../components';
-import { getPosts, getSite } from '../services';
+import { Categories, PostWidget } from '../components';
+import { getSite } from '../services';
 
 export default function About({ site }) {
   const getContentFragment = (index, text, obj, type) => {
