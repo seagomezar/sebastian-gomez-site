@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import YouTube from 'react-youtube';
 import Link from 'next/link';
 import moment from 'moment';
 import Prism from 'prismjs';
@@ -57,6 +58,24 @@ const PostDetail = ({ post }) => {
               {text}
             </code>
           </pre>
+        );
+      case 'iframe':
+        return (
+          <div>
+            <YouTube
+              videoId={obj.url.replace('https://youtu.be/', '')}
+              opts={{
+                height: '390',
+                width: '640',
+                playerVars: {
+                  autoplay: 1,
+                },
+              }}
+              onReady={(event) => {
+                event.target.pauseVideo();
+              }}
+            />
+          </div>
         );
       default:
         return modifiedText;
