@@ -1,9 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { Categories, PostWidget } from '../components';
-import { getSite } from '../services';
-import getContentFragment from '../services/parsing';
+import Link from 'next/link';
+import { Categories, PostWidget } from '../../components';
+import { getSite } from '../../services';
+import getContentFragment from '../../services/parsing';
 
 export default function About({ site }) {
   return (
@@ -11,14 +11,14 @@ export default function About({ site }) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           <div className="float-right">
-            <Link href="/en/about" locale="en">
+            <Link href="/about">
               <Image
                 unoptimized
-                alt="English"
+                alt="Español"
                 height="32px"
                 width="32px"
                 className="align-middle rounded-full"
-                src="/en.png"
+                src="/es.jpg"
               />
             </Link>
           </div>
@@ -27,13 +27,16 @@ export default function About({ site }) {
               <h1 className="mb-8 text-3xl font-semibold">
                 {site.name}
               </h1>
-
               {site.about.raw.children.map((typeObj, index) => {
                 const children = typeObj.children.map(
                   (item, itemindex) =>
-                    getContentFragment(itemindex, item.text, item)
+                    getContentFragment(
+                      itemindex,
+                      item.text,
+                      item,
+                      item.type
+                    )
                 );
-
                 return getContentFragment(
                   index,
                   children,
@@ -57,7 +60,7 @@ export default function About({ site }) {
 
 // Fetch data at build time
 export async function getStaticProps() {
-  const site = (await getSite()) || [];
+  const site = (await getSite('en')) || [];
   return {
     props: { site },
   };

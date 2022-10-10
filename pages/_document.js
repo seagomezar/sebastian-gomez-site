@@ -1,4 +1,10 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document';
+import React from 'react';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -10,7 +16,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Lee sobre teconologías web</title>
           {/* <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1" /> */}
           <script
             async
@@ -33,7 +38,6 @@ class MyDocument extends Document {
             data-ad-client="ca-pub-5241677876798110"
             async
             strategy="afterInteractive"
-            onError={(e) => { console.error('Script failed to load', e); }}
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
         </Head>

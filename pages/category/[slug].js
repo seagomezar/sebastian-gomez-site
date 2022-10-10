@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { getCategories, getCategoryPost } from '../../services';
 import { PostCard, Categories, Loader } from '../../components';
 
-const CategoryPost = ({ posts }) => {
+function CategoryPost({ posts }) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -27,7 +27,7 @@ const CategoryPost = ({ posts }) => {
       </div>
     </div>
   );
-};
+}
 export default CategoryPost;
 
 // Fetch data at build time

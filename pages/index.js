@@ -1,6 +1,13 @@
+import React from 'react';
+import Link from 'next/link';
 import { FeaturedPosts } from '../sections/index';
-import { PostCard, Categories, PostWidget, SiteWidget } from '../components';
-import { getPosts, getSite } from '../services';
+import {
+  PostCard,
+  Categories,
+  PostWidget,
+  SiteWidget,
+} from '../components';
+import { getPostsPerPage, getSite } from '../services';
 
 export default function Home({ posts, site }) {
   return (
@@ -11,11 +18,19 @@ export default function Home({ posts, site }) {
           {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />
           ))}
+          <div className="text-center">
+            <Link href={`/posts/page/${posts.length / 4 + 1}`}>
+              <div className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-4 py-3 cursor-pointer border-blue-400 border-r">
+                Cargar Más ...
+              </div>
+            </Link>
+          </div>
         </div>
+
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
             <SiteWidget site={site} />
-            <PostWidget />
+            <PostWidget categories={undefined} slug={undefined} />
             <Categories />
           </div>
         </div>
@@ -26,10 +41,9 @@ export default function Home({ posts, site }) {
 
 // Fetch data at build time
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  const posts = (await getPostsPerPage(1)) || [];
   const site = (await getSite()) || [];
   return {
     props: { posts, site },
   };
 }
-
