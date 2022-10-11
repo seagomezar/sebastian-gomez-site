@@ -24,10 +24,6 @@ export default function About({ site }) {
           </div>
           <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
             <div className="px-4 lg:px-0 text-justify">
-              <h1 className="mb-8 text-3xl font-semibold">
-                {site.name}
-              </h1>
-
               {site.about.raw.children.map((typeObj, index) => {
                 const children = typeObj.children.map(
                   (item, itemindex) =>
