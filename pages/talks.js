@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import { Categories, PostWidget } from '../components';
 import { getSite } from '../services';
@@ -6,6 +7,10 @@ import getContentFragment from '../services/parsing';
 export default function About({ site }) {
   return (
     <div className="container mx-auto px-10 mb-8">
+      <Head>
+        <title>Conferences</title>
+        <meta property="og:title" content="Conferences" key="title" />
+      </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">

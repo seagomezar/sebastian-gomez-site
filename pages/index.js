@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import { FeaturedPosts } from '../sections/index';
 import {
   PostCard,
@@ -12,6 +13,14 @@ import { getPostsPerPage, getSite } from '../services';
 export default function Home({ posts, site }) {
   return (
     <div className="container mx-auto px-10 mb-8">
+      <Head>
+        <title>Sebastian Gomez</title>
+        <meta
+          property="og:title"
+          content="Sebastian Gomez"
+          key="title"
+        />
+      </Head>
       <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
