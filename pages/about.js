@@ -31,7 +31,12 @@ export default function About({ site }) {
               {site.about.raw.children.map((typeObj, index) => {
                 const children = typeObj.children.map(
                   (item, itemindex) =>
-                    getContentFragment(itemindex, item.text, item)
+                    getContentFragment(
+                      itemindex,
+                      item.text,
+                      item,
+                      item.type
+                    )
                 );
 
                 return getContentFragment(
