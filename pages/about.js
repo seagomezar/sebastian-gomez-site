@@ -24,8 +24,8 @@ export default function About({ site }) {
               <Image
                 unoptimized
                 alt="English"
-                height="32px"
-                width="32px"
+                height="32"
+                width="32"
                 className="align-middle rounded-full"
                 src="/en.png"
               />

@@ -20,8 +20,8 @@ export default function About({ site }) {
               <Image
                 unoptimized
                 alt="Español"
-                height="32px"
-                width="32px"
+                height="32"
+                width="32"
                 className="align-middle rounded-full"
                 src="/es.jpg"
               />

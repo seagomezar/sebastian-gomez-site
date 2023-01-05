@@ -25,8 +25,8 @@ function PostDetail({ post }) {
           <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
             <img
               alt={post.author.name}
-              height="30px"
-              width="30px"
+              height="30"
+              width="30"
               className="align-middle rounded-full"
               src={post.author.photo.url}
             />

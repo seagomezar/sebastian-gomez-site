@@ -12,8 +12,8 @@ function SiteWidget({ site }) {
         <Image
           loader={grpahCMSImageLoader}
           alt={site.name}
-          height="160px"
-          width="160px"
+          height="160"
+          width="160"
           unoptimized
           className="align-middle rounded-full"
           src={site.image.url}
