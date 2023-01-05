@@ -64,7 +64,7 @@ export default function About({ site }) {
 }
 
 // Fetch data at build time
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const site = (await getSite('en')) || [];
   return {
     props: { site },

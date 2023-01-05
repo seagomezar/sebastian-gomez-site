@@ -49,7 +49,7 @@ export default function Home({ posts, site }) {
 }
 
 // Fetch data at build time
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const posts = (await getPostsPerPage(1)) || [];
   const site = (await getSite()) || [];
   return {

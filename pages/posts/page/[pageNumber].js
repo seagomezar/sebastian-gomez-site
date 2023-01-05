@@ -13,8 +13,6 @@ import {
   getSite,
 } from '../../../services';
 
-const postsPerPage = process.env.POSTS_PER_PAGE;
-
 export default function Home({ posts, site, nextPageNumber }) {
   return (
     <div className="container mx-auto px-10 mb-8">
@@ -56,7 +54,7 @@ export default function Home({ posts, site, nextPageNumber }) {
 }
 
 // Fetch data at build time
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const posts = (await getPostsPerPage(params.pageNumber)) || [];
   const postsCount = (await getPosts()) || [];
   const site = (await getSite()) || [];
@@ -70,27 +68,5 @@ export async function getStaticProps({ params }) {
       site,
       nextPageNumber,
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const posts = await getPosts();
-  const numberOfPages = Math.floor(
-    posts.length / parseInt(postsPerPage || '1', 10)
-  );
-  const finalNumberOfPages =
-    posts.length % parseInt(postsPerPage || '1', 10) ? 1 : 0;
-
-  const paths = [];
-  for (
-    let i = 2;
-    i < numberOfPages + finalNumberOfPages - 1;
-    i += 1
-  ) {
-    paths.push({ params: { pageNumber: i.toString() } });
-  }
-  return {
-    paths,
-    fallback: false,
   };
 }
