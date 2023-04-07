@@ -12,7 +12,7 @@ import { getPostsPerPage, getSite } from '../services';
 
 export default function Home({ posts, site }) {
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto sm:px-4 md:px-10 mb-8">
       <Head>
         <title>Sebastian Gomez</title>
         <meta
