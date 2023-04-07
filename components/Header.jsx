@@ -19,9 +19,9 @@ function Header() {
         <div className="flex justify-between items-center">
           <div className="min-w-330">
             <Link href="/">
-              <span className="cursor-pointer font-bold text-4xl text-white">
-                Sebastian Gomez
-              </span>
+            <span className="cursor-pointer font-bold text-3xl text-white min-w-200 max-w-330">
+              Sebastian Gomez
+            </span>
             </Link>
           </div>
           <div>
