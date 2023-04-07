@@ -1,0 +1,13 @@
+query GetRecentPosts {
+  posts(
+    orderBy: createdAt_ASC
+    last: 3
+  ) {
+    title
+    featuredImage {
+      url
+    }
+    createdAt
+    slug
+  }
+}

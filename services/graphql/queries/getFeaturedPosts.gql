@@ -1,0 +1,16 @@
+query GetFeaturedPosts {
+  posts(where: {featuredPost: true}) {
+    author {
+      name
+      photo {
+        url
+      }
+    }
+    featuredImage {
+      url
+    }
+    title
+    slug
+    createdAt
+  }
+}

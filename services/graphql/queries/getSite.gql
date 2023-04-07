@@ -1,0 +1,19 @@
+query GetSite($locales: [Locale!]!) {
+  site(where: {url: "www.sebastian-gomez.com"}, locales: $locales) {
+    url
+    name
+    description
+    keywords
+    publishedAt
+    stage
+    talks {
+      raw
+    }
+    image {
+      url
+    }
+    about {
+      raw
+    }
+  }
+}

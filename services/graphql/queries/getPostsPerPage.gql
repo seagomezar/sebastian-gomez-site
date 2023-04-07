@@ -1,0 +1,28 @@
+query GetPostsPerPage($first: Int, $skip: Int) {
+  postsConnection(first: $first, skip: $skip) {
+    edges {
+      cursor
+      node {
+        author {
+          bio
+          name
+          id
+          photo {
+            url
+          }
+        }
+        createdAt
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+      }
+    }
+  }
+}
