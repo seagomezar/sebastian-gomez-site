@@ -34,8 +34,8 @@ function CardHeader({ date, title }) {
 
 function NavigationArrow({ direction, onClick }) {
   const arrowClasses =
-    'absolute arrow-btn bottom-5 text-center py-3 cursor-pointer bg-pink-600 rounded-full ' +
-    (direction === 'left' ? 'left-4' : 'right-4');
+    `absolute arrow-btn bottom-5 text-center py-3 cursor-pointer bg-pink-600 rounded-full ${
+      direction === 'left' ? 'left-4' : 'right-4'}`;
   const arrowPath =
     direction === 'left'
       ? 'M10 19l-7-7m0 0l7-7m-7 7h18'
@@ -67,7 +67,7 @@ function AdjacentPostCard({ post, position, onNavigationClick }) {
       <FeaturedImage imageUrl={post.featuredImage.url} />
       <GradientOverlay />
       <CardHeader date={post.createdAt} title={post.title} />
-      <Link href={`/post/${post.slug}`} className="z-10 cursor-pointer absolute w-full h-full" aria-label={`Go to ${post.title}`}/>
+      <Link href={`/post/${post.slug}`} className="z-10 cursor-pointer absolute w-full h-full" aria-label={`Go to ${post.title}`} />
       {position === 'LEFT' && (
         <NavigationArrow
           direction="left"

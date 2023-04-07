@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Document, {
   Html,
   Head,
