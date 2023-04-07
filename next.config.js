@@ -1,5 +1,8 @@
 module.exports = {
   reactStrictMode: true,
+  images: {
+    domains: ['media.graphassets.com'],
+  },
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(graphql|gql)/,
