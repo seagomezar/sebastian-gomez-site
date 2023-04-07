@@ -7,7 +7,6 @@
 html,
 body {
   padding: 0;
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
   &:before{
     content:'';
@@ -62,3 +61,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+ol.list-decimal {
+  list-style: decimal;
+
+}
+
+ol.list-inside {
+  padding-left: 2em;
+}
+
+ul.list-disc {
+  list-style: disc;
+
+}
+
+ul.list-inside {
+  padding-left: 2em;
+}
+
+
+
