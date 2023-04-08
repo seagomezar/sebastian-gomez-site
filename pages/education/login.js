@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
-const Login = () => {
+function Login() {
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -21,14 +21,17 @@ const Login = () => {
   return (
     <div
       className="min-h-screen flex items-center justify-center"
-      
+
     >
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full" style={{
-        backgroundImage: 'url(/background-tech.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}>
+      <div
+        className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full"
+        style={{
+          backgroundImage: 'url(/background-tech.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <img
           src="/logo.png"
           alt="Logo"
@@ -75,7 +78,8 @@ const Login = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="group relative w-full flex justify-center py-2
+              px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Iniciar sesión
             </button>
@@ -84,6 +88,6 @@ const Login = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Login;

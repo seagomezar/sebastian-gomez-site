@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Clase = ({ clase }) => {
+function Clase({ clase }) {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
       <h2 className="text-2xl font-bold mb-2">{clase.mainTitle}</h2>
@@ -23,6 +23,6 @@ const Clase = ({ clase }) => {
       </ul>
     </div>
   );
-};
+}
 
 export default Clase;
