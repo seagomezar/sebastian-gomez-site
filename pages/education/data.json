@@ -1,0 +1,219 @@
+{
+    "clases": [
+      {
+        "id": "1",
+        "subtitle": "HTML & CSS",
+        "mainTitle": "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
+        "introText": "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
+        "homework": "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        "activa": false,
+        "links": [
+          {
+            "title": "Lista de tags en HTML",
+            "URL": "https://www.w3schools.com/tags/default.asp"
+          },
+          {
+            "title": "Duolingo",
+            "URL": "https://www.duolingo.com/"
+          }
+        ],
+        "given": true
+      },
+      {
+        "id": "2",
+        "subtitle": "Introducción a JavaScript",
+        "mainTitle": "Segunda Clase! Vas muy bien 😊",
+        "introText": "En esta clase comenzarás a programar con tu nuevo mejor amigo JavaScript. Aprenderás qué son funciones y cómo hacer que se ejecuten al hacer click en un botón. También aprenderás sobre los condicionales if/else. No te preocupes, you got this!",
+        "homework": "Tarea: Crear una página con un CSS aceptable que tenga 10 botones y ejecute 10 funciones a partir de operaciones matemáticas.",
+        "activa": false,
+        "links": [
+          {
+            "title": "Funciones en JavaScript",
+            "URL": "https://www.w3schools.com/js/js_functions.asp"
+          },
+          {
+            "title": "Información para la tarea",
+            "URL": "https://www.tutorialstonight.com/js/js-function.php"
+          }
+        ],
+        "given": true
+      },
+      {
+        "id": "3",
+        "subtitle": "If/else & Loops",
+        "mainTitle": "Tercera Clase! Keep going! 👊",
+        "introText": "En esta clase continuaremos con JavaScript, usarás los FOR loops y además aprenderás los operadores ||,&&, % que te serán tan útiles de ahora en adelante.",
+        "homework": "Tarea: Resolver los 30 ejercicios con IF/ELSE y FOR loops.",
+        "activa": false,
+        "links": [
+          {
+            "title": "Ejercicios if/else",
+            "URL": "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
+          },
+          {
+            "title": "Ejercicios FOR",
+            "URL": "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
+          },
+          {
+            "title": "Ejercicios FOR II",
+            "URL": "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
+          }
+        ],
+        "given": true
+      },
+      {
+        "id": "4",
+        "subtitle": "While Loops",
+        "mainTitle": "Cuarta clase! 🧠",
+        "introText": "En esta clase continuaremos con loops, pero en esta ocasión serán WHILE loops. Muy similar a los FOR loops. Además aprenderás typeOf datos de Javascript y otros datos muy útiles como parseInt, parseFloat y toString.",
+        "homework": "Tarea: Resolver los 30 ejercicios anteriores pero ahora con While loops.",
+        "activa": false,
+        "links": [
+          {
+            "title": "Ejercicios if/else",
+            "URL": "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
+          },
+          {
+            "title": "Ejercicios FOR",
+            "URL": "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
+          },
+          {
+            "title": "Ejercicios FOR II",
+            "URL": "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
+          }
+        ],
+        "given": false
+      },
+      {
+        "id": "5",
+        "subtitle": "Arrays",
+        "mainTitle": "Quinta clase! 🖐",
+        "introText": "Hoy verás los arrays o arreglos y cómo usarlos para guardar todo tipo de datos bajo una misma categoría.",
+        "homework": "Tarea: Hacer un escrito explicándo 15 funciones de los arrays.",
+        "activa": false,
+        "links": [
+          {
+            "title": "Arrays",
+            "URL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+          },
+          {
+            "title": "25 Métodos de Arrays en JavaScript",
+            "URL": "https://dev.to/gdcodev/25-metodos-de-arrays-en-javascript-que-todo-desarrollador-debe-conocer-4a2d"
+          }
+        ],
+        "given": false
+      },
+      {
+        "id": "6",
+        "subtitle": "Objects",
+        "mainTitle": "Esta es tu sexta clase! Ya has llegado a más de la mitad de tu journey! 🎓 ",
+        "introText": "En esta clase verás objetos y sus propiedades, además empezarás a usar Local Storage y JSON.",
+        "homework": "Tarea: Crear un formulario con al menos 8 preguntas que guarde la información del usuario en el Local Storage, y al mismo tiempo muestre todas las respuestas en la página. Recuerda que debe ser aesthetically pleasing!",
+        "activa": false,
+        "links": [
+          {
+            "title": "Objects",
+            "URL": "https://www.w3schools.com/js/js_objects.asp"
+          },
+          {
+            "title": "Local Storage",
+            "URL": "https://www.w3schools.com/jsref/prop_win_localstorage.asp"
+          }
+        ],
+        "given": false
+      },
+      {
+        "id": "7",
+        "subtitle": "API and Fetch",
+        "mainTitle": "Séptima clase! 🧳 Cada vez más cerca!!",
+        "introText": "En esta clase entrarás en el tema de los A.P.Is y la función Fetch para poder hacer uso de cualquier API.",
+        "homework": "Tarea: A la pagina que creaste la clase anterior conéctale una API y pinta sus datos.",
+        "activa": false,
+        "links": [
+          {
+            "title": "Fetch",
+            "URL": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+          },
+          {
+            "title": "APIs",
+            "URL": "https://aws.amazon.com/es/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses"
+          }
+        ],
+        "given": false
+      },
+      {
+        "id": "8",
+        "subtitle": "DOM",
+        "mainTitle": "Clase Octava",
+        "introText": "En esta clase aprenderás cómo crear y modificar datos del HTML desde javascript",
+        "homework": "Tarea: Seguir trabajando en la página anterior evitando usar el HTML",
+        "activa": false,
+        "links": [
+          {
+            "title": "JavaScript HTML DOM Elements (Nodes)",
+            "URL": "https://www.w3schools.com/js/js_htmldom_nodes.asp"
+          }
+        ],
+        "given": false
+      },
+      {
+        "id": "9",
+        "subtitle": "GIT, GITHUB & Terminal",
+        "mainTitle": "Ultima clase. Introduccion a Proyecto 1",
+        "introText": "En esta clase verás cómo conectar tu laptop al terminal para registrar las modificaciones y que estén actualizadas en GITHUB",
+        "homework": "Tarea: Empezar Proyecto 1.",
+        "activa": false,
+        "links": [
+          {
+            "title": "Ejemplo - Mural",
+            "URL": "https://app.guide.co/muralco/JW8VhFeS/Sebastian"
+          }
+        ],
+        "given": false
+      },
+      {
+        "id": "10",
+        "subtitle": "Proyecto 1",
+        "mainTitle": "Revisión Proyecto 1",
+        "introText": "En esta clase se revisará el proyecto que creaste y aclararás todas tus dudas",
+        "homework": "A convenir con profesor",
+        "activa": false,
+        "links": [
+          {}
+        ],
+        "given": false
+      }
+    ],
+    "users": [
+      {
+        "name": "Luisa Maria",
+        "email": "luisa@gmail.com",
+        "progress": "4",
+        "id": 5
+      },
+      {
+        "name": "Sebas",
+        "email": "sebas@gmail.com",
+        "progress": "1",
+        "id": 6
+      },
+      {
+        "name": "Lorena",
+        "email": "lorena@lorena.com",
+        "progress": "5",
+        "id": 8
+      },
+      {
+        "name": "Alfred",
+        "email": "alfie@gmail.com",
+        "progress": "0",
+        "id": 9
+      },
+      {
+        "name": "Yilmar Alberto",
+        "email": "yito@youporn.com",
+        "progress": "0",
+        "id": 10
+      }
+    ]
+  }
