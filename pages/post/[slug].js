@@ -22,7 +22,7 @@ function PostDetails({ post }) {
   }
 
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto md:px-10 mb-8">
       <Head>
         <title>{post.title}</title>
         <meta property="og:title" content={post.title} key="title" />
