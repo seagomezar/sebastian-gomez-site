@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://www.sebastian-gomez.com/</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/about</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/talks</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/despliegue-de-aplicaciones-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/carga-de-componentes-dinamicos-en-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/modos-de-renderizado-en-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/obteniendo-datos-con-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/2</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/en/about</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/crea-tu-api-rest-con-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/plugins-con-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/personalizando-la-configuracion-en-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/theme-ui-en-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/3</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/css-y-estilos-en-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/navegacion-entre-rutas-en-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/enrutando-paginas-en-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/comenzando-con-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/4</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/introduccion-a-nextjs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/analisis-de-la-criminalidad-cerca-a-los-sitios-turisticos-en-medellin</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/analisis-de-tendencia-en-desarrolladores</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/profundizando-en-un-stack-tecnologico-para-uber-like-apps</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/5</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/aprendiendo-bulljs</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/todo-sobre-transiciones-en-css</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/entendiendo-el-patron-observador-observer-pattern-en-javascript</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/escribiendo-tests-para-funciones-y-propiedades-privadas-en-angular</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/6</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/entendiendo-el-patron-iterador-iterator-pattern-en-javascript</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/implementando-of-como-operador-en-observables</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/implementando-map-como-operador-en-observables</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/7</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/implementando-filter-como-operador-en-observables</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/implementando-concat-para-concatenar-observables</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/implementando-observables-a-partir-de-eventos-en-js</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/8</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/introduccion-a-google-vision-api</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/fundamentos-de-typescript</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/como-crear-espectaculares-presentaciones-usando-html-y-css</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/tres-maneras-de-inyectar-servicios-en-unit-tests-con-angular</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/9</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/el-boilerplate-por-excelencia-para-crear-aplicaciones-con-react-native</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/pada-template</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/empezando-a-programar-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/10</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/variables-datos-y-estructuras-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/condicionales-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/arreglos-y-ciclos-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/11</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/estructuras-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/programacion-orientada-a-objetos-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/pilas-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/colas-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/12</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/dequeue-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/listas-enlazadas-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/listas-doblemente-enlazadas-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/listas-enlazadas-circulares-en-go</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/posts/page/13</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/react-props</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/el-comando-kubectl</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://www.sebastian-gomez.com/post/troubleshooting-con-kubectl-en-k8s</loc>
+  <lastmod>2023-05-02T18:57:15+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+</urlset>
