@@ -13,6 +13,7 @@ function Author({ author }) {
           alt={author.name}
           height={100}
           width={100}
+          sizes="(max-width: 768px) 100vw"
           className="align-middle rounded-full"
           src={author.photo.url}
         />

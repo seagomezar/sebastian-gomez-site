@@ -25,6 +25,7 @@ export default function About({ site }) {
                 unoptimized
                 alt="English"
                 height="32"
+                sizes="(max-width: 768px) 100vw"
                 width="32"
                 className="align-middle rounded-full"
                 src="/en.png"

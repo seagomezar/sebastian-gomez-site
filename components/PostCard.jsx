@@ -34,6 +34,7 @@ function PostCard({ post }) {
             height="30"
             width="30"
             className="align-middle rounded-full"
+            sizes="(max-width: 768px) 100vw"
             src={post.author.photo.url}
           />
           <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">

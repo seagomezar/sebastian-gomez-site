@@ -86,7 +86,6 @@ export const getComments = async (slug) => {
 };
 
 export const getRecentPosts = async () => {
-    console.log("AQUI")
     const { data } = await client.query({ query: GET_RECENT_POSTS_QUERY });
     return data.posts;
 };

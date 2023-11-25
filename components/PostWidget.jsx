@@ -35,6 +35,7 @@ function PostWidget({ categories, slug }) {
               height="60"
               width="60"
               unoptimized
+              sizes="(max-width: 768px) 100vw"
               className="align-middle rounded-full"
               src={post.featuredImage.url}
             />

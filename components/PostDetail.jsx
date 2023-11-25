@@ -16,6 +16,7 @@ function AuthorInfo({ author }) {
           objectFit="cover"
           objectPosition="center"
           className="rounded-full"
+          sizes="(max-width: 768px) 100vw"
         />
       </div>
       <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">
@@ -73,6 +74,7 @@ function PostDetail({ post }) {
           objectFit="contain"
           objectPosition="center"
           className="rounded-t-lg lg:rounded-lg object-contain"
+          sizes="(max-width: 768px) 100vw"
         />
       </div>
       <div className="px-4 lg:px-0">

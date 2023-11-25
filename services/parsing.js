@@ -59,8 +59,8 @@ const Image = memo(({ index, obj }) => (
 
 const BulletedList = memo(({ index, modifiedText }) => (
   <ul key={`ul-${index}`} className="mb-8 list-disc list-inside">
-    {modifiedText.map((item, i) => (
-      <React.Fragment key={`p-${i}-1`}>{item}</React.Fragment>
+    {modifiedText && modifiedText.map((item, i) => (
+      <React.Fragment key={`p-${i+Date.now()}-1`}>{item}</React.Fragment>
     ))}
   </ul>
 ));
@@ -68,39 +68,39 @@ const BulletedList = memo(({ index, modifiedText }) => (
 const NumberedList = memo(({ index, modifiedText }) => (
   <ol key={`ol-${index}`} className="mb-8 list-decimal list-inside">
     {modifiedText.map((item, i) => (
-      <React.Fragment key={`p-${i}-1`}>{item}</React.Fragment>
+      <React.Fragment key={`p-${i+Date.now()}-1`}>{item}</React.Fragment>
     ))}
   </ol>
 ));
 
 const ListItem = memo(({ obj }) => {
-  console.log({obj});
+  // Función para procesar cada hijo del elemento de lista, incluyendo los anidados
+  const processChildren = (children) => {
+    return children.map((child, index) => {
+      // Verificar si el hijo tiene sus propios hijos y procesarlos recursivamente
+      if (child.children) {
+        return processChildren(child.children);
+      }
+      // Si el hijo es un objeto simple, procesarlo con getContentFragment
+      return getContentFragment(
+        index,
+        child.text,
+        child,
+        child.type || (child.code ? 'text' : 'text')
+      );
+    });
+  };
+
+  // Renderizar los hijos del elemento de lista utilizando la función auxiliar
   return (
-    <li className="mb-2">
-      {obj.children.map((child, index) => {
-        if (child.type === 'list-item-child') {
-          return child.children.map((nestedChild, nestedIndex) =>
-            getContentFragment(
-              `${index}-${nestedIndex}`,
-              nestedChild.text,
-              nestedChild,
-              nestedChild.type
-            )
-          );
-        } else {
-          return getContentFragment(
-            index,
-            child.text,
-            child,
-            child.type
-          );
-        }
-      })}
+    <li key={obj.toString()} className="mb-2">
+      {processChildren(obj.children)}
     </li>
-  );});
+  );
+});
 
 const LinkElement = memo(({ obj }) => (
-  <Link href={obj.href}>
+  <Link key={obj.toString()} href={obj.href}>
     <span className="cursor-pointer font-semibold text-blue-400">
       {obj.children[0].text}
     </span>
@@ -108,7 +108,7 @@ const LinkElement = memo(({ obj }) => (
 ));
 
 const CodeBlock = memo(({ text }) => (
-  <pre className="language-javascript">
+  <pre key={text.toString()} className="language-javascript">
     <code>{text}</code>
   </pre>
 ));
@@ -133,7 +133,6 @@ const Iframe = memo(({ obj }) => (
 
 const getContentFragment = (index, text, obj, type) => {
   const modifiedText = getModifiedText(index, text, obj);
-  console.log(type);
   switch (type) {
     case 'heading-three':
       return <HeadingThree index={index} modifiedText={modifiedText} />;
@@ -142,7 +141,7 @@ const getContentFragment = (index, text, obj, type) => {
     case 'heading-four':
       return <HeadingFour index={index} modifiedText={modifiedText} />;
     case 'image':
-      return <Image index={index} obj={obj} />;
+      return <Image index={index} obj={obj} sizes="(max-width: 768px) 100vw" />;
     case 'bulleted-list':
       return <BulletedList index={index} modifiedText={modifiedText} />;
     case 'numbered-list':

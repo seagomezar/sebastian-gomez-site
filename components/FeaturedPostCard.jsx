@@ -26,6 +26,7 @@ function FeaturedPostCard({ post }) {
             alt={post.author.name}
             height="30"
             width="30"
+            sizes="(max-width: 768px) 100vw"
             className="align-middle drop-shadow-lg rounded-full"
             src={post.author.photo.url}
           />

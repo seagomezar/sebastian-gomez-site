@@ -22,6 +22,7 @@ export default function About({ site }) {
                 alt="Español"
                 height="32"
                 width="32"
+                sizes="(max-width: 768px) 100vw"
                 className="align-middle rounded-full"
                 src="/es.jpg"
               />
