@@ -1,5 +1,5 @@
 query GetPostsPerPage($first: Int, $skip: Int) {
-  postsConnection(first: $first, skip: $skip) {
+  postsConnection(first: $first, skip: $skip, orderBy: createdAt_DESC) {
     edges {
       cursor
       node {
