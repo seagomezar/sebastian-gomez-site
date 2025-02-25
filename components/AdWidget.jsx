@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 function AdWidget() {
   useEffect(() => {
     // Push the AdSense ad slot to the display queue
-    if (window.adsbygoogle) {
+    if (typeof window !== 'undefined' && window.adsbygoogle) {
       window.adsbygoogle.push({});
     }
   }, []);
