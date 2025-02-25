@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+
 function AdWidget() {
   useEffect(() => {
     // Push the AdSense ad slot to the display queue
