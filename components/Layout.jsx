@@ -1,12 +1,12 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './Header';
-import { Analytics } from "@vercel/analytics/react"
 
 function Layout({ children }) {
   return (
     <>
+      <Analytics />
       <Header />
-      <Analytics/>
       {children}
     </>
   );

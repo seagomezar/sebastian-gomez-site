@@ -13,8 +13,6 @@ function Login() {
     if (username === 'admin' && password === 'password') {
       sessionStorage.setItem('isLoggedIn', true);
       router.push('/education');
-    } else {
-      alert('Credenciales incorrectas');
     }
   };
 
