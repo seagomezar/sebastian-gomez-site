@@ -6,6 +6,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 import React from 'react';
+import Script from 'next/script'; // Import Script
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -33,8 +34,11 @@ class MyDocument extends Document {
                             `,
             }}
           />
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5241677876798110"
-     crossorigin="anonymous"></script>
+          <Script // Replace script tag with Script component
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5241677876798110"
+            crossorigin="anonymous"
+            strategy="lazyOnload" // Add strategy for lazy loading
+          />
         </Head>
         <body>
           <Main />
