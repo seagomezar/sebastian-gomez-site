@@ -7,6 +7,7 @@ import {
   Categories,
   PostWidget,
   SiteWidget,
+  AdWidget,
 } from '../components';
 import { getPostsPerPage, getSite } from '../services';
 
@@ -39,6 +40,7 @@ export default function Home({ posts, site }) {
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
             <SiteWidget site={site} />
+            <AdWidget />
             <PostWidget categories={undefined} slug={undefined} />
             <Categories />
           </div>
