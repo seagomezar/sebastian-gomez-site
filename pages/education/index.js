@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Image from 'next/image'; // Import Image
 import { Categories, PostWidget } from '../../components';
 import Clase from '../../components/Clase';
 import data from './data.json';
@@ -40,10 +41,12 @@ function Protected() {
         <div className="col-span-1 lg:col-span-8">
           <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
             <div className="flex items-center justify-between">
-              <img
+              <Image // Replace img tag with Image component
                 src="/logo.png"
                 alt="Logo"
-                className="w-32 h-auto mb-4"
+                width={128} // Specify width
+                height={42} // Specify height
+                className="mb-4"
               />
               <div className="text-right">
                 <p className="text-xl mb-8">

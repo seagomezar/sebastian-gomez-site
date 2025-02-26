@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image'; // Import Image
 
 function Login() {
   const router = useRouter();
@@ -30,9 +31,11 @@ function Login() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <img
+        <Image // Replace img tag with Image component
           src="/logo.png"
           alt="Logo"
+          width={128} // Specify width
+          height={42} // Specify height
           className="w-32 h-auto mx-auto mb-4"
         />
         <h2 className="text-2xl mb-4">Iniciar sesión</h2>

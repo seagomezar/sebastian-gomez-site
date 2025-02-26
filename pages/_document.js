@@ -18,20 +18,22 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script
-            async
+          <Script
+            strategy="afterInteractive"
             src="https://www.googletagmanager.com/gtag/js?id=G-HM718Q7C20"
           />
-          <script
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
-                                window.dataLayer = window.dataLayer || [];
-                                function gtag(){dataLayer.push(arguments);}
-                                gtag('js', new Date());
-                                gtag('config', 'G-HM718Q7C20', {
-                                page_path: window.location.pathname,
-                                });
-                            `,
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-HM718Q7C20', {
+                  page_path: window.location.pathname,
+                });
+              `,
             }}
           />
           <Script // Replace script tag with Script component

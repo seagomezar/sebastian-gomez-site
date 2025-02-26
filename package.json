@@ -30,6 +30,7 @@
     "sass": "^1.85.1"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^15.1.7",
     "@tailwindcss/postcss": "^4.0.9",
     "autoprefixer": "^10.4.20",
     "cypress": "^14.1.0",
