@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@use "tailwindcss";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
@@ -79,6 +78,3 @@ ul.list-disc {
 ul.list-inside {
   padding-left: 2em;
 }
-
-
-
