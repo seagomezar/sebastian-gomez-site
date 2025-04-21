@@ -6,7 +6,6 @@ import '../styles/globals.scss';
 import { Layout } from '../components';
 import * as ga from '../lib/analytics';
 
-
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
