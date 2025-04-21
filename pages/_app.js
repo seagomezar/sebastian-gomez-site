@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import 'prismjs/themes/prism-tomorrow.css';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import '../styles/globals.scss';
 import { Layout } from '../components';
 import * as ga from '../lib/analytics';
-import Head from 'next/head';
+
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
