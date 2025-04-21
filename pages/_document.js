@@ -36,10 +36,11 @@ class MyDocument extends Document {
               `,
             }}
           />
-          <Script // Replace script tag with Script component
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5241677876798110"
-            crossorigin="anonymous"
-            strategy="lazyOnload" // Add strategy for lazy loading
+          <meta charSet="UTF-8" />
+          {/* Adding Google AdSense script directly */}
+          <script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}`}
+            async
           />
         </Head>
         <body>
