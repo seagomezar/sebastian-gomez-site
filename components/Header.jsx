@@ -17,7 +17,7 @@ function Header() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-8">
       <div className="border-b w-full inline-block border-blue-400 py-8">
         <div className="flex justify-between items-center">
-          <div className="min-w-330">
+          <div>
             <Link href="/">
               <span className="cursor-pointer font-bold text-3xl text-white min-w-200 max-w-330">
                 Sebastian Gomez
