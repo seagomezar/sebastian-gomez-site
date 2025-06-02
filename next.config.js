@@ -1,7 +1,12 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['media.graphassets.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.graphassets.com',
+      },
+    ],
   },
   webpack: (config, options) => {
     config.module.rules.push({
