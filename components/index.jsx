@@ -11,3 +11,4 @@ export { default as CommentsForm } from './CommentsForm';
 export { default as Loader } from './Loader';
 export { default as SiteWidget } from './SiteWidget';
 export { default as AdWidget } from './AdWidget';
+export { default as CookieConsent } from './CookieConsent';

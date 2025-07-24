@@ -10,14 +10,23 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    // Initialize analytics when the app loads
+    ga.initGA();
+
     const handleRouteChange = (url) => {
       ga.pageview(url);
     };
+
+    // Track initial page view
+    ga.pageview(router.asPath);
+
+    // Listen for route changes
     router.events.on('routeChangeComplete', handleRouteChange);
+
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
-  }, [router.events]);
+  }, [router.events, router.asPath]);
 
   return (
     <Layout>
