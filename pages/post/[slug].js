@@ -10,6 +10,7 @@ import {
   Comments,
   CommentsForm,
   Loader,
+  AdWidget,
 } from '../../components';
 import { getPostDetails } from '../../services';
 import { AdjacentPosts } from '../../sections';
@@ -40,6 +41,7 @@ function PostDetails({ post }) {
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
+            <AdWidget />
             <PostWidget
               slug={post.slug}
               categories={post.categories.map(

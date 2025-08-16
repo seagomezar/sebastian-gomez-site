@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image'; // Import Image
-import { Categories, PostWidget } from '../../components';
+import { Categories, PostWidget, AdWidget } from '../../components';
 import Clase from '../../components/Clase';
 import data from './data.json';
 
@@ -70,6 +70,7 @@ function Protected() {
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
+            <AdWidget />
             <Categories />
             <PostWidget />
           </div>

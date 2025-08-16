@@ -16,7 +16,7 @@ class MyDocument extends Document {
 
   render() {
     const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-HM718Q7C20';
-    const GOOGLE_ADS_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID;
+    const GOOGLE_ADS_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
     const isProduction = process.env.NODE_ENV === 'production';
     const shouldLoadAnalytics = isProduction && GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX';
 

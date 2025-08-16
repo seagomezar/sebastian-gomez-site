@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import { Categories, PostWidget } from '../../components';
+import { Categories, PostWidget, AdWidget } from '../../components';
 import { getSite } from '../../services';
 import getContentFragment from '../../services/parsing';
 
@@ -55,6 +55,7 @@ export default function About({ site }) {
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
+            <AdWidget />
             <Categories />
             <PostWidget />
           </div>
