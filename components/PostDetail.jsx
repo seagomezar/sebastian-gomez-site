@@ -3,6 +3,7 @@ import moment from 'moment';
 import Prism from 'prismjs';
 import Image from 'next/image';
 import SocialShare from './SocialShare';
+import Applause from './Applause';
 import getContentFragment from '../services/parsing';
 
 function AuthorInfo({ author }) {
@@ -85,6 +86,7 @@ function PostDetail({ post }) {
         <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
         {renderedContent}
         <SocialShare url={post.slug} />
+        <Applause slug={post.slug} />
       </div>
     </div>
   );
