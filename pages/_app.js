@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import 'prismjs/themes/prism-tomorrow.css';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import '../styles/globals.scss';
 import { Layout } from '../components';
 import * as ga from '../lib/analytics';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
