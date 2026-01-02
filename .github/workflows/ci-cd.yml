@@ -29,10 +29,12 @@ jobs:
       - name: Unit Tests
         run: npm test
 
+      - name: Create .env file
+        run: |
+          echo "NEXT_PUBLIC_GRAPHCMS_ENDPOINT=${{ secrets.NEXT_PUBLIC_GRAPHCMS_ENDPOINT }}" > .env
+
       - name: Build Application
         run: npm run build
-        env:
-          NEXT_PUBLIC_GRAPHCMS_ENDPOINT: ${{ secrets.NEXT_PUBLIC_GRAPHCMS_ENDPOINT }}
 
       - name: E2E Tests (Cypress)
         uses: cypress-io/github-action@v6
