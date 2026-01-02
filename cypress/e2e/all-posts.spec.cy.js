@@ -14,6 +14,9 @@ it('should visit every blog post visible on homepage and verify it renders witho
     });
 
     // Also explicitly visit one to ensure rendering is fine
-    cy.get('a[href^="/post/"]').first().click();
+    cy.get('a[href^="/post/"]').first().then(($a) => {
+        const href = $a.attr('href');
+        cy.visit(href);
+    });
     cy.get('h1').should('exist');
 });

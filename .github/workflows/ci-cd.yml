@@ -32,6 +32,7 @@ jobs:
       - name: Create .env file
         run: |
           echo "NEXT_PUBLIC_GRAPHCMS_ENDPOINT=${{ secrets.NEXT_PUBLIC_GRAPHCMS_ENDPOINT }}" > .env
+          echo "GRAPHCMS_TOKEN=${{ secrets.GRAPHCMS_TOKEN }}" >> .env
 
       - name: Build Application
         run: npm run build
@@ -44,6 +45,7 @@ jobs:
           wait-on: 'http://localhost:3000'
         env:
           NEXT_PUBLIC_GRAPHCMS_ENDPOINT: ${{ secrets.NEXT_PUBLIC_GRAPHCMS_ENDPOINT }}
+          GRAPHCMS_TOKEN: ${{ secrets.GRAPHCMS_TOKEN }}
 
 
   deploy:
