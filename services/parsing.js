@@ -204,7 +204,6 @@ const getContentFragment = (index, text, obj, type) => {
     case 'link':
       return <LinkElement key={index} obj={obj} />;
     case 'code-block':
-      console.log('DEBUG CodeBlock obj:', obj);
       return <CodeBlock key={index} text={text} obj={obj} />;
     case 'iframe':
       return <Iframe key={index} obj={obj} />;
