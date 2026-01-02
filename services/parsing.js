@@ -135,9 +135,9 @@ const LinkElement = memo(({ obj }) => (
   </Link>
 ));
 
-const CodeBlock = memo(({ obj }) => {
+const CodeBlock = memo(({ obj, text: textProp }) => {
   // Extract raw text from children to ensure Prism gets clean code
-  const text = obj.children?.map((child) => child.text).join('') || '';
+  const text = obj.children?.map((child) => child.text).join('') || textProp || '';
 
   // Simple heuristic for auto-detection if language is missing
   let language = obj?.language || (obj?.className ? obj.className.replace('language-', '') : null);

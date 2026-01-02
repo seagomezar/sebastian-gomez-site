@@ -37,18 +37,18 @@ describe('getContentFragment', () => {
   });
 
   it('renders a bulleted list correctly', () => {
-      // simulating what PostDetail passes to getContentFragment for a list
-      // It passes an array of rendered ListItems
-      const listItems = [
-        <li key="1">Item 1</li>,
-        <li key="2">Item 2</li>
-      ];
-      const result = getContentFragment(0, listItems, {}, 'bulleted-list');
-      render(result);
-      const list = screen.getByRole('list');
-      expect(list).toHaveClass('list-disc');
-      expect(screen.getByText('Item 1')).toBeInTheDocument();
-      expect(screen.getByText('Item 2')).toBeInTheDocument();
+    // simulating what PostDetail passes to getContentFragment for a list
+    // It passes an array of rendered ListItems
+    const listItems = [
+      <li key="1">Item 1</li>,
+      <li key="2">Item 2</li>
+    ];
+    const result = getContentFragment(0, listItems, {}, 'bulleted-list');
+    render(result);
+    const list = screen.getByRole('list');
+    expect(list).toHaveClass('list-disc');
+    expect(screen.getByText('Item 1')).toBeInTheDocument();
+    expect(screen.getByText('Item 2')).toBeInTheDocument();
   });
 
   it('renders a code block correctly', () => {
@@ -57,6 +57,6 @@ describe('getContentFragment', () => {
     render(result);
     const codeElement = screen.getByText('console.log("Hello World");');
     expect(codeElement).toBeInTheDocument();
-    expect(codeElement).toHaveClass('language-text');
+    expect(codeElement).toHaveClass('language-javascript');
   });
 });
