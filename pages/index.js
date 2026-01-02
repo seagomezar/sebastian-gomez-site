@@ -1,14 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import { FeaturedPosts } from '../sections/index';
-import {
-  PostCard,
-  Categories,
-  PostWidget,
-  SiteWidget,
-  AdWidget,
-} from '../components';
+import FeaturedPosts from '../sections/FeaturedPosts';
+import PostCard from '../components/PostCard';
+import Categories from '../components/Categories';
+import PostWidget from '../components/PostWidget';
+import SiteWidget from '../components/SiteWidget';
+import AdWidget from '../components/AdWidget';
 import { getPostsPerPage, getSite } from '../services';
 
 export default function Home({ posts, site }) {
@@ -51,9 +49,9 @@ export default function Home({ posts, site }) {
 }
 
 // Fetch data at build time
-export async function getServerSideProps() {
+export async function getServerSideProps({ locale }) {
   const posts = (await getPostsPerPage(1)) || [];
-  const site = (await getSite()) || [];
+  const site = (await getSite(locale)) || [];
   return {
     props: { posts, site },
   };

@@ -24,7 +24,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Google Analytics - Only load in production with valid ID */}
-          {shouldLoadAnalytics && (
+          {/* {shouldLoadAnalytics && (
             <>
               <Script
                 strategy="afterInteractive"
@@ -60,7 +60,7 @@ class MyDocument extends Document {
                 }}
               />
             </>
-          )}
+          )} */}
 
           {/* Google Ads - Only load if client ID is provided */}
           {isProduction && GOOGLE_ADS_CLIENT_ID && GOOGLE_ADS_CLIENT_ID !== 'ca-pub-XXXXXXXXX' && (

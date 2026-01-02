@@ -13,6 +13,7 @@ query GetPostDetails($slug: String!) {
       }
     }
     createdAt
+    updatedAt
     slug
     content {
       raw

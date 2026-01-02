@@ -1,25 +1,27 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
-import {GetPosts as  GET_POSTS_QUERY}  from './graphql/queries/getPosts.gql';
-import {GetPostsPerPage as GET_POSTS_PER_PAGE_QUERY} from './graphql/queries/getPostsPerPage.gql';
-import {GetCategories as GET_CATEGORIES_QUERY} from './graphql/queries/getCategories.gql';
-import {GetPostDetails as GET_POST_DETAILS_QUERY} from './graphql/queries/getPostDetails.gql';
-import {GetSimilarPosts as GET_SIMILAR_POSTS_QUERY} from './graphql/queries/getSimilarPosts.gql';
-import {GetAdjacentPosts as GET_ADJACENT_POSTS_QUERY} from './graphql/queries/getAdjacentPosts.gql';
-import {GetCategoryPost as GET_CATEGORY_POST_QUERY} from './graphql/queries/getCategoryPost.gql';
-import {GetFeaturedPosts as GET_FEATURED_POSTS_QUERY} from './graphql/queries/getFeaturedPosts.gql';
-import {GetComments as GET_COMMENTS_QUERY} from './graphql/queries/getComments.gql';
-import {GetSite as GET_SITE_QUERY} from './graphql/queries/getSite.gql';
-import {GetRecentPosts as GET_RECENT_POSTS_QUERY} from './graphql/queries/getRecentPosts.gql';
+import { GetPosts as GET_POSTS_QUERY } from './graphql/queries/getPosts.gql';
+import { GetPostsPerPage as GET_POSTS_PER_PAGE_QUERY } from './graphql/queries/getPostsPerPage.gql';
+import { GetCategories as GET_CATEGORIES_QUERY } from './graphql/queries/getCategories.gql';
+import { GetPostDetails as GET_POST_DETAILS_QUERY } from './graphql/queries/getPostDetails.gql';
+import { GetSimilarPosts as GET_SIMILAR_POSTS_QUERY } from './graphql/queries/getSimilarPosts.gql';
+import { GetAdjacentPosts as GET_ADJACENT_POSTS_QUERY } from './graphql/queries/getAdjacentPosts.gql';
+import { GetCategoryPost as GET_CATEGORY_POST_QUERY } from './graphql/queries/getCategoryPost.gql';
+import { GetFeaturedPosts as GET_FEATURED_POSTS_QUERY } from './graphql/queries/getFeaturedPosts.gql';
+import { GetComments as GET_COMMENTS_QUERY } from './graphql/queries/getComments.gql';
+import { GetSite as GET_SITE_QUERY } from './graphql/queries/getSite.gql';
+import { GetRecentPosts as GET_RECENT_POSTS_QUERY } from './graphql/queries/getRecentPosts.gql';
 
 const client = new ApolloClient({
-    uri: process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT,
+    link: new HttpLink({
+        uri: process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT,
+    }),
     cache: new InMemoryCache(),
     connectToDevTools: true
 });
 
 export const getPosts = async () => {
-    
+
     const { data } = await client.query({ query: GET_POSTS_QUERY });
     return data.posts;
 };
@@ -91,7 +93,7 @@ export const getRecentPosts = async () => {
 };
 
 export const getSite = async (locale = 'es') => {
-    
+
     const { data } = await client.query({
         query: GET_SITE_QUERY,
         variables: { locales: [locale] },

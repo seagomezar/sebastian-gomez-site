@@ -78,3 +78,28 @@ ul.list-disc {
 ul.list-inside {
   padding-left: 2em;
 }
+
+/* Fix for lists */
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+li {
+  display: list-item;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 1.5rem;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+    margin-left: 1.5rem;
+}

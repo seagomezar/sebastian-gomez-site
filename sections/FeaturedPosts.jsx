@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { FeaturedPostCard } from '../components';
+import FeaturedPostCard from '../components/FeaturedPostCard';
 import { getFeaturedPosts } from '../services';
 
 const responsive = {
@@ -35,8 +35,8 @@ function FeaturedPosts() {
     });
   }, []);
 
-  const customLeftArrow = (
-    <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
+  const CustomLeftArrow = ({ onClick }) => (
+    <div onClick={onClick} className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 text-white w-full"
@@ -54,8 +54,8 @@ function FeaturedPosts() {
     </div>
   );
 
-  const customRightArrow = (
-    <div className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
+  const CustomRightArrow = ({ onClick }) => (
+    <div onClick={onClick} className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 text-white w-full"
@@ -77,8 +77,8 @@ function FeaturedPosts() {
     <div className="mb-8">
       <Carousel
         infinite
-        customLeftArrow={customLeftArrow}
-        customRightArrow={customRightArrow}
+        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow />}
         responsive={responsive}
         itemClass="px-4"
       >

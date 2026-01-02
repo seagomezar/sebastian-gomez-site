@@ -3,7 +3,9 @@ import 'prismjs/themes/prism-tomorrow.css';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import '../styles/globals.scss';
-import { Layout } from '../components';
+import { DefaultSeo } from 'next-seo';
+import Layout from '../components/Layout';
+import SEO from '../next-seo.config';
 import * as ga from '../lib/analytics';
 
 function MyApp({ Component, pageProps }) {
@@ -30,6 +32,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
+      {/* <DefaultSeo {...SEO} /> */}
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
