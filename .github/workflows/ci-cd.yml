@@ -39,8 +39,11 @@ jobs:
       - name: E2E Tests (Cypress)
         uses: cypress-io/github-action@v6
         with:
+          install: false
           start: npm start
           wait-on: 'http://localhost:3000'
+        env:
+          NEXT_PUBLIC_GRAPHCMS_ENDPOINT: ${{ secrets.NEXT_PUBLIC_GRAPHCMS_ENDPOINT }}
 
 
   deploy:
