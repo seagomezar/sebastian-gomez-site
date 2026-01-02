@@ -29,14 +29,17 @@ jobs:
       - name: Unit Tests
         run: npm test
 
+      - name: Build Application
+        run: npm run build
+        env:
+          NEXT_PUBLIC_GRAPHCMS_ENDPOINT: ${{ secrets.NEXT_PUBLIC_GRAPHCMS_ENDPOINT }}
+
       - name: E2E Tests (Cypress)
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
           start: npm start
           wait-on: 'http://localhost:3000'
-        env:
-          NEXT_PUBLIC_GRAPHCMS_ENDPOINT: ${{ secrets.NEXT_PUBLIC_GRAPHCMS_ENDPOINT }}
+
 
   deploy:
     needs: test
