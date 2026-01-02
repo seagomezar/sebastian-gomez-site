@@ -36,19 +36,64 @@ describe('getContentFragment', () => {
     expect(element.tagName).toBe('EM');
   });
 
-  it('renders a bulleted list correctly', () => {
-    // simulating what PostDetail passes to getContentFragment for a list
-    // It passes an array of rendered ListItems
-    const listItems = [
-      <li key="1">Item 1</li>,
-      <li key="2">Item 2</li>
-    ];
-    const result = getContentFragment(0, listItems, {}, 'bulleted-list');
+  it('renders a bulleted list correctly integration', () => {
+    // We simulate the Loop in PostDetail by manually mapping the children of the list container
+    // and passing them to getContentFragment
+    const listObj = {
+      type: 'bulleted-list',
+      children: [
+        {
+          type: 'list-item',
+          children: [
+            {
+              type: 'list-item-child',
+              children: [
+                {
+                  text: 'Text Item 1'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          type: 'list-item',
+          children: [
+            {
+              type: 'list-item-child',
+              children: [
+                {
+                  bold: true,
+                  text: 'Bold Item 2'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    // Simulate PostDetail.jsx loop:
+    const renderedChildren = listObj.children.map((item, i) =>
+      getContentFragment(i, item.text, item, item.type)
+    );
+    // Then call the list container handler
+    const result = getContentFragment(0, renderedChildren, listObj, 'bulleted-list');
+
     render(result);
+
     const list = screen.getByRole('list');
     expect(list).toHaveClass('list-disc');
-    expect(screen.getByText('Item 1')).toBeInTheDocument();
-    expect(screen.getByText('Item 2')).toBeInTheDocument();
+
+    // Check for list items
+    const items = screen.getAllByRole('listitem');
+    expect(items).toHaveLength(2);
+
+    // Check content
+    expect(screen.getByText('Text Item 1')).toBeInTheDocument();
+
+    const boldItem = screen.getByText('Bold Item 2');
+    expect(boldItem).toBeInTheDocument();
+    expect(boldItem.tagName).toBe('STRONG');
   });
 
   it('renders a code block correctly', () => {
