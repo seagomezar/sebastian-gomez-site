@@ -60,3 +60,10 @@ npm run cypress:open
 - **Build**: ✅ Passing
 - **Tests**: ✅ Passing
 - **Dependencies**: Fully updated to 2025/2026 standards.
+
+
+Current ERROR:
+
+Invalid project directory provided, no such directory: /home/runner/work/sebastian-gomez-site/sebastian-gomez-site/lint
+Error: Process completed with exit code 1
+

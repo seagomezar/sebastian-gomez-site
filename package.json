@@ -10,7 +10,7 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "test": "jest",
     "cypress:open": "cypress open",
     "cypress:run": "start-server-and-test dev http://localhost:3000 cypress:test",

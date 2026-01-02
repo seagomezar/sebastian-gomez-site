@@ -3,16 +3,10 @@ import { render, screen } from '@testing-library/react';
 import getContentFragment from '../../services/parsing';
 
 // Mock Next.js Link
-jest.mock('next/link', () => {
-  return ({ children, href }) => {
-    return <a href={href}>{children}</a>;
-  };
-});
+jest.mock('next/link', () => ({ children, href }) => <a href={href}>{children}</a>);
 
 // Mock react-youtube
-jest.mock('react-youtube', () => {
-  return () => <div>YouTube Video</div>;
-});
+jest.mock('react-youtube', () => () => <div>YouTube Video</div>);
 
 describe('getContentFragment', () => {
   it('renders a paragraph correctly', () => {
@@ -46,8 +40,8 @@ describe('getContentFragment', () => {
       // simulating what PostDetail passes to getContentFragment for a list
       // It passes an array of rendered ListItems
       const listItems = [
-          <li key="1">Item 1</li>,
-          <li key="2">Item 2</li>
+        <li key="1">Item 1</li>,
+        <li key="2">Item 2</li>
       ];
       const result = getContentFragment(0, listItems, {}, 'bulleted-list');
       render(result);

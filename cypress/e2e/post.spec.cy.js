@@ -20,7 +20,7 @@ describe('Post Detail Page', () => {
         `,
       },
     }).then((response) => {
-      const posts = response.body.data.posts;
+      const { posts } = response.body.data;
       if (posts && posts.length > 0) {
         const postSlug = posts[0].slug;
         cy.visit(`http://localhost:3000/post/${postSlug}`);

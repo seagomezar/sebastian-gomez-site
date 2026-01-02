@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-// eslint-disable-next-line import/no-unresolved
+
 import { NextSeo } from 'next-seo';
 import PostDetail from '../../components/PostDetail';
 import Categories from '../../components/Categories';

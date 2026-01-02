@@ -6,7 +6,7 @@ describe('All Posts Traversal', () => {
             }
             return true;
         });
-        // 1. Visit homepage to get total pagination or recent posts. 
+        // 1. Visit homepage to get total pagination or recent posts.
         // Since we don't have a sitemap.xml readily available in the frontend links usually,
         // we can use the GraphQL API to get all slugs if possible.
         // However, Cypress runs in browser.
@@ -15,7 +15,7 @@ describe('All Posts Traversal', () => {
         // Pagination makes it hard to get ALL posts just from homepage.
         // But we know the project uses GraphCMS.
 
-        // Better approach: Use a cy.request to the same API endpoint? 
+        // Better approach: Use a cy.request to the same API endpoint?
         // Or just iterate through the "Recent Posts" and "Featured Posts" visible.
         // AND iterate through pages /posts/page/1 etc.
 
@@ -47,7 +47,7 @@ describe('All Posts Traversal', () => {
             // That misses old posts.
 
             // Let's use the actual API.
-            // We need the URL. typically usually in .env.local, checkable via process.env in next, 
+            // We need the URL. typically usually in .env.local, checkable via process.env in next,
             // but cypress doesn't see server process.env unless exposed.
             // NEXT_PUBLIC_... is exposed.
         });
@@ -70,7 +70,7 @@ describe('All Posts Traversal', () => {
         // I will hardcode the logic to try to read the NEXT_PUBLIC variable if possible.
         // Or just look at the app source code (I know it uses process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT).
 
-        // Since I cannot easily read the .env from Cypress (it runs in browser), I will try. 
+        // Since I cannot easily read the .env from Cypress (it runs in browser), I will try.
         // Wait, I can read the file using `cy.readFile` in node mode maybe? No.
         // I will just look for all `a[href^="/post/"]` on Home and verify them.
         // Then click "Cargar Mas" if it exists?
@@ -108,7 +108,7 @@ describe('All Posts Traversal', () => {
             '/post/adk-conclusion'
         ];
 
-        specificPosts.forEach(slug => {
+        specificPosts.forEach((slug) => {
             cy.visit(`${baseUrl}${slug}`);
             cy.get('h1').should('exist');
             cy.get('body').should('not.contain', 'Application error');

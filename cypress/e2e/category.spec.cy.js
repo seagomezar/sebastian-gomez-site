@@ -20,7 +20,7 @@ describe('Category Page', () => {
         `,
       },
     }).then((response) => {
-      const categories = response.body.data.categories;
+      const { categories } = response.body.data;
       if (categories && categories.length > 0) {
         const categorySlug = categories[0].slug;
         cy.visit(`http://localhost:3000/category/${categorySlug}`);
