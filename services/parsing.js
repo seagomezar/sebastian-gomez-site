@@ -201,6 +201,14 @@ const getContentFragment = (index, text, obj, type) => {
       // but in our recursion fix we pass the object.
       // Let's use 'obj' which is the raw node.
       return <ListItem key={index} index={index} obj={obj} />;
+    case 'list-item-child':
+      return (
+        <React.Fragment key={index}>
+          {modifiedText && modifiedText.map((item, i) => (
+            <React.Fragment key={i}>{item}</React.Fragment>
+          ))}
+        </React.Fragment>
+      );
     case 'link':
       return <LinkElement key={index} obj={obj} />;
     case 'code-block':
