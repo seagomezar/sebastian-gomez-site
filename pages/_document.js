@@ -64,9 +64,10 @@ class MyDocument extends Document {
 
           {/* Google Ads - Only load if client ID is provided */}
           {isProduction && GOOGLE_ADS_CLIENT_ID && GOOGLE_ADS_CLIENT_ID !== 'ca-pub-XXXXXXXXX' && (
-            <script
+            <Script
+              id="google-ads"
+              strategy="lazyOnload"
               src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADS_CLIENT_ID}`}
-              async
               crossOrigin="anonymous"
             />
           )}

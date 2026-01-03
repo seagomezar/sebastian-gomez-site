@@ -123,7 +123,7 @@ function CommentsForm({ slug }) {
             value="true"
           />
           <label
-            className="text-gray-500 cursor-pointer"
+            className="text-gray-600 cursor-pointer"
             htmlFor="storeData"
           >
             {' '}

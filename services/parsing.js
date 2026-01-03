@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import YouTube from 'react-youtube';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const getModifiedText = (index, text, obj) => {
   let modifiedText = text;
@@ -27,11 +28,11 @@ const getModifiedText = (index, text, obj) => {
 };
 
 const HeadingThree = memo(({ index, modifiedText }) => (
-  <h3 key={`h3-${index}`} className="text-xl font-semibold mb-4 mt-8 text-gray-800">
+  <h2 key={`h3-${index}`} className="text-xl font-semibold mb-4 mt-8 text-gray-800">
     {modifiedText && modifiedText.map((item, i) => (
       <React.Fragment key={`h3-${i}-2`}>{item}</React.Fragment>
     ))}
-  </h3>
+  </h2>
 ));
 
 const Paragraph = memo(({ index, modifiedText }) => (
@@ -51,15 +52,16 @@ const HeadingFour = memo(({ index, modifiedText }) => (
   </h4>
 ));
 
-const Image = memo(({ index, obj }) => (
+const RichTextImage = memo(({ index, obj }) => (
   <div className="my-8 flex justify-center">
-    <img
+    <Image
       key={index}
       alt={obj.title}
       height={obj.height}
       width={obj.width}
       src={obj.src}
       className="rounded-lg shadow-md max-w-full h-auto"
+      sizes="(max-width: 768px) 100vw, 700px"
     />
   </div>
 ));
@@ -209,7 +211,7 @@ const getContentFragment = (index, text, obj, type) => {
     case 'heading-four':
       return <HeadingFour key={index} index={index} modifiedText={modifiedText} />;
     case 'image':
-      return <Image key={index} index={index} obj={obj} />;
+      return <RichTextImage key={index} index={index} obj={obj} />;
     case 'bulleted-list':
       return <BulletedList key={index} index={index} modifiedText={modifiedText} />;
     case 'numbered-list':

@@ -55,7 +55,7 @@ function PostDate({ createdAt, updatedAt }) {
         </span>
       </div>
       {updatedAt && (
-        <div className="text-gray-500 text-sm mt-1 ml-8" suppressHydrationWarning>
+        <div className="text-gray-600 text-sm mt-1 ml-8" suppressHydrationWarning>
           Updated: {moment(updatedAt).format('MMM DD, YYYY')}
         </div>
       )}
