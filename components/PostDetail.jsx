@@ -68,7 +68,7 @@ function PostDetail({ post }) {
     if (typeof window !== 'undefined') {
       Prism.highlightAll();
     }
-  }, []);
+  }, [post.content.raw]);
 
   const renderedContent = useMemo(() => post.content.raw.children.map((typeObj, index) => {
     const children = typeObj.children.map((item, itemindex) =>

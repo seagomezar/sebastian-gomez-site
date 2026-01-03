@@ -39,6 +39,7 @@ describe('getContentFragment', () => {
   it('renders a bulleted list correctly integration', () => {
     // We simulate the Loop in PostDetail by manually mapping the children of the list container
     // and passing them to getContentFragment
+    // Structure matches actual GraphCMS rich text: bulleted-list -> list-item -> list-item-child -> paragraph -> text
     const listObj = {
       type: 'bulleted-list',
       children: [
@@ -49,7 +50,12 @@ describe('getContentFragment', () => {
               type: 'list-item-child',
               children: [
                 {
-                  text: 'Text Item 1'
+                  type: 'paragraph',
+                  children: [
+                    {
+                      text: 'Text Item 1'
+                    }
+                  ]
                 }
               ]
             }
@@ -62,8 +68,13 @@ describe('getContentFragment', () => {
               type: 'list-item-child',
               children: [
                 {
-                  bold: true,
-                  text: 'Bold Item 2'
+                  type: 'paragraph',
+                  children: [
+                    {
+                      bold: true,
+                      text: 'Bold Item 2'
+                    }
+                  ]
                 }
               ]
             }

@@ -112,9 +112,27 @@ const ListItem = memo(({ index, obj }) => {
     // We must recurse on their children to provide content
     let childContent = undefined;
     if (child.children) {
-      childContent = child.children.map((grandChild, j) =>
-        getContentFragment(j, grandChild.text, grandChild, grandChild.type || 'text')
-      );
+      childContent = child.children.map((grandChild, j) => {
+        // Recursively handle the children of the block element (e.g. text nodes inside a paragraph)
+        // This was the missing step: previously we passed undefined or raw text, causing empty rendering
+        if (grandChild.children) {
+          const grandChildContent = grandChild.children.map((greatGrandChild, k) =>
+            getContentFragment(k, greatGrandChild.text, greatGrandChild, greatGrandChild.type || 'text')
+          );
+          return getContentFragment(j, grandChildContent, grandChild, grandChild.type || 'text');
+        }
+
+        return getContentFragment(j, grandChild.text, grandChild, grandChild.type || 'text')
+      });
+    }
+
+    // Special handling for list-item-child which is a wrapper
+    if (child.type === 'list-item-child') {
+      return (
+        <React.Fragment key={i}>
+          {childContent.map((item, k) => <React.Fragment key={k}>{item}</React.Fragment>)}
+        </React.Fragment>
+      )
     }
 
     return getContentFragment(i, childContent, child, child.type);
