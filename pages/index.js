@@ -51,7 +51,7 @@ export default function Home({ posts, site }) {
 // Fetch data at build time
 export async function getServerSideProps({ locale }) {
   const posts = (await getPostsPerPage(1)) || [];
-  const site = (await getSite(locale)) || [];
+  const site = (await getSite(locale)) || {};
   return {
     props: { posts, site },
   };

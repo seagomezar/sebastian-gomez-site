@@ -93,10 +93,11 @@ export const getRecentPosts = async () => {
 };
 
 export const getSite = async (locale = 'es') => {
+    const locales = locale === 'es' ? ['es'] : [locale, 'es'];
 
     const { data } = await client.query({
         query: GET_SITE_QUERY,
-        variables: { locales: [locale] },
+        variables: { locales },
     });
     return data.site;
 };

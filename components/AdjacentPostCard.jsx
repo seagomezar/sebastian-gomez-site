@@ -64,7 +64,7 @@ function NavigationArrow({ direction, onClick }) {
 function AdjacentPostCard({ post, position, onNavigationClick }) {
   return (
     <div className="relative w-full h-72">
-      <FeaturedImage imageUrl={post.featuredImage.url} />
+      <FeaturedImage imageUrl={post.featuredImage?.url} />
       <GradientOverlay />
       <CardHeader date={post.createdAt} title={post.title} />
       <Link href={`/post/${post.slug}`} className="z-10 cursor-pointer absolute w-full h-full" aria-label={`Go to ${post.title}`} />

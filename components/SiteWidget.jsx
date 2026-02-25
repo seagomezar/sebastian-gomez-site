@@ -4,22 +4,26 @@ import { FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import { grpahCMSImageLoader } from '../util';
 
 function SiteWidget({ site }) {
+  if (!site || !site.name) return null;
+
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 text-center">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
         {site.name}
       </h3>
-      <div className="flex w-full mb-4 justify-center">
-        <Image
-          loader={grpahCMSImageLoader}
-          alt={site.name}
-          height="160"
-          width="160"
-          unoptimized
-          className="align-middle rounded-full"
-          src={site.image.url}
-        />
-      </div>
+      {site.image?.url && (
+        <div className="flex w-full mb-4 justify-center">
+          <Image
+            loader={grpahCMSImageLoader}
+            alt={site.name}
+            height="160"
+            width="160"
+            unoptimized
+            className="align-middle rounded-full"
+            src={site.image.url}
+          />
+        </div>
+      )}
       <div className="flex items-center w-full mb-8 text-justify">
         {site.description}
       </div>

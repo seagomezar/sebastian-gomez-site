@@ -6,14 +6,16 @@ import Link from 'next/link';
 function FeaturedPostCard({ post }) {
   return (
     <div className="relative h-72">
-      <Image
-        src={post.featuredImage.url}
-        alt={post.title}
-        fill
-        className="rounded-lg object-cover shadow-md"
-        sizes="(max-width: 768px) 100vw, 50vw"
-        priority
-      />
+      {post.featuredImage?.url && (
+        <Image
+          src={post.featuredImage.url}
+          alt={post.title}
+          fill
+          className="rounded-lg object-cover shadow-md"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
+        />
+      )}
       <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-72" />
       <div className="flex flex-col rounded-lg p-4 items-center justify-center absolute w-full h-full">
         <p className="text-white mb-4 text-shadow font-semibold text-xs">
@@ -23,14 +25,16 @@ function FeaturedPostCard({ post }) {
           {post.title}
         </p>
         <div className="flex items-center absolute bottom-5 w-full justify-center">
-          <Image
-            alt={post.author.name}
-            height="30"
-            width="30"
-            sizes="30px"
-            className="align-middle drop-shadow-lg rounded-full"
-            src={post.author.photo.url}
-          />
+          {post.author?.photo?.url && (
+            <Image
+              alt={post.author.name}
+              height="30"
+              width="30"
+              sizes="30px"
+              className="align-middle drop-shadow-lg rounded-full"
+              src={post.author.photo.url}
+            />
+          )}
           <p className="inline align-middle text-white text-shadow ml-2 font-medium">
             {post.author.name}
           </p>

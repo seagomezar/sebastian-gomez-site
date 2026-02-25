@@ -14,17 +14,19 @@ import getContentFragment from '../services/parsing';
 function AuthorInfo({ author }) {
   return (
     <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
-      <div className="relative h-8 w-8">
-        <Image
-          src={author.photo.url}
-          alt={author.name}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          className="rounded-full"
-          sizes="(max-width: 768px) 100vw"
-        />
-      </div>
+      {author.photo?.url && (
+        <div className="relative h-8 w-8">
+          <Image
+            src={author.photo.url}
+            alt={author.name}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="rounded-full"
+            sizes="(max-width: 768px) 100vw"
+          />
+        </div>
+      )}
       <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">
         {author.name}
       </p>
@@ -79,17 +81,19 @@ function PostDetail({ post }) {
 
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-      <div className="relative overflow-hidden shadow-md mb-6 h-48 lg:h-64 rounded-t-lg lg:rounded-lg">
-        <Image
-          src={post.featuredImage.url}
-          alt={post.title}
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center"
-          className="rounded-t-lg lg:rounded-lg object-contain"
-          sizes="(max-width: 768px) 100vw"
-        />
-      </div>
+      {post.featuredImage?.url && (
+        <div className="relative overflow-hidden shadow-md mb-6 h-48 lg:h-64 rounded-t-lg lg:rounded-lg">
+          <Image
+            src={post.featuredImage.url}
+            alt={post.title}
+            layout="fill"
+            objectFit="contain"
+            objectPosition="center"
+            className="rounded-t-lg lg:rounded-lg object-contain"
+            sizes="(max-width: 768px) 100vw"
+          />
+        </div>
+      )}
       <div className="px-4 lg:px-0">
         <div className="flex items-center mb-8 w-full">
           <AuthorInfo author={post.author} />

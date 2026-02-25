@@ -29,14 +29,16 @@ function PostWidget({ categories, slug }) {
       {relatedPosts.map((post, index) => (
         <div key={index} className="flex items-center w-full mb-4">
           <div className="w-16 flex-none">
-            <Image
-              alt={post.title}
-              height="60"
-              width="60"
-              sizes="60px"
-              className="align-middle rounded-full"
-              src={post.featuredImage.url}
-            />
+            {post.featuredImage?.url && (
+              <Image
+                alt={post.title}
+                height="60"
+                width="60"
+                sizes="60px"
+                className="align-middle rounded-full"
+                src={post.featuredImage.url}
+              />
+            )}
           </div>
           <div className="flex-grow ml-4">
             <p className="text-gray-600 font-xs">
