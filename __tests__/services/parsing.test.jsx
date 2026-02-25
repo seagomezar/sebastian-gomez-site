@@ -108,8 +108,11 @@ describe('getContentFragment', () => {
   });
 
   it('renders a code block correctly', () => {
-    const code = 'console.log("Hello World");';
-    const result = getContentFragment(0, code, {}, 'code-block');
+    const obj = {
+      type: 'code-block',
+      children: [{ text: 'console.log("Hello World");' }],
+    };
+    const result = getContentFragment(0, null, obj, 'code-block');
     render(result);
     const codeElement = screen.getByText('console.log("Hello World");');
     expect(codeElement).toBeInTheDocument();
