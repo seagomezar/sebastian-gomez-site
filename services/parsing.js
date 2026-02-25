@@ -155,23 +155,25 @@ const LinkElement = memo(({ obj }) => (
   </Link>
 ));
 
-const CodeBlock = memo(({ obj, text: textProp }) => {
+const CodeBlock = memo(({ obj }) => {
   // Extract raw text from children to ensure Prism gets clean code
-  const text = obj.children?.map((child) => child.text).join('') || textProp || '';
+  const text = obj.children?.map((child) => child.text ?? '').join('') || '';
 
   // Simple heuristic for auto-detection if language is missing
   let language = obj?.language || (obj?.className ? obj.className.replace('language-', '') : null);
 
-  if (!language) {
+  if (!language && typeof text === 'string') {
     if (text.includes('def ') || text.includes('import ') || text.includes('print(')) {
       language = 'python';
     } else if (text.includes('console.log') || text.includes('const ') || text.includes('=>') || text.includes('function')) {
-      language = 'javascript'; // Default to JS/JSX for web code
+      language = 'javascript';
     } else if (text.startsWith('$') || text.includes('npm run') || text.includes('yarn add')) {
       language = 'bash';
     } else {
       language = 'text';
     }
+  } else if (!language) {
+    language = 'text';
   }
 
   return (
@@ -186,7 +188,9 @@ const CodeBlock = memo(({ obj, text: textProp }) => {
   );
 });
 
-const Iframe = memo(({ obj }) => (
+const Iframe = memo(({ obj }) => {
+  if (!obj.url) return null;
+  return (
   <div className="my-8 aspect-w-16 aspect-h-9">
     <YouTube
       videoId={obj.url.replace('https://youtu.be/', '')}
@@ -199,7 +203,8 @@ const Iframe = memo(({ obj }) => (
       }}
     />
   </div>
-));
+  );
+});
 
 const getContentFragment = (index, text, obj, type) => {
   const modifiedText = getModifiedText(index, text, obj);
