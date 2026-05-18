@@ -11,6 +11,7 @@ import { GetFeaturedPosts as GET_FEATURED_POSTS_QUERY } from './graphql/queries/
 import { GetComments as GET_COMMENTS_QUERY } from './graphql/queries/getComments.gql';
 import { GetSite as GET_SITE_QUERY } from './graphql/queries/getSite.gql';
 import { GetRecentPosts as GET_RECENT_POSTS_QUERY } from './graphql/queries/getRecentPosts.gql';
+import { GetConference as GET_CONFERENCE_QUERY } from './graphql/queries/getConference.gql';
 
 const client = new ApolloClient({
     link: new HttpLink({
@@ -104,6 +105,26 @@ export const getSite = async (locale = 'es') => {
 
 export const submitComment = async (obj) => {
     const result = await fetch('/api/comments', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(obj),
+    });
+
+    return result.json();
+};
+
+export const getConferenceDetails = async (slug) => {
+    const { data } = await client.query({
+        query: GET_CONFERENCE_QUERY,
+        variables: { slug },
+    });
+    return data.conference;
+};
+
+export const submitConferenceFeedback = async (obj) => {
+    const result = await fetch('/api/conferenceFeedback', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

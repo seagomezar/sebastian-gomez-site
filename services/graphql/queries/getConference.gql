@@ -1,0 +1,16 @@
+query GetConference($slug: String!) {
+  conference(where: { slug: $slug }) {
+    name
+    slug
+    talkTitle
+    slidesUrl
+    googleFormUrl
+    themeColor {
+      hex
+    }
+    categories {
+      name
+      slug
+    }
+  }
+}
