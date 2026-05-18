@@ -50,7 +50,7 @@ function ConferenceLanding({ conference, relatedPosts }) {
       />
       <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 mt-8 text-center" style={{ borderTop: `8px solid ${themeColor}` }}>
         <h1 className="text-3xl font-bold mb-4">¡Gracias por haber participado en mi charla!</h1>
-        <h2 className="text-xl text-gray-600 mb-8">"{conference.talkTitle}"</h2>
+        <h2 className="text-xl text-gray-600 mb-8">&quot;{conference.talkTitle}&quot;</h2>
         
         <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
           {conference.slidesUrl && (
