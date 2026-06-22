@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { submitConferenceFeedback } from '../services';
 import { event } from '../lib/analytics';
+import { getReadableTextColor } from '../lib/color';
 
 function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
+  const buttonColor = themeColor || '#db2777'; // pink-600 default
   const [error, setError] = useState(false);
   const [localStorage, setLocalStorage] = useState(null);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [renderedAt, setRenderedAt] = useState(null);
+  const [website, setWebsite] = useState(''); // honeypot: must stay empty
   const [formData, setFormData] = useState({
     userName: null,
     comment: null,
@@ -15,6 +19,7 @@ function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
 
   useEffect(() => {
     setLocalStorage(window.localStorage);
+    setRenderedAt(Date.now());
     const initalFormData = {
       userName: window.localStorage.getItem('userName'),
       storeData: window.localStorage.getItem('userName') ? true : false,
@@ -52,6 +57,8 @@ function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
       comment,
       score: parseInt(score, 10),
       slug,
+      website, // honeypot
+      renderedAt, // timing check
     };
 
     if (storeData) {
@@ -92,6 +99,19 @@ function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
         Déjame tus comentarios sobre la charla
       </h3>
+      {/* Honeypot: hidden from real users; bots auto-fill it. Off-screen, not focusable. */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+        <label htmlFor="website">No llenar este campo</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <input
           type="text"
@@ -155,8 +175,8 @@ function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
         <button
           type="button"
           onClick={handlePostSubmission}
-          className="transition duration-500 ease inline-block text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
-          style={{ backgroundColor: themeColor || '#db2777' }}
+          className="transition duration-500 ease inline-block text-lg font-medium rounded-full px-8 py-3 cursor-pointer"
+          style={{ backgroundColor: buttonColor, color: getReadableTextColor(buttonColor) }}
         >
           Enviar Feedback
         </button>
