@@ -1,35 +1,33 @@
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
-
 describe('Category Page', () => {
   it('should visit a category page', () => {
+    const graphqlAPI = Cypress.env('NEXT_PUBLIC_GRAPHCMS_ENDPOINT');
     if (!graphqlAPI) {
-      cy.log('NEXT_PUBLIC_GRAPHCMS_ENDPOINT is not defined, skipping test');
-      return;
+      throw new Error('NEXT_PUBLIC_GRAPHCMS_ENDPOINT is not defined for Cypress');
     }
-    // Fetch categories to get a valid slug
+
+    // Fetch categories to get a valid slug. Order deterministically so the same
+    // category is exercised every run, and assert the request actually succeeded.
     cy.request({
       method: 'POST',
-      url: graphqlAPI, // Replace with your actual API endpoint
+      url: graphqlAPI,
+      timeout: 30000,
       body: {
         query: `
           query GetCategories {
-            categories {
+            categories(orderBy: slug_ASC) {
               slug
             }
           }
         `,
       },
     }).then((response) => {
+      expect(response.status, 'CMS responded 200').to.eq(200);
       const { categories } = response.body.data;
-      if (categories && categories.length > 0) {
-        const categorySlug = categories[0].slug;
-        cy.visit(`http://localhost:3000/category/${categorySlug}`);
-        cy.get('h1').should('exist'); // Adjust assertion based on your actual content
-      } else {
-        // Handle the case where no categories are found
-        cy.log('No categories found, skipping test');
-        assert.fail('No categories found');
-      }
+      expect(categories, 'CMS returned categories').to.have.length.greaterThan(0);
+
+      const categorySlug = categories[0].slug;
+      cy.visit(`/category/${categorySlug}`);
+      cy.get('h1', { timeout: 15000 }).should('exist');
     });
   });
 });
