@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import Script from 'next/script';
+
+const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+const adsEnabled = process.env.NODE_ENV === 'production'
+  && ADSENSE_CLIENT_ID
+  && ADSENSE_CLIENT_ID !== 'ca-pub-XXXXXXXXX';
 
 function AdWidget() {
   const [showFallback, setShowFallback] = useState(false);
@@ -47,6 +53,16 @@ function AdWidget() {
 
   return (
     <div className="mb-8">
+      {/* Load AdSense only when an ad is actually rendered; next/script dedupes by id
+          across multiple AdWidgets. Pages without ads never load the ad stack. */}
+      {adsEnabled && (
+        <Script
+          id="google-ads"
+          strategy="lazyOnload"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
+        />
+      )}
       <h3 className="text-xl mb-3 font-semibold border-b pb-3">
         Advertisements
       </h3>

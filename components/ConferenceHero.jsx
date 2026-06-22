@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
-// Hero banner for the conference landing page. Shows an optimized, muted, looping
-// video behind the talk title/buttons on desktop. On small screens and when the
-// user prefers reduced motion, it shows the static poster image instead (saves
-// mobile data/battery and respects accessibility preferences).
+const POSTER = '/conference/conference-bg-poster.webp';
+
+// Hero banner for the conference landing page. The poster is always rendered as a
+// high-priority next/image so it is the preloadable LCP element (a CSS background
+// is invisible to the preload scanner and loads late). On desktop without
+// prefers-reduced-motion, an optimized muted/looping video layers on top; on small
+// screens and reduced-motion the poster alone shows (saves mobile data/battery).
 function ConferenceHero({ children }) {
   const [playVideo, setPlayVideo] = useState(false);
 
@@ -26,27 +30,33 @@ function ConferenceHero({ children }) {
 
   return (
     <div className="relative overflow-hidden rounded-lg shadow-lg mb-8 mt-8">
-      {/* Background layer: poster by default, video on capable desktops. */}
+      {/* Background layer. */}
       <div className="absolute inset-0 z-0">
-        {playVideo ? (
+        {/* Poster as a preloadable, high-priority image = the LCP element. */}
+        <Image
+          src={POSTER}
+          alt=""
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="object-cover"
+          aria-hidden="true"
+        />
+        {/* Video overlays the poster on capable desktops. */}
+        {playVideo && (
           <video
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             muted
             loop
             playsInline
-            poster="/conference/conference-bg-poster.jpg"
+            poster={POSTER}
             aria-hidden="true"
           >
             <source src="/conference/conference-bg.mp4" type="video/mp4" />
             <source src="/conference/conference-bg.webm" type="video/webm" />
           </video>
-        ) : (
-          <div
-            className="w-full h-full bg-center bg-cover"
-            style={{ backgroundImage: 'url(/conference/conference-bg-poster.jpg)' }}
-            aria-hidden="true"
-          />
         )}
         {/* Dark overlay keeps the foreground text legible over the footage. */}
         <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
