@@ -5,7 +5,7 @@ import { getReadableTextColor } from '../lib/color';
 
 function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
   const buttonColor = themeColor || '#db2777'; // pink-600 default
-  const [error, setError] = useState(false);
+  const [error, setError] = useState('');
   const [localStorage, setLocalStorage] = useState(null);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [renderedAt, setRenderedAt] = useState(null);
@@ -46,10 +46,10 @@ function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
   };
 
   const handlePostSubmission = () => {
-    setError(false);
+    setError('');
     const { userName, comment, score, storeData } = formData;
     if (!userName || !comment || !score) {
-      setError(true);
+      setError('Todos los campos son obligatorios.');
       return;
     }
     const feedbackObj = {
@@ -68,29 +68,33 @@ function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
     }
 
     submitConferenceFeedback(feedbackObj).then((res) => {
-      if (res.createConferenceFeedback) {
-        if (!storeData) {
-          formData.userName = null;
-        }
-        formData.comment = '';
+      if (res && res.createConferenceFeedback) {
+        // Reset the comment (and the name unless the user chose to remember it),
+        // updating state immutably rather than mutating formData directly.
         setFormData((prevState) => ({
           ...prevState,
-          ...formData,
+          userName: storeData ? prevState.userName : null,
+          comment: '',
         }));
         setShowSuccessMessage(true);
 
         // Track feedback submission in GA4
         event({
-            action: 'submit_conference_feedback',
-            category: 'conference_landing',
-            label: conferenceName,
-            value: parseInt(score, 10)
+          action: 'submit_conference_feedback',
+          category: 'conference_landing',
+          label: conferenceName,
+          value: parseInt(score, 10),
         });
 
         setTimeout(() => {
           setShowSuccessMessage(false);
         }, 5000);
+      } else {
+        // Server rejected the submission (e.g. validation error).
+        setError(res?.error || 'No se pudo enviar el feedback. Intenta de nuevo.');
       }
+    }).catch(() => {
+      setError('No se pudo enviar el feedback. Intenta de nuevo.');
     });
   };
 
@@ -168,7 +172,7 @@ function ConferenceFeedbackForm({ slug, conferenceName, themeColor }) {
       </div>
       {error && (
         <p className="text-xs text-red-500">
-          Todos los campos son obligatorios.
+          {error}
         </p>
       )}
       <div className="mt-8">
