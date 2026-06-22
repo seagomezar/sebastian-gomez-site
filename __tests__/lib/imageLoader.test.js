@@ -36,4 +36,19 @@ describe('imageLoader (global next/image loader)', () => {
     // A URL that already contains a transform segment should be returned as-is.
     expect(imageLoader({ src: already, width: 120, quality: 75 })).toBe(already);
   });
+
+  it('rewrites legacy graphcms.com URLs the same way (they redirect to graphassets)', () => {
+    const legacy = 'https://media.graphcms.com/VKHHNvEETYqZRkqgjybc';
+    const out = imageLoader({ src: legacy, width: 60, quality: 75 });
+    expect(out).toBe(
+      'https://media.graphcms.com/output=format:webp/resize=width:60,fit:max/quality=value:75/VKHHNvEETYqZRkqgjybc',
+    );
+  });
+
+  it('passes a Hygraph URL through unchanged when width is missing', () => {
+    // next/image always supplies width; guard against manual/unexpected calls so we
+    // never emit "resize=width:undefined".
+    expect(imageLoader({ src: HYGRAPH })).toBe(HYGRAPH);
+    expect(imageLoader({ src: HYGRAPH, quality: 75 })).toBe(HYGRAPH);
+  });
 });
