@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Script from 'next/script';
+import { isAdSenseEnabled } from '../lib/ads';
 
 const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
-const adsEnabled = process.env.NODE_ENV === 'production'
-  && ADSENSE_CLIENT_ID
-  && ADSENSE_CLIENT_ID !== 'ca-pub-XXXXXXXXX';
+const ADSENSE_AD_SLOT_ID = process.env.NEXT_PUBLIC_ADSENSE_AD_SLOT_ID;
+// Require BOTH the client and slot IDs: without a slot the ad can't render, so
+// loading the heavy AdSense script would be wasted. Gating the script on the same
+// condition as rendering keeps it truly on-demand.
+const adsEnabled = isAdSenseEnabled({
+  nodeEnv: process.env.NODE_ENV,
+  clientId: ADSENSE_CLIENT_ID,
+  slotId: ADSENSE_AD_SLOT_ID,
+});
 
 function AdWidget() {
   const [showFallback, setShowFallback] = useState(false);
@@ -13,12 +20,7 @@ function AdWidget() {
     // Check if AdSense script is loaded
     const checkAdSenseScript = () => {
       if (typeof window !== 'undefined') {
-        const isProduction = process.env.NODE_ENV === 'production';
-        const hasAdSenseConfig = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID &&
-                                 process.env.NEXT_PUBLIC_ADSENSE_AD_SLOT_ID &&
-                                 process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID !== 'ca-pub-XXXXXXXXX';
-
-        if (!isProduction || !hasAdSenseConfig) {
+        if (!adsEnabled) {
           setShowFallback(true);
           return;
         }
