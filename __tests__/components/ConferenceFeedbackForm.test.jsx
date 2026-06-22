@@ -40,6 +40,37 @@ describe('ConferenceFeedbackForm', () => {
     expect(submitConferenceFeedback).not.toHaveBeenCalled();
   });
 
+  it('shows a server error message when the API returns an error', async () => {
+    submitConferenceFeedback.mockResolvedValue({ error: 'La calificación debe estar entre 1 y 5.' });
+    render(<ConferenceFeedbackForm slug="react-conf" conferenceName="React Conf" />);
+    fill('Ada', 'Great talk!');
+    fireEvent.click(screen.getByText('Enviar Feedback'));
+
+    expect(await screen.findByText('La calificación debe estar entre 1 y 5.')).toBeInTheDocument();
+  });
+
+  it('shows a generic error message when the submission rejects', async () => {
+    submitConferenceFeedback.mockRejectedValue(new Error('network down'));
+    render(<ConferenceFeedbackForm slug="react-conf" conferenceName="React Conf" />);
+    fill('Ada', 'Great talk!');
+    fireEvent.click(screen.getByText('Enviar Feedback'));
+
+    expect(
+      await screen.findByText('No se pudo enviar el feedback. Intenta de nuevo.'),
+    ).toBeInTheDocument();
+  });
+
+  it('clears the comment field after a successful submission', async () => {
+    render(<ConferenceFeedbackForm slug="react-conf" conferenceName="React Conf" />);
+    fill('Ada', 'Great talk!');
+    const comment = screen.getByPlaceholderText(/Qué te pareció la charla/i);
+    expect(comment).toHaveValue('Great talk!');
+
+    fireEvent.click(screen.getByText('Enviar Feedback'));
+
+    await waitFor(() => expect(comment).toHaveValue(''));
+  });
+
   it('submits a parsed integer score plus honeypot and timing fields', async () => {
     render(<ConferenceFeedbackForm slug="react-conf" conferenceName="React Conf" />);
     fill('Ada', 'Great talk!');
