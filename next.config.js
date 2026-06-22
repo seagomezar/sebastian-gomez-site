@@ -8,8 +8,11 @@ module.exports = {
     defaultLocale: 'es',
   },
   images: {
-    unoptimized: true,
-    formats: ['image/avif', 'image/webp'],
+    // Custom loader resizes via Hygraph's CDN (graphassets.com), so Vercel's
+    // Image Optimization is never invoked — zero transformation-quota usage.
+    // Local/static assets are passed through untouched by the loader.
+    loader: 'custom',
+    loaderFile: './lib/imageLoader.js',
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
