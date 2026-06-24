@@ -43,10 +43,14 @@ export const getCategories = async () => {
     return data.categories;
 };
 
-export const getPostDetails = async (slug) => {
+export const getPostDetails = async (slug, locale = 'es') => {
+    // Request the chosen locale, falling back to 'es' for any field without a
+    // localization (same pattern as getSite). 'es' alone keeps the default behavior.
+    const locales = locale === 'es' ? ['es'] : [locale, 'es'];
+
     const { data } = await client.query({
         query: GET_POST_DETAILS_QUERY,
-        variables: { slug },
+        variables: { slug, locales },
     });
     return data.post;
 };

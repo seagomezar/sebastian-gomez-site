@@ -13,12 +13,15 @@ import AdWidget from '../../components/AdWidget';
 import { getPostDetails } from '../../services';
 import AdjacentPosts from '../../sections/AdjacentPosts';
 
-function PostDetails({ post }) {
+function PostDetails({ post, locale = 'es' }) {
   const router = useRouter();
 
   if (router.isFallback) {
     return <Loader />;
   }
+
+  const localeParam = locale === 'es' ? '' : `?lang=${locale}`;
+  const ogLocale = locale === 'en' ? 'en_US' : 'es_ES';
 
   return (
     <div className="container mx-auto md:px-10 mb-8">
@@ -28,7 +31,8 @@ function PostDetails({ post }) {
         openGraph={{
           title: post.title,
           description: post.excerpt,
-          url: `https://www.sebastian-gomez.com/post/${post.slug}`,
+          url: `https://www.sebastian-gomez.com/post/${post.slug}${localeParam}`,
+          locale: ogLocale,
           type: 'article',
           article: {
             publishedTime: post.createdAt,
@@ -74,12 +78,17 @@ function PostDetails({ post }) {
 }
 export default PostDetails;
 
-// Fetch data at build time
-export async function getServerSideProps({ params }) {
-  const data = await getPostDetails(params.slug);
+// Supported content locales (must exist in Hygraph). Anything else falls back to 'es'.
+const SUPPORTED_LOCALES = ['es', 'en'];
+
+// Fetch data per request (SSR) so new posts/locales go live without a redeploy.
+export async function getServerSideProps({ params, query }) {
+  const locale = SUPPORTED_LOCALES.includes(query.lang) ? query.lang : 'es';
+  const data = await getPostDetails(params.slug, locale);
   return {
     props: {
       post: data,
+      locale,
     },
   };
 }
