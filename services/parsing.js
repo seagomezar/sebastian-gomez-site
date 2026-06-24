@@ -27,6 +27,14 @@ const getModifiedText = (index, text, obj) => {
   return modifiedText;
 };
 
+const HeadingTwo = memo(({ index, modifiedText }) => (
+  <h2 key={`h2-${index}`} className="text-2xl font-bold mb-4 mt-10 text-gray-800">
+    {modifiedText && modifiedText.map((item, i) => (
+      <React.Fragment key={`h2-${i}-2`}>{item}</React.Fragment>
+    ))}
+  </h2>
+));
+
 const HeadingThree = memo(({ index, modifiedText }) => (
   <h2 key={`h3-${index}`} className="text-xl font-semibold mb-4 mt-8 text-gray-800">
     {modifiedText && modifiedText.map((item, i) => (
@@ -209,6 +217,8 @@ const Iframe = memo(({ obj }) => {
 const getContentFragment = (index, text, obj, type) => {
   const modifiedText = getModifiedText(index, text, obj);
   switch (type) {
+    case 'heading-two':
+      return <HeadingTwo key={index} index={index} modifiedText={modifiedText} />;
     case 'heading-three':
       return <HeadingThree key={index} index={index} modifiedText={modifiedText} />;
     case 'paragraph':
