@@ -55,15 +55,25 @@ export default function Home({ posts, site, nextPageNumber }) {
   );
 }
 
-// Fetch data at build time
+// Fetch data per request (SSR). A non-numeric or < 1 page number, or a page past
+// the last one, returns 404 (see SPEC-404-handling.md). Page 1 always renders.
 export async function getServerSideProps({ params }) {
-  const posts = (await getPostsPerPage(params.pageNumber)) || [];
+  const pageNumber = Number(params.pageNumber);
+  if (!Number.isInteger(pageNumber) || pageNumber < 1) {
+    return { notFound: true };
+  }
+
+  const posts = (await getPostsPerPage(pageNumber)) || [];
+
+  // Out of range: no posts on a page beyond the first => 404 (page 1 may be empty).
+  if (posts.length === 0 && pageNumber > 1) {
+    return { notFound: true };
+  }
+
   const postsCount = (await getPosts()) || [];
   const site = (await getSite()) || [];
   const nextPageNumber =
-    postsCount.length > parseInt(params.pageNumber || '1', 10) * 4
-      ? parseInt(params.pageNumber, 10) + 1
-      : 0;
+    postsCount.length > pageNumber * 4 ? pageNumber + 1 : 0;
   return {
     props: {
       posts,

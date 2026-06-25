@@ -85,6 +85,13 @@ const SUPPORTED_LOCALES = ['es', 'en'];
 export async function getServerSideProps({ params, query }) {
   const locale = SUPPORTED_LOCALES.includes(query.lang) ? query.lang : 'es';
   const data = await getPostDetails(params.slug, locale);
+
+  // A successful query with no record => the slug doesn't exist => 404 (not a 500).
+  // A transport/CMS error throws above and surfaces as a genuine 500 (not masked).
+  if (!data) {
+    return { notFound: true };
+  }
+
   return {
     props: {
       post: data,

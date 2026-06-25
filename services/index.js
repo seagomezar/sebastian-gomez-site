@@ -79,6 +79,20 @@ export const getCategoryPost = async (slug) => {
     return data.postsConnection.edges;
 };
 
+// Like getCategoryPost, but also returns the category record so callers can tell
+// "unknown category" (category === null => 404) apart from "known category, zero
+// posts" (category set, empty posts => 200 empty state). Same single query.
+export const getCategoryPageData = async (slug) => {
+    const { data } = await client.query({
+        query: GET_CATEGORY_POST_QUERY,
+        variables: { slug },
+    });
+    return {
+        category: data?.category || null,
+        posts: data?.postsConnection?.edges || [],
+    };
+};
+
 export const getFeaturedPosts = async () => {
     const { data } = await client.query({ query: GET_FEATURED_POSTS_QUERY });
     return data.posts;

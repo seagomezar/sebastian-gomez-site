@@ -1,4 +1,8 @@
 query GetCategoryPost($slug: String!) {
+  category(where: { slug: $slug }) {
+    name
+    slug
+  }
   postsConnection(where: { categories_some: { slug: $slug } }) {
     edges {
       cursor
