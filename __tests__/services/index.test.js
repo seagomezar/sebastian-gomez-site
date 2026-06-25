@@ -6,7 +6,7 @@ jest.mock('@apollo/client', () => ({
   HttpLink: jest.fn(),
 }));
 
-import { getConferenceDetails, submitConferenceFeedback } from '../../services';
+import { getConferenceDetails, submitConferenceFeedback, getCategoryPageData } from '../../services';
 
 describe('getConferenceDetails', () => {
   beforeEach(() => mockQuery.mockReset());
@@ -21,6 +21,37 @@ describe('getConferenceDetails', () => {
     expect(mockQuery).toHaveBeenCalledWith(
       expect.objectContaining({ variables: { slug: 'react-conf' } }),
     );
+  });
+});
+
+describe('getCategoryPageData', () => {
+  beforeEach(() => mockQuery.mockReset());
+
+  it('returns the category and its posts when the category exists', async () => {
+    const category = { name: 'React', slug: 'react' };
+    const edges = [{ node: { slug: 'a' } }];
+    mockQuery.mockResolvedValue({ data: { category, postsConnection: { edges } } });
+
+    const result = await getCategoryPageData('react');
+
+    expect(result).toEqual({ category, posts: edges });
+  });
+
+  it('returns category: null for an unknown slug', async () => {
+    mockQuery.mockResolvedValue({ data: { category: null, postsConnection: { edges: [] } } });
+
+    const result = await getCategoryPageData('nope');
+
+    expect(result).toEqual({ category: null, posts: [] });
+  });
+
+  it('returns the category with empty posts when it has none', async () => {
+    const category = { name: 'Empty', slug: 'empty' };
+    mockQuery.mockResolvedValue({ data: { category, postsConnection: { edges: [] } } });
+
+    const result = await getCategoryPageData('empty');
+
+    expect(result).toEqual({ category, posts: [] });
   });
 });
 
