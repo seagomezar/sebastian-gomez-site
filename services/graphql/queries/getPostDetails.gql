@@ -22,5 +22,8 @@ query GetPostDetails($slug: String!, $locales: [Locale!]!) {
       name
       slug
     }
+    localizations(includeCurrent: false) {
+      locale
+    }
   }
 }

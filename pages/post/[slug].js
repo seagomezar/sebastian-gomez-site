@@ -10,6 +10,7 @@ import Comments from '../../components/Comments';
 import CommentsForm from '../../components/CommentsForm';
 import Loader from '../../components/Loader';
 import AdWidget from '../../components/AdWidget';
+import PostLanguageToggle from '../../components/PostLanguageToggle';
 import { getPostDetails } from '../../services';
 import AdjacentPosts from '../../sections/AdjacentPosts';
 
@@ -22,12 +23,22 @@ function PostDetails({ post, locale = 'es' }) {
 
   const localeParam = locale === 'es' ? '' : `?lang=${locale}`;
   const ogLocale = locale === 'en' ? 'en_US' : 'es_ES';
+  const baseUrl = `https://www.sebastian-gomez.com/post/${post.slug}`;
+  // The post has both locales if we're on the EN view, or EN is listed as an
+  // alternate of the ES view (localizations are relative to the current locale).
+  const hasEnglish = locale === 'en' || post.availableLocales?.includes('en');
 
   return (
     <div className="container mx-auto md:px-10 mb-8">
       <NextSeo
         title={post.title}
         description={post.excerpt}
+        canonical={`${baseUrl}${localeParam}`}
+        languageAlternates={hasEnglish ? [
+          { hrefLang: 'es', href: baseUrl },
+          { hrefLang: 'en', href: `${baseUrl}?lang=en` },
+          { hrefLang: 'x-default', href: baseUrl },
+        ] : undefined}
         openGraph={{
           title: post.title,
           description: post.excerpt,
@@ -51,6 +62,11 @@ function PostDetails({ post, locale = 'es' }) {
       />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
+          <PostLanguageToggle
+            slug={post.slug}
+            locale={locale}
+            availableLocales={post.availableLocales}
+          />
           <PostDetail post={post} />
           <Author author={post.author} />
           <AdjacentPosts
