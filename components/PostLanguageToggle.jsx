@@ -32,9 +32,8 @@ function PostLanguageToggle({ slug, locale, availableLocales }) {
         <Image
           unoptimized
           alt={flagAlt}
-          height="32"
-          width="32"
-          sizes="(max-width: 768px) 100vw"
+          height={32}
+          width={32}
           className="align-middle rounded-full"
           src={flagSrc}
         />
