@@ -52,7 +52,14 @@ export const getPostDetails = async (slug, locale = 'es') => {
         query: GET_POST_DETAILS_QUERY,
         variables: { slug, locales },
     });
-    return data.post;
+    if (!data.post) return null; // keep null → 404 contract (SPEC-404-handling.md)
+    // Expose which other locales the post is translated into so the UI can show a
+    // language toggle only when the target locale genuinely exists (ES fallback
+    // would otherwise serve Spanish under an English URL).
+    return {
+        ...data.post,
+        availableLocales: (data.post.localizations || []).map((l) => l.locale),
+    };
 };
 
 export const getSimilarPosts = async (categories, slug) => {

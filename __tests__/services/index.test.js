@@ -6,7 +6,7 @@ jest.mock('@apollo/client', () => ({
   HttpLink: jest.fn(),
 }));
 
-import { getConferenceDetails, submitConferenceFeedback, getCategoryPageData } from '../../services';
+import { getConferenceDetails, submitConferenceFeedback, getCategoryPageData, getPostDetails } from '../../services';
 
 describe('getConferenceDetails', () => {
   beforeEach(() => mockQuery.mockReset());
@@ -20,6 +20,47 @@ describe('getConferenceDetails', () => {
     expect(result).toEqual(conference);
     expect(mockQuery).toHaveBeenCalledWith(
       expect.objectContaining({ variables: { slug: 'react-conf' } }),
+    );
+  });
+});
+
+describe('getPostDetails', () => {
+  beforeEach(() => mockQuery.mockReset());
+
+  it('returns null when the post does not exist (404 contract)', async () => {
+    mockQuery.mockResolvedValue({ data: { post: null } });
+
+    const result = await getPostDetails('nope');
+
+    expect(result).toBeNull();
+  });
+
+  it('returns the post with availableLocales derived from localizations', async () => {
+    const post = { slug: 'hello', title: 'Hola', localizations: [{ locale: 'en' }] };
+    mockQuery.mockResolvedValue({ data: { post } });
+
+    const result = await getPostDetails('hello');
+
+    expect(result.slug).toBe('hello');
+    expect(result.availableLocales).toEqual(['en']);
+  });
+
+  it('returns an empty availableLocales array when there are no other localizations', async () => {
+    const post = { slug: 'solo', title: 'Solo', localizations: [] };
+    mockQuery.mockResolvedValue({ data: { post } });
+
+    const result = await getPostDetails('solo');
+
+    expect(result.availableLocales).toEqual([]);
+  });
+
+  it('requests [locale, es] for a non-es locale', async () => {
+    mockQuery.mockResolvedValue({ data: { post: { slug: 'x', localizations: [] } } });
+
+    await getPostDetails('x', 'en');
+
+    expect(mockQuery).toHaveBeenCalledWith(
+      expect.objectContaining({ variables: { slug: 'x', locales: ['en', 'es'] } }),
     );
   });
 });
