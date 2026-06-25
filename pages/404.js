@@ -19,10 +19,8 @@ export default function Custom404() {
           Parece que lo que buscas no existe. Quizá quieras revisar las categorías
           o los posts recientes.
         </p>
-        <Link href="/">
-          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-6 py-3 cursor-pointer">
-            Ir al inicio
-          </span>
+        <Link href="/" className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-6 py-3 cursor-pointer">
+          Ir al inicio
         </Link>
       </div>
 
