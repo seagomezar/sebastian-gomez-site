@@ -88,8 +88,8 @@ export const getCategoryPageData = async (slug) => {
         variables: { slug },
     });
     return {
-        category: data.category || null,
-        posts: data.postsConnection.edges,
+        category: data?.category || null,
+        posts: data?.postsConnection?.edges || [],
     };
 };
 
