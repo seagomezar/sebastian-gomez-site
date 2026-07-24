@@ -6,7 +6,10 @@ import { Categories, PostWidget, AdWidget } from '../components';
 import { getSite } from '../services';
 import getContentFragment from '../services/parsing';
 
-export default function About({ site }) {
+export default function About({ site, locale = 'es' }) {
+  const isEnglish = locale === 'en';
+  const targetLocale = isEnglish ? 'es' : 'en';
+
   return (
     <div className="container mx-auto px-10 mb-8">
       <Head>
@@ -20,14 +23,14 @@ export default function About({ site }) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           <div className="float-right">
-            <Link href="/en/about" locale="en">
+            <Link href="/about" locale={targetLocale}>
               <Image
                 unoptimized
-                alt="English"
+                alt={isEnglish ? 'Español' : 'English'}
                 height={32}
                 width={32}
                 className="align-middle rounded-full"
-                src="/en.png"
+                src={isEnglish ? '/es.jpg' : '/en.png'}
               />
             </Link>
           </div>
@@ -67,9 +70,9 @@ export default function About({ site }) {
 }
 
 // Fetch data at build time
-export async function getServerSideProps() {
-  const site = (await getSite()) || [];
+export async function getServerSideProps({ locale = 'es' }) {
+  const site = (await getSite(locale)) || [];
   return {
-    props: { site },
+    props: { site, locale },
   };
 }
