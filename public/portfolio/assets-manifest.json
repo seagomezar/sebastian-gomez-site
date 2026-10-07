@@ -1,0 +1,316 @@
+{
+  "practifactu": {
+    "primaryImage": "/portfolio/practifactu/01_01_login.png",
+    "galleryImages": [
+      "/portfolio/practifactu/01_01_login.png",
+      "/portfolio/practifactu/02_02_dashboard.png",
+      "/portfolio/practifactu/03_03_nueva_factura.png",
+      "/portfolio/practifactu/04_04_facturas_list.png",
+      "/portfolio/practifactu/05_05_factura_detalle.png",
+      "/portfolio/practifactu/06_06_configuracion_empresa.png",
+      "/portfolio/practifactu/07_07_documentos_soporte.png",
+      "/portfolio/practifactu/08_08_proveedores_radian.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/practifactu/cover.svg"
+  },
+  "music-journal-app": {
+    "primaryImage": "/portfolio/music-journal-app/01_active_practice_screen.png",
+    "galleryImages": [
+      "/portfolio/music-journal-app/01_active_practice_screen.png",
+      "/portfolio/music-journal-app/02_android_add_piece_screen.png",
+      "/portfolio/music-journal-app/03_android_auth_screen.png",
+      "/portfolio/music-journal-app/04_android_dashboard_screen.png",
+      "/portfolio/music-journal-app/05_auth_screen.png",
+      "/portfolio/music-journal-app/06_dashboard_screen.png",
+      "/portfolio/music-journal-app/07_01_dashboard.png",
+      "/portfolio/music-journal-app/08_02_rutinas.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/music-journal-app/cover.svg"
+  },
+  "herbalism-bot": {
+    "primaryImage": "/portfolio/herbalism-bot/01_circular_masked_minimap.png",
+    "galleryImages": [
+      "/portfolio/herbalism-bot/01_circular_masked_minimap.png",
+      "/portfolio/herbalism-bot/02_debug_analysis_result.png",
+      "/portfolio/herbalism-bot/04_debug_latest_window.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/herbalism-bot/cover.svg"
+  },
+  "sonoma-racing-coach": {
+    "primaryImage": "/portfolio/sonoma-racing-coach/cover.svg",
+    "galleryImages": [
+      "/portfolio/sonoma-racing-coach/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/sonoma-racing-coach/cover.svg"
+  },
+  "sebastian-gomez-next": {
+    "primaryImage": "/portfolio/sebastian-gomez-next/01_angular.png",
+    "galleryImages": [
+      "/portfolio/sebastian-gomez-next/01_angular.png",
+      "/portfolio/sebastian-gomez-next/02_bigdata.jpg",
+      "/portfolio/sebastian-gomez-next/03_bulljs.png",
+      "/portfolio/sebastian-gomez-next/04_cloudvision.png",
+      "/portfolio/sebastian-gomez-next/05_css3.jpg"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/sebastian-gomez-next/cover.svg"
+  },
+  "real-time-coach-codelab": {
+    "primaryImage": "/portfolio/real-time-coach-codelab/01_map.svg",
+    "galleryImages": [
+      "/portfolio/real-time-coach-codelab/01_map.svg"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/real-time-coach-codelab/cover.svg"
+  },
+  "crecere-agents": {
+    "primaryImage": "/portfolio/crecere-agents/01_a2a_demo_arch.png",
+    "galleryImages": [
+      "/portfolio/crecere-agents/01_a2a_demo_arch.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/crecere-agents/cover.svg"
+  },
+  "anthropometry-app": {
+    "primaryImage": "/portfolio/anthropometry-app/01_Measurement_--_Measurement_On_Desktop__f.png",
+    "galleryImages": [
+      "/portfolio/anthropometry-app/01_Measurement_--_Measurement_On_Desktop__f.png",
+      "/portfolio/anthropometry-app/02_Nutritionist_--_Nutritionist_On_Desktop_.png",
+      "/portfolio/anthropometry-app/03_User_--_User_On_Mobile__failed_.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/anthropometry-app/cover.svg"
+  },
+  "flutemodes": {
+    "primaryImage": "/portfolio/flutemodes/01_articulaciones.svg",
+    "galleryImages": [
+      "/portfolio/flutemodes/01_articulaciones.svg",
+      "/portfolio/flutemodes/02_app_icon.jpg",
+      "/portfolio/flutemodes/03_AppIcon.png",
+      "/portfolio/flutemodes/04_splash_logo.png",
+      "/portfolio/flutemodes/05_splash_logo.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/flutemodes/cover.svg"
+  },
+  "agendarcitademaquillaje": {
+    "primaryImage": "/portfolio/agendarcitademaquillaje/01_apple-touch-icon.png",
+    "galleryImages": [
+      "/portfolio/agendarcitademaquillaje/01_apple-touch-icon.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/agendarcitademaquillaje/cover.svg"
+  },
+  "litert-lm": {
+    "primaryImage": "/portfolio/litert-lm/01_analog_terminal_final.png",
+    "galleryImages": [
+      "/portfolio/litert-lm/01_analog_terminal_final.png",
+      "/portfolio/litert-lm/02_LiteRT_Logo_Symbol-only_RGB_Color_Teal.png",
+      "/portfolio/litert-lm/03_terminal_laboratory_manual.png",
+      "/portfolio/litert-lm/04_terminal_rag_cabinet.png",
+      "/portfolio/litert-lm/05_terminal_switchboard.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/litert-lm/cover.svg"
+  },
+  "sgi-v2": {
+    "primaryImage": "/portfolio/sgi-v2/01_administracion.jpg",
+    "galleryImages": [
+      "/portfolio/sgi-v2/01_administracion.jpg",
+      "/portfolio/sgi-v2/02_bodega.png",
+      "/portfolio/sgi-v2/03_compras.png",
+      "/portfolio/sgi-v2/04_contabilidad.png",
+      "/portfolio/sgi-v2/05_login-box-backg.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/sgi-v2/cover.svg"
+  },
+  "workshopjsconfmxrnapp": {
+    "primaryImage": "/portfolio/workshopjsconfmxrnapp/03_logo-ignite.png",
+    "galleryImages": [
+      "/portfolio/workshopjsconfmxrnapp/03_logo-ignite.png",
+      "/portfolio/workshopjsconfmxrnapp/04_logo-ignite_2x.png",
+      "/portfolio/workshopjsconfmxrnapp/05_bowser.png",
+      "/portfolio/workshopjsconfmxrnapp/06_bowser_2x.png",
+      "/portfolio/workshopjsconfmxrnapp/07_paso1-browser-expo.png",
+      "/portfolio/workshopjsconfmxrnapp/08_paso1-demo-screen.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/workshopjsconfmxrnapp/cover.svg"
+  },
+  "family-wallet": {
+    "primaryImage": "/portfolio/family-wallet/cover.svg",
+    "galleryImages": [
+      "/portfolio/family-wallet/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/family-wallet/cover.svg"
+  },
+  "ai-based-music-generator-reactjs": {
+    "primaryImage": "/portfolio/ai-based-music-generator-reactjs/cover.svg",
+    "galleryImages": [
+      "/portfolio/ai-based-music-generator-reactjs/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/ai-based-music-generator-reactjs/cover.svg"
+  },
+  "rigare": {
+    "primaryImage": "/portfolio/rigare/01_Aplicaciones_Bombeo_Agr_cola.webp",
+    "galleryImages": [
+      "/portfolio/rigare/01_Aplicaciones_Bombeo_Agr_cola.webp",
+      "/portfolio/rigare/02_Aplicaciones_Bombeo_Comercial.png",
+      "/portfolio/rigare/03_Aplicaciones_Bombeo_Residencial.webp",
+      "/portfolio/rigare/04_Aplicaciones_Riego_Agricultura.jpg",
+      "/portfolio/rigare/05_Aplicaciones_Riego_Campos_Deportivos.jpg"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/rigare/cover.svg"
+  },
+  "newfitnesstrainingapp": {
+    "primaryImage": "/portfolio/newfitnesstrainingapp/01_screen.png",
+    "galleryImages": [
+      "/portfolio/newfitnesstrainingapp/01_screen.png",
+      "/portfolio/newfitnesstrainingapp/02_screen.png",
+      "/portfolio/newfitnesstrainingapp/03_screen.png",
+      "/portfolio/newfitnesstrainingapp/04_screen.png",
+      "/portfolio/newfitnesstrainingapp/05_screen.png",
+      "/portfolio/newfitnesstrainingapp/06_screen.png",
+      "/portfolio/newfitnesstrainingapp/07_screen.png",
+      "/portfolio/newfitnesstrainingapp/08_screen.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/newfitnesstrainingapp/cover.svg"
+  },
+  "sebastian-gomez": {
+    "primaryImage": "/portfolio/sebastian-gomez/02_cover-green.png",
+    "galleryImages": [
+      "/portfolio/sebastian-gomez/02_cover-green.png",
+      "/portfolio/sebastian-gomez/03_cover-v1_2_0.jpg",
+      "/portfolio/sebastian-gomez/04_cover.jpg"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/sebastian-gomez/cover.svg"
+  },
+  "cognitive-guardian": {
+    "primaryImage": "/portfolio/cognitive-guardian/01_diagram_cognitive_guardian_architecture.jpeg",
+    "galleryImages": [
+      "/portfolio/cognitive-guardian/01_diagram_cognitive_guardian_architecture.jpeg",
+      "/portfolio/cognitive-guardian/02_icon128.png",
+      "/portfolio/cognitive-guardian/04_icon48.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/cognitive-guardian/cover.svg"
+  },
+  "flutter_gemma_test": {
+    "primaryImage": "/portfolio/flutter_gemma_test/cover.svg",
+    "galleryImages": [
+      "/portfolio/flutter_gemma_test/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/flutter_gemma_test/cover.svg"
+  },
+  "adaptai": {
+    "primaryImage": "/portfolio/adaptai/05_logo.webp",
+    "galleryImages": [
+      "/portfolio/adaptai/05_logo.webp"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/adaptai/cover.svg"
+  },
+  "maps-angular": {
+    "primaryImage": "/portfolio/maps-angular/cover.svg",
+    "galleryImages": [
+      "/portfolio/maps-angular/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/maps-angular/cover.svg"
+  },
+  "sgi": {
+    "primaryImage": "/portfolio/sgi/01_administracion.jpg",
+    "galleryImages": [
+      "/portfolio/sgi/01_administracion.jpg",
+      "/portfolio/sgi/02_bodega.png",
+      "/portfolio/sgi/03_compras.png",
+      "/portfolio/sgi/04_contabilidad.png",
+      "/portfolio/sgi/05_login-box-backg.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/sgi/cover.svg"
+  },
+  "uber-like-app-angular": {
+    "primaryImage": "/portfolio/uber-like-app-angular/cover.svg",
+    "galleryImages": [
+      "/portfolio/uber-like-app-angular/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/uber-like-app-angular/cover.svg"
+  },
+  "tmux-game": {
+    "primaryImage": "/portfolio/tmux-game/cover.svg",
+    "galleryImages": [
+      "/portfolio/tmux-game/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/tmux-game/cover.svg"
+  },
+  "melodic-generator": {
+    "primaryImage": "/portfolio/melodic-generator/02_react.svg",
+    "galleryImages": [
+      "/portfolio/melodic-generator/02_react.svg"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/melodic-generator/cover.svg"
+  },
+  "pettracker": {
+    "primaryImage": "/portfolio/pettracker/cover.svg",
+    "galleryImages": [
+      "/portfolio/pettracker/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/pettracker/cover.svg"
+  },
+  "gemini-pro-nextjs": {
+    "primaryImage": "/portfolio/gemini-pro-nextjs/cover.svg",
+    "galleryImages": [
+      "/portfolio/gemini-pro-nextjs/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/gemini-pro-nextjs/cover.svg"
+  },
+  "huokan-frontend": {
+    "primaryImage": "/portfolio/huokan-frontend/cover.svg",
+    "galleryImages": [
+      "/portfolio/huokan-frontend/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/huokan-frontend/cover.svg"
+  },
+  "file-system": {
+    "primaryImage": "/portfolio/file-system/03_react.svg",
+    "galleryImages": [
+      "/portfolio/file-system/03_react.svg"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/file-system/cover.svg"
+  },
+  "fiestapwa": {
+    "primaryImage": "/portfolio/fiestapwa/01_home-splash-screen.png",
+    "galleryImages": [
+      "/portfolio/fiestapwa/01_home-splash-screen.png"
+    ],
+    "hasRealScreenshots": true,
+    "coverImage": "/portfolio/fiestapwa/cover.svg"
+  },
+  "react-vite-gemini-chrome-extension": {
+    "primaryImage": "/portfolio/react-vite-gemini-chrome-extension/cover.svg",
+    "galleryImages": [
+      "/portfolio/react-vite-gemini-chrome-extension/cover.svg"
+    ],
+    "hasRealScreenshots": false,
+    "coverImage": "/portfolio/react-vite-gemini-chrome-extension/cover.svg"
+  }
+}
