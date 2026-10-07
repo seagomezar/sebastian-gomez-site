@@ -26,6 +26,11 @@ function CategoryList({ categories }) {
           Conferencias
         </span>
       </Link>
+      <Link href="/portafolio">
+        <span className="hidden md:inline-block mr-4 text-white font-semibold cursor-pointer">
+          Portafolio
+        </span>
+      </Link>
 
       <button
         type="button"
@@ -51,7 +56,7 @@ function CategoryList({ categories }) {
       {isOpen && (
       <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white z-10 mt-6">
         <nav className="py-1 rounded-md divide-y divide-gray-200">
-          {/* Enlaces "About" y "Conferencias" dentro del menú desplegable */}
+          {/* Enlaces "About", "Conferencias" y "Portafolio" dentro del menú desplegable */}
           <Link href="/about">
             <span onClick={closeDropdown} className="md:hidden block px-4 py-2 text-sm text-white bg-gradient-to-r from-pink-600 to-red-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-400 cursor-pointer">
               📄 About
@@ -60,6 +65,11 @@ function CategoryList({ categories }) {
           <Link href="/talks">
             <span onClick={closeDropdown} className="md:hidden block px-4 py-2 text-sm text-white bg-gradient-to-r from-pink-600 to-red-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-400 cursor-pointer">
               🎤 Conferencias
+            </span>
+          </Link>
+          <Link href="/portafolio">
+            <span onClick={closeDropdown} className="md:hidden block px-4 py-2 text-sm text-white bg-gradient-to-r from-pink-600 to-red-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-400 cursor-pointer">
+              💼 Portafolio
             </span>
           </Link>
           {/* Categorías */}

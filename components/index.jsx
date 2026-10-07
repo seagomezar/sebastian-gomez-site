@@ -13,3 +13,7 @@ export { default as SiteWidget } from './SiteWidget';
 export { default as AdWidget } from './AdWidget';
 export { default as CookieConsent } from './CookieConsent';
 export { default as Applause } from './Applause';
+export { default as ProjectCard } from './portfolio/ProjectCard';
+export { default as PortfolioCategories } from './portfolio/PortfolioCategories';
+export { default as PortfolioPageView } from './portfolio/PortfolioPageView';
+

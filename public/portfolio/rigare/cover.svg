@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0052cc" />
+      <stop offset="50%" stop-color="#0077ff" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="52" height="52" rx="10" fill="#ffffff" fill-opacity="0.05" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <rect x="50" y="45" width="1100" height="540" rx="24" fill="#0f172a" fill-opacity="0.45" stroke="#60a5fa" stroke-opacity="0.4" stroke-width="2" />
+  <rect x="80" y="85" width="280" height="40" rx="20" fill="#db2777" />
+  <text x="220" y="111" font-family="Montserrat, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">WEB APP / SAAS</text>
+  <rect x="380" y="85" width="340" height="40" rx="20" fill="#0f172a" fill-opacity="0.7" stroke="#10b981" stroke-width="1.5" />
+  <circle cx="405" cy="105" r="6" fill="#10b981" />
+  <text x="560" y="111" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">HTTP 200 • LIVE (Vercel)</text>
+  <rect x="970" y="85" width="150" height="40" rx="20" fill="#ffffff" fill-opacity="0.15" />
+  <text x="1045" y="111" font-family="Montserrat, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Score: 39/50</text>
+  <text x="80" y="235" font-family="Montserrat, sans-serif" font-size="44" font-weight="800" fill="#ffffff">Rigare SAS Industrial Pumping &amp; Irriga</text>
+  <text x="80" y="290" font-family="Montserrat, sans-serif" font-size="24" font-weight="500" fill="#bfdbfe">tion Portal</text>
+  <text x="80" y="365" font-family="Montserrat, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Commercial production web portal for Rigare SAS showcasing industrial pumping, irrigation engin</text>
+  <text x="80" y="395" font-family="Montserrat, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">eering solutions, and agricultural hydrology services.</text>
+  
+        <g transform="translate(80, 460)">
+          <rect width="190" height="44" rx="22" fill="#ffffff" fill-opacity="0.14" stroke="#60a5fa" stroke-width="1.5" />
+          <text x="95" y="28" font-family="Montserrat, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">TypeScript</text>
+        </g>
+      
+
+        <g transform="translate(285, 460)">
+          <rect width="190" height="44" rx="22" fill="#ffffff" fill-opacity="0.14" stroke="#60a5fa" stroke-width="1.5" />
+          <text x="95" y="28" font-family="Montserrat, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Next.js</text>
+        </g>
+      
+
+        <g transform="translate(490, 460)">
+          <rect width="190" height="44" rx="22" fill="#ffffff" fill-opacity="0.14" stroke="#60a5fa" stroke-width="1.5" />
+          <text x="95" y="28" font-family="Montserrat, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Tailwind CSS</text>
+        </g>
+      
+
+        <g transform="translate(695, 460)">
+          <rect width="190" height="44" rx="22" fill="#ffffff" fill-opacity="0.14" stroke="#60a5fa" stroke-width="1.5" />
+          <text x="95" y="28" font-family="Montserrat, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Vercel</text>
+        </g>
+      
+</svg>
