@@ -1,49 +1,48 @@
 {
   "metadata": {
-    "totalAudited": 137,
+    "totalAudited": 111,
     "publicRepositories": 111,
-    "privateRepositories": 26,
-    "totalCurated": 32,
-    "totalExcluded": 105,
-    "totalPages": 8,
+    "totalCurated": 23,
+    "totalExcluded": 88,
+    "totalPages": 6,
     "projectsPerPage": 4,
-    "verifiedLiveDeployments": 30,
-    "embeddableLiveWebApps": 27,
-    "generatedAt": "2026-10-07T19:58:21Z",
+    "verifiedLiveDeployments": 11,
+    "embeddableLiveWebApps": 10,
+    "generatedAt": "2026-10-08T16:30:33.879Z",
     "categories": [
       {
         "name": "Web App / SaaS",
-        "totalCount": 46,
-        "curatedCount": 16
+        "totalCount": 36,
+        "curatedCount": 10
       },
       {
         "name": "Mobile App",
-        "totalCount": 5,
-        "curatedCount": 5
-      },
-      {
-        "name": "3D / Game / Creative Tech",
         "totalCount": 4,
         "curatedCount": 4
       },
       {
+        "name": "3D / Game / Creative Tech",
+        "totalCount": 3,
+        "curatedCount": 3
+      },
+      {
         "name": "AI / ML / Data Science",
-        "totalCount": 17,
-        "curatedCount": 7
+        "totalCount": 11,
+        "curatedCount": 6
       },
       {
         "name": "Academic / Course / Exercise",
-        "totalCount": 30,
+        "totalCount": 27,
         "curatedCount": 0
       },
       {
         "name": "Empty / Stub",
-        "totalCount": 15,
+        "totalCount": 14,
         "curatedCount": 0
       },
       {
         "name": "Backend / API / Cloud",
-        "totalCount": 10,
+        "totalCount": 6,
         "curatedCount": 0
       },
       {
@@ -60,73 +59,13 @@
   },
   "projects": [
     {
-      "id": "practifactu",
-      "name": "practifactu",
-      "title": "PractiFactu - DIAN Electronic Invoicing SaaS",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 1,
-      "pageGroup": 1,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS",
-        "Prisma",
-        "DIAN ERP",
-        "PostgreSQL"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 6,
-        "visualAppeal": 10,
-        "recency": 10,
-        "domainValue": 8,
-        "total": 44
-      },
-      "description": "Enterprise SaaS electronic invoicing and ERP platform complying with Colombian DIAN tax regulations (Anexo 1.9, RADIAN, Documento Soporte) built with Next.js, Prisma, and PostgreSQL.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/practifactu/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "docs/screenshots/01_login.png",
-        "assetPaths": [
-          "docs/screenshots/01_login.png",
-          "docs/screenshots/02_dashboard.png",
-          "docs/screenshots/03_nueva_factura.png",
-          "docs/screenshots/04_facturas_list.png",
-          "docs/screenshots/05_factura_detalle.png",
-          "docs/screenshots/06_configuracion_empresa.png",
-          "docs/screenshots/07_documentos_soporte.png",
-          "docs/screenshots/08_proveedores_radian.png",
-          "docs/screenshots/09_configuracion_dian.png",
-          "docs/screenshots/10_perfil_seguridad.png",
-          "docs/screenshots/11_clientes.png",
-          "docs/screenshots/12_mobile_dashboard.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "music-journal-app",
       "name": "music-journal-app",
       "title": "Music Journal & Flute Practice Coach",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 2,
+      "rank": 1,
       "pageGroup": 1,
       "category": "Mobile App",
       "tags": [
@@ -186,65 +125,13 @@
       }
     },
     {
-      "id": "herbalism-bot",
-      "name": "herbalism-bot",
-      "title": "MMORPG Computer Vision Herbalism Bot",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 3,
-      "pageGroup": 1,
-      "category": "3D / Game / Creative Tech",
-      "tags": [
-        "Python",
-        "OpenCV",
-        "NumPy",
-        "Computer Vision",
-        "Automation"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 7,
-        "visualAppeal": 9,
-        "recency": 10,
-        "domainValue": 8,
-        "total": 43
-      },
-      "description": "Autonomous MMORPG navigation and resource gathering bot using Python OpenCV computer vision, heading-aware minimap tracking, and safe Windows input emulation.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/herbalism-bot/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "circular_masked_minimap.png",
-        "assetPaths": [
-          "circular_masked_minimap.png",
-          "debug_analysis_result.png",
-          "debug_hsv_mask.png",
-          "debug_latest_window.png",
-          "herb_icon.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "sonoma-racing-coach",
       "name": "sonoma-racing-coach",
       "title": "ApexAI Sonoma Motorsport Telemetry Coach",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 4,
+      "rank": 2,
       "pageGroup": 1,
       "category": "3D / Game / Creative Tech",
       "tags": [
@@ -297,8 +184,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 5,
-      "pageGroup": 2,
+      "rank": 3,
+      "pageGroup": 1,
       "category": "Web App / SaaS",
       "tags": [
         "JavaScript",
@@ -348,8 +235,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 6,
-      "pageGroup": 2,
+      "rank": 4,
+      "pageGroup": 1,
       "category": "3D / Game / Creative Tech",
       "tags": [
         "TypeScript",
@@ -391,61 +278,13 @@
       }
     },
     {
-      "id": "crecere-agents",
-      "name": "crecere-agents",
-      "title": "Agent2Agent (A2A) Multi-Agent Ecosystem",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 7,
-      "pageGroup": 2,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python",
-        "Agent2Agent (A2A)",
-        "Multi-Agent Systems",
-        "Google Cloud",
-        "SSE Streaming"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 4,
-        "visualAppeal": 8,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 40
-      },
-      "description": "Enterprise multi-agent communication protocol and orchestration platform implementing Google's Agent2Agent (A2A) standard with real-time SSE streaming.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/crecere-agents/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "images/a2a_demo_arch.png",
-        "assetPaths": [
-          "images/a2a_demo_arch.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "anthropometry-app",
       "name": "anthropometry-app",
       "title": "Clinical Anthropometry & Body Composition App",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 8,
+      "rank": 5,
       "pageGroup": 2,
       "category": "Web App / SaaS",
       "tags": [
@@ -495,8 +334,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 9,
-      "pageGroup": 3,
+      "rank": 6,
+      "pageGroup": 2,
       "category": "Web App / SaaS",
       "tags": [
         "JavaScript",
@@ -547,8 +386,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 10,
-      "pageGroup": 3,
+      "rank": 7,
+      "pageGroup": 2,
       "category": "Web App / SaaS",
       "tags": [
         "JavaScript",
@@ -599,8 +438,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 11,
-      "pageGroup": 3,
+      "rank": 8,
+      "pageGroup": 2,
       "category": "AI / ML / Data Science",
       "tags": [
         "JavaScript",
@@ -645,66 +484,14 @@
       }
     },
     {
-      "id": "sgi-v2",
-      "name": "sgi-v2",
-      "title": "SGI v2 Modernized Enterprise ERP Refactor",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 12,
-      "pageGroup": 3,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "PHP",
-        "CodeIgniter",
-        "Docker",
-        "MySQL"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 5,
-        "visualAppeal": 8,
-        "recency": 10,
-        "domainValue": 7,
-        "total": 39
-      },
-      "description": "Modular enterprise management and business intelligence portal refactored with TypeScript, CodeIgniter backend, and Docker containerization.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/sgi-v2/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "images/administracion.jpg",
-        "assetPaths": [
-          "images/administracion.jpg",
-          "images/bodega.png",
-          "images/compras.png",
-          "images/contabilidad.png",
-          "images/login-box-backg.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "workshopjsconfmxrnapp",
       "name": "workshopJsconfmxRNApp",
       "title": "JSConf Mexico React Native Conference Companion",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 13,
-      "pageGroup": 4,
+      "rank": 9,
+      "pageGroup": 3,
       "category": "Mobile App",
       "tags": [
         "TypeScript",
@@ -760,8 +547,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 14,
-      "pageGroup": 4,
+      "rank": 10,
+      "pageGroup": 3,
       "category": "Web App / SaaS",
       "tags": [
         "TypeScript",
@@ -811,8 +598,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 15,
-      "pageGroup": 4,
+      "rank": 11,
+      "pageGroup": 3,
       "category": "AI / ML / Data Science",
       "tags": [
         "JavaScript",
@@ -857,8 +644,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 16,
-      "pageGroup": 4,
+      "rank": 12,
+      "pageGroup": 3,
       "category": "Web App / SaaS",
       "tags": [
         "TypeScript",
@@ -902,70 +689,14 @@
       }
     },
     {
-      "id": "newfitnesstrainingapp",
-      "name": "NewFitnessTrainingApp",
-      "title": "Fitness & Workout Routine Training App",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 17,
-      "pageGroup": 5,
-      "category": "Mobile App",
-      "tags": [
-        "TypeScript",
-        "React Native",
-        "Mobile",
-        "Health & Fitness"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 5,
-        "visualAppeal": 10,
-        "recency": 5,
-        "domainValue": 8,
-        "total": 38
-      },
-      "description": "Mobile fitness and workout tracking application built with React Native, supporting customized training routines, exercise logs, and biometric progress metrics.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/NewFitnessTrainingApp/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "android/app/src/main/res/drawable/screen.png",
-        "assetPaths": [
-          "android/app/src/main/res/drawable/screen.png",
-          "android/app/src/main/res/drawable-hdpi/screen.png",
-          "android/app/src/main/res/drawable-land/screen.png",
-          "android/app/src/main/res/drawable-land-hdpi/screen.png",
-          "android/app/src/main/res/drawable-land-ldpi/screen.png",
-          "android/app/src/main/res/drawable-land-mdpi/screen.png",
-          "android/app/src/main/res/drawable-land-xhdpi/screen.png",
-          "android/app/src/main/res/drawable-land-xxhdpi/screen.png",
-          "android/app/src/main/res/drawable-land-xxxhdpi/screen.png",
-          "android/app/src/main/res/drawable-ldpi/screen.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "sebastian-gomez",
       "name": "sebastian-gomez",
       "title": "Hexo Technical Engineering Publication",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 18,
-      "pageGroup": 5,
+      "rank": 13,
+      "pageGroup": 4,
       "category": "Web App / SaaS",
       "tags": [
         "Hexo",
@@ -1015,8 +746,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 19,
-      "pageGroup": 5,
+      "rank": 14,
+      "pageGroup": 4,
       "category": "AI / ML / Data Science",
       "tags": [
         "Python",
@@ -1067,8 +798,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 20,
-      "pageGroup": 5,
+      "rank": 15,
+      "pageGroup": 4,
       "category": "Mobile App",
       "tags": [
         "Dart",
@@ -1113,66 +844,14 @@
       }
     },
     {
-      "id": "adaptai",
-      "name": "adaptai",
-      "title": "AdaptAI Intelligent Learning Management System",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 21,
-      "pageGroup": 6,
-      "category": "Web App / SaaS",
-      "tags": [
-        "JavaScript",
-        "React",
-        "Tailwind CSS",
-        "Vite",
-        "Firebase"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 4,
-        "visualAppeal": 7,
-        "recency": 8,
-        "domainValue": 8,
-        "total": 37
-      },
-      "description": "Personalized adaptive learning management web platform built with React, Tailwind CSS, and Firebase cloud authentication.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/adaptai/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": "GitHub Pages"
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "public/logo192.png",
-        "assetPaths": [
-          "public/logo192.png",
-          "public/logo512.png",
-          "public/vite.svg",
-          "src/logo.svg",
-          "src/assets/logo.webp"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "maps-angular",
       "name": "maps-angular",
       "title": "Angular Real-Time Geolocation & Fleet Map",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 22,
-      "pageGroup": 6,
+      "rank": 16,
+      "pageGroup": 4,
       "category": "Web App / SaaS",
       "tags": [
         "TypeScript",
@@ -1213,64 +892,14 @@
       }
     },
     {
-      "id": "sgi",
-      "name": "sgi",
-      "title": "SGI Enterprise Resource Planning System",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 23,
-      "pageGroup": 6,
-      "category": "Web App / SaaS",
-      "tags": [
-        "PHP",
-        "CodeIgniter",
-        "MySQL"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 2,
-        "visualAppeal": 8,
-        "recency": 9,
-        "domainValue": 7,
-        "total": 36
-      },
-      "description": "Comprehensive enterprise resource planning (ERP) and internal administration system built with PHP, CodeIgniter, and MySQL.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/sgi/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "images/administracion.jpg",
-        "assetPaths": [
-          "images/administracion.jpg",
-          "images/bodega.png",
-          "images/compras.png",
-          "images/contabilidad.png",
-          "images/login-box-backg.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "uber-like-app-angular",
       "name": "uber-like-app-angular",
       "title": "Angular On-Demand Mobility Prototype",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 24,
-      "pageGroup": 6,
+      "rank": 17,
+      "pageGroup": 5,
       "category": "Web App / SaaS",
       "tags": [
         "TypeScript",
@@ -1318,8 +947,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 25,
-      "pageGroup": 7,
+      "rank": 18,
+      "pageGroup": 5,
       "category": "3D / Game / Creative Tech",
       "tags": [
         "JavaScript",
@@ -1364,8 +993,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 26,
-      "pageGroup": 7,
+      "rank": 19,
+      "pageGroup": 5,
       "category": "AI / ML / Data Science",
       "tags": [
         "TypeScript",
@@ -1413,8 +1042,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 27,
-      "pageGroup": 7,
+      "rank": 20,
+      "pageGroup": 5,
       "category": "Mobile App",
       "tags": [
         "Dart",
@@ -1465,8 +1094,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 28,
-      "pageGroup": 7,
+      "rank": 21,
+      "pageGroup": 6,
       "category": "AI / ML / Data Science",
       "tags": [
         "TypeScript",
@@ -1507,114 +1136,14 @@
       }
     },
     {
-      "id": "huokan-frontend",
-      "name": "huokan-frontend",
-      "title": "HuoKan Full-Stack Gaming Analytics Platform",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 29,
-      "pageGroup": 8,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        "Python",
-        "Flask"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 2,
-        "visualAppeal": 9,
-        "recency": 7,
-        "domainValue": 7,
-        "total": 35
-      },
-      "description": "Full-stack gaming analytics and character telemetry platform featuring a React Vite frontend and Python Flask backend.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/huokan-frontend/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "frontend/public/assets/Specs/DPS/Demon Hunter.jpg",
-        "assetPaths": [
-          "frontend/public/assets/Specs/DPS/Demon Hunter.jpg",
-          "frontend/public/assets/Specs/DPS/Warlock-Demonology.jpg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "file-system",
-      "name": "file-system",
-      "title": "Cloud Virtual Drive & File Management Web App",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 30,
-      "pageGroup": 8,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "React",
-        "Firebase",
-        "Cloud Storage",
-        "Vite"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 5,
-        "visualAppeal": 6,
-        "recency": 8,
-        "domainValue": 7,
-        "total": 35
-      },
-      "description": "Cloud file management and virtual drive web application built with React, Vite, and Firebase Cloud Storage.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://data-connect-01.web.app",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": "Firebase"
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": ".idx/icon.png",
-        "assetPaths": [
-          ".idx/icon.png",
-          "public/vite.svg",
-          "src/assets/react.svg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "fiestapwa",
       "name": "fiestaPWA",
       "title": "Fiesta Progressive Web App Event Manager",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 31,
-      "pageGroup": 8,
+      "rank": 22,
+      "pageGroup": 6,
       "category": "Web App / SaaS",
       "tags": [
         "React",
@@ -1662,8 +1191,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 32,
-      "pageGroup": 8,
+      "rank": 23,
+      "pageGroup": 6,
       "category": "AI / ML / Data Science",
       "tags": [
         "TypeScript",
@@ -2098,132 +1627,6 @@
       }
     },
     {
-      "id": "crecere-greetings-agent",
-      "name": "crecere-greetings-agent",
-      "title": "crecere-greetings-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 33/50, 17 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 3,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 33
-      },
-      "description": "Machine learning exploration and agent implementation utilizing Python.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "crecere-identity-validation-agent",
-      "name": "crecere-identity-validation-agent",
-      "title": "crecere-identity-validation-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 33/50, 17 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 3,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 33
-      },
-      "description": "Machine learning exploration and agent implementation utilizing Python.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "crecere-negotiation-agent",
-      "name": "crecere-negotiation-agent",
-      "title": "crecere-negotiation-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 33/50, 17 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 3,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 33
-      },
-      "description": "Machine learning exploration and agent implementation utilizing Python.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
       "id": "gdgdevfestmed",
       "name": "gdgdevfestmed",
       "title": "gdgdevfestmed",
@@ -2319,50 +1722,6 @@
           "src/assets/img/carlos.jpg"
         ],
         "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "druckey",
-      "name": "druckey",
-      "title": "druckey",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 32/50, 55 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "TypeScript",
-        "Angular",
-        "Tone.js"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 8,
-        "visualAppeal": 3,
-        "recency": 2,
-        "domainValue": 9,
-        "total": 32
-      },
-      "description": "Machine learning exploration and agent implementation utilizing TypeScript, Angular, Tone.js.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
       }
     },
     {
@@ -2640,98 +1999,6 @@
       }
     },
     {
-      "id": "booking-shopify-app",
-      "name": "booking-shopify-app",
-      "title": "booking-shopify-app",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 31/50, 133 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "JavaScript",
-        "Express",
-        "Prisma"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 10,
-        "domainValue": 6,
-        "total": 31
-      },
-      "description": "Backend microservice and API architecture built with JavaScript, Express, Prisma.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://booking-shopify-app-962952534311.us-central1.run.app/health",
-        "status": "LIVE",
-        "httpStatusCode": 200,
-        "platform": "Google Cloud Run"
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "recomiendo-en-casa",
-      "name": "recomiendo-en-casa",
-      "title": "recomiendo-en-casa",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 31/50, 65 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "Angular",
-        "Firebase"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 5,
-        "visualAppeal": 6,
-        "recency": 4,
-        "domainValue": 7,
-        "total": 31
-      },
-      "description": "Software engineering project implemented with TypeScript, Angular, Firebase.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://ionicframework.com/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": "Firebase"
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": "default-src https: data: blob: 'unsafe-eval' 'unsafe-inline'; frame-src 'self' https://*;",
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "src/assets/logo.svg",
-        "assetPaths": [
-          "src/assets/logo.svg",
-          "src/assets/shapes.svg",
-          "src/assets/icon/favicon.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "springboot-curso-eafit",
       "name": "springboot-curso-eafit",
       "title": "springboot-curso-eafit",
@@ -2924,55 +2191,6 @@
       }
     },
     {
-      "id": "perkify_admin",
-      "name": "perkify_admin",
-      "title": "perkify_admin",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 30/50, 1001 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "PHP",
-        "CodeIgniter"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 4,
-        "visualAppeal": 8,
-        "recency": 2,
-        "domainValue": 7,
-        "total": 30
-      },
-      "description": "Software engineering project implemented with PHP, CodeIgniter.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "assets/grocery_crud/css/jquery_plugins/chosen/chosen-sprite.png",
-        "assetPaths": [
-          "assets/grocery_crud/css/jquery_plugins/chosen/chosen-sprite.png",
-          "assets/grocery_crud/css/jquery_plugins/chosen/chosen-sprite@2x.png",
-          "assets/grocery_crud/css/jquery_plugins/fancybox/blank.gif",
-          "assets/grocery_crud/css/jquery_plugins/fancybox/fancybox-x.png",
-          "assets/grocery_crud/css/jquery_plugins/fancybox/fancybox-y.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "budget-app",
       "name": "budget-app",
       "title": "budget-app",
@@ -3048,104 +2266,6 @@
         "url": null,
         "status": "NONE",
         "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "perkify",
-      "name": "perkify",
-      "title": "perkify",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 29/50, 145 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "JavaScript"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 2,
-        "visualAppeal": 9,
-        "recency": 2,
-        "domainValue": 7,
-        "total": 29
-      },
-      "description": "Software engineering project implemented with JavaScript.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "resources/android/splash/drawable-land-hdpi-screen.png",
-        "assetPaths": [
-          "resources/android/splash/drawable-land-hdpi-screen.png",
-          "resources/android/splash/drawable-land-ldpi-screen.png",
-          "resources/android/splash/drawable-land-mdpi-screen.png",
-          "resources/android/splash/drawable-land-xhdpi-screen.png",
-          "resources/android/splash/drawable-land-xxhdpi-screen.png",
-          "resources/android/splash/drawable-land-xxxhdpi-screen.png",
-          "resources/android/splash/drawable-port-hdpi-screen.png",
-          "resources/android/splash/drawable-port-ldpi-screen.png",
-          "resources/android/splash/drawable-port-mdpi-screen.png",
-          "resources/android/splash/drawable-port-xhdpi-screen.png",
-          "resources/android/splash/drawable-port-xxhdpi-screen.png",
-          "resources/android/splash/drawable-port-xxxhdpi-screen.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "harmony-adk-agent",
-      "name": "harmony-adk-agent",
-      "title": "harmony-adk-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 28/50, 15 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "Python",
-        "FastAPI"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 10,
-        "domainValue": 6,
-        "total": 28
-      },
-      "description": "Backend microservice and API architecture built with Python, FastAPI.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/harmony-adk-agent/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
         "platform": null
       },
       "embeddability": {
@@ -3293,49 +2413,6 @@
         "xFrameOptions": null,
         "cspFrameAncestors": null,
         "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "autoreserva",
-      "name": "autoreserva",
-      "title": "autoreserva",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 28/50, 9 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "JavaScript",
-        "Express"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 10,
-        "domainValue": 6,
-        "total": 28
-      },
-      "description": "Backend microservice and API architecture built with JavaScript, Express.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://autoreserva.vercel.app/",
-        "status": "LIVE",
-        "httpStatusCode": 200,
-        "platform": "Vercel"
-      },
-      "embeddability": {
-        "mode": "IFRAME_EMBED",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": true
       },
       "visualAssets": {
         "hasAssets": false,
@@ -3614,49 +2691,6 @@
       },
       "description": "Repository for the course on Software Architecture with Spring Boot + Thymeleaf",
       "repoUrl": "https://github.com/seagomezar/springboot-online-store",
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "crecere-tag-system",
-      "name": "crecere-tag-system",
-      "title": "crecere-tag-system",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 26/50, 1 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "JavaScript",
-        "Express"
-      ],
-      "score": {
-        "completeness": 1,
-        "complexity": 6,
-        "visualAppeal": 2,
-        "recency": 9,
-        "domainValue": 8,
-        "total": 26
-      },
-      "description": "Machine learning exploration and agent implementation utilizing JavaScript, Express.",
-      "repoUrl": null,
       "liveDeployment": {
         "url": null,
         "status": "NONE",
@@ -3991,53 +3025,6 @@
         "primaryScreenshot": null,
         "assetPaths": [],
         "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "meetup-react",
-      "name": "meetup-react",
-      "title": "meetup-react",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Course exercise / tutorial / meetup talk (meetup-react): Educational practice exercise lacking standalone commercial or production value.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Academic / Course / Exercise",
-      "tags": [
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS"
-      ],
-      "score": {
-        "completeness": 7,
-        "complexity": 3,
-        "visualAppeal": 4,
-        "recency": 8,
-        "domainValue": 2,
-        "total": 24
-      },
-      "description": "Academic and tutorial exercises exploring TypeScript, Next.js, Tailwind CSS patterns and programming principles.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "public/next.svg",
-        "assetPaths": [
-          "public/next.svg",
-          "public/vercel.svg"
-        ],
-        "needsAssetGeneration": false
       }
     },
     {
@@ -4432,93 +3419,6 @@
       }
     },
     {
-      "id": "perkify_backend",
-      "name": "perkify_backend",
-      "title": "perkify_backend",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 22/50, 38 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "PHP",
-        "Laravel"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 2,
-        "domainValue": 6,
-        "total": 22
-      },
-      "description": "Backend microservice and API architecture built with PHP, Laravel.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "springboottutorial02",
-      "name": "SpringBootTutorial02",
-      "title": "SpringBootTutorial02",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Course exercise / tutorial / meetup talk (SpringBootTutorial02): Educational practice exercise lacking standalone commercial or production value.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Academic / Course / Exercise",
-      "tags": [
-        "Java",
-        "Spring Boot",
-        "Maven"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 3,
-        "visualAppeal": 2,
-        "recency": 9,
-        "domainValue": 2,
-        "total": 22
-      },
-      "description": "Academic and tutorial exercises exploring Java, Spring Boot, Maven patterns and programming principles.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
       "id": "clase-docker",
       "name": "Clase-Docker",
       "title": "Clase-Docker",
@@ -4765,50 +3665,6 @@
         "url": null,
         "status": "NONE",
         "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "springboottutorial01",
-      "name": "SpringBootTutorial01",
-      "title": "SpringBootTutorial01",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Course exercise / tutorial / meetup talk (SpringBootTutorial01): Educational practice exercise lacking standalone commercial or production value.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Academic / Course / Exercise",
-      "tags": [
-        "Java",
-        "Spring Boot",
-        "Maven"
-      ],
-      "score": {
-        "completeness": 5,
-        "complexity": 3,
-        "visualAppeal": 2,
-        "recency": 9,
-        "domainValue": 2,
-        "total": 21
-      },
-      "description": "Academic and tutorial exercises exploring Java, Spring Boot, Maven patterns and programming principles.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://sebastian-gomez.com",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
         "platform": null
       },
       "embeddability": {
@@ -5115,48 +3971,6 @@
       },
       "description": "An utility component to display charts with React using Chart.js and Typescript",
       "repoUrl": "https://github.com/seagomezar/ionchart",
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "testing-component",
-      "name": "testing-component",
-      "title": "testing-component",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 20/50, 1 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "JavaScript"
-      ],
-      "score": {
-        "completeness": 1,
-        "complexity": 2,
-        "visualAppeal": 3,
-        "recency": 7,
-        "domainValue": 7,
-        "total": 20
-      },
-      "description": "Software engineering project implemented with JavaScript.",
-      "repoUrl": null,
       "liveDeployment": {
         "url": null,
         "status": "NONE",
@@ -6406,111 +5220,9 @@
         "assetPaths": [],
         "needsAssetGeneration": true
       }
-    },
-    {
-      "id": "holamundoweb",
-      "name": "HolaMundoWeb",
-      "title": "HolaMundoWeb",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Empty repository (0 code files): Contains only git metadata or non-code files; ineligible for portfolio showcase.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Empty / Stub",
-      "tags": [
-        "General"
-      ],
-      "score": {
-        "completeness": 0,
-        "complexity": 0,
-        "visualAppeal": 0,
-        "recency": 2,
-        "domainValue": 0,
-        "total": 2
-      },
-      "description": "Initial repository scaffold stub without implemented application source code.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
     }
   ],
   "repositories": [
-    {
-      "id": "practifactu",
-      "name": "practifactu",
-      "title": "PractiFactu - DIAN Electronic Invoicing SaaS",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 1,
-      "pageGroup": 1,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS",
-        "Prisma",
-        "DIAN ERP",
-        "PostgreSQL"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 6,
-        "visualAppeal": 10,
-        "recency": 10,
-        "domainValue": 8,
-        "total": 44
-      },
-      "description": "Enterprise SaaS electronic invoicing and ERP platform complying with Colombian DIAN tax regulations (Anexo 1.9, RADIAN, Documento Soporte) built with Next.js, Prisma, and PostgreSQL.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/practifactu/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "docs/screenshots/01_login.png",
-        "assetPaths": [
-          "docs/screenshots/01_login.png",
-          "docs/screenshots/02_dashboard.png",
-          "docs/screenshots/03_nueva_factura.png",
-          "docs/screenshots/04_facturas_list.png",
-          "docs/screenshots/05_factura_detalle.png",
-          "docs/screenshots/06_configuracion_empresa.png",
-          "docs/screenshots/07_documentos_soporte.png",
-          "docs/screenshots/08_proveedores_radian.png",
-          "docs/screenshots/09_configuracion_dian.png",
-          "docs/screenshots/10_perfil_seguridad.png",
-          "docs/screenshots/11_clientes.png",
-          "docs/screenshots/12_mobile_dashboard.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
     {
       "id": "music-journal-app",
       "name": "music-journal-app",
@@ -6518,7 +5230,7 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 2,
+      "rank": 1,
       "pageGroup": 1,
       "category": "Mobile App",
       "tags": [
@@ -6578,65 +5290,13 @@
       }
     },
     {
-      "id": "herbalism-bot",
-      "name": "herbalism-bot",
-      "title": "MMORPG Computer Vision Herbalism Bot",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 3,
-      "pageGroup": 1,
-      "category": "3D / Game / Creative Tech",
-      "tags": [
-        "Python",
-        "OpenCV",
-        "NumPy",
-        "Computer Vision",
-        "Automation"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 7,
-        "visualAppeal": 9,
-        "recency": 10,
-        "domainValue": 8,
-        "total": 43
-      },
-      "description": "Autonomous MMORPG navigation and resource gathering bot using Python OpenCV computer vision, heading-aware minimap tracking, and safe Windows input emulation.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/herbalism-bot/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "circular_masked_minimap.png",
-        "assetPaths": [
-          "circular_masked_minimap.png",
-          "debug_analysis_result.png",
-          "debug_hsv_mask.png",
-          "debug_latest_window.png",
-          "herb_icon.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "sonoma-racing-coach",
       "name": "sonoma-racing-coach",
       "title": "ApexAI Sonoma Motorsport Telemetry Coach",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 4,
+      "rank": 2,
       "pageGroup": 1,
       "category": "3D / Game / Creative Tech",
       "tags": [
@@ -6689,8 +5349,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 5,
-      "pageGroup": 2,
+      "rank": 3,
+      "pageGroup": 1,
       "category": "Web App / SaaS",
       "tags": [
         "JavaScript",
@@ -6740,8 +5400,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 6,
-      "pageGroup": 2,
+      "rank": 4,
+      "pageGroup": 1,
       "category": "3D / Game / Creative Tech",
       "tags": [
         "TypeScript",
@@ -6783,61 +5443,13 @@
       }
     },
     {
-      "id": "crecere-agents",
-      "name": "crecere-agents",
-      "title": "Agent2Agent (A2A) Multi-Agent Ecosystem",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 7,
-      "pageGroup": 2,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python",
-        "Agent2Agent (A2A)",
-        "Multi-Agent Systems",
-        "Google Cloud",
-        "SSE Streaming"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 4,
-        "visualAppeal": 8,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 40
-      },
-      "description": "Enterprise multi-agent communication protocol and orchestration platform implementing Google's Agent2Agent (A2A) standard with real-time SSE streaming.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/crecere-agents/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "images/a2a_demo_arch.png",
-        "assetPaths": [
-          "images/a2a_demo_arch.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "anthropometry-app",
       "name": "anthropometry-app",
       "title": "Clinical Anthropometry & Body Composition App",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 8,
+      "rank": 5,
       "pageGroup": 2,
       "category": "Web App / SaaS",
       "tags": [
@@ -6887,8 +5499,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 9,
-      "pageGroup": 3,
+      "rank": 6,
+      "pageGroup": 2,
       "category": "Web App / SaaS",
       "tags": [
         "JavaScript",
@@ -6939,8 +5551,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 10,
-      "pageGroup": 3,
+      "rank": 7,
+      "pageGroup": 2,
       "category": "Web App / SaaS",
       "tags": [
         "JavaScript",
@@ -6991,8 +5603,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 11,
-      "pageGroup": 3,
+      "rank": 8,
+      "pageGroup": 2,
       "category": "AI / ML / Data Science",
       "tags": [
         "JavaScript",
@@ -7037,66 +5649,14 @@
       }
     },
     {
-      "id": "sgi-v2",
-      "name": "sgi-v2",
-      "title": "SGI v2 Modernized Enterprise ERP Refactor",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 12,
-      "pageGroup": 3,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "PHP",
-        "CodeIgniter",
-        "Docker",
-        "MySQL"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 5,
-        "visualAppeal": 8,
-        "recency": 10,
-        "domainValue": 7,
-        "total": 39
-      },
-      "description": "Modular enterprise management and business intelligence portal refactored with TypeScript, CodeIgniter backend, and Docker containerization.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/sgi-v2/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "images/administracion.jpg",
-        "assetPaths": [
-          "images/administracion.jpg",
-          "images/bodega.png",
-          "images/compras.png",
-          "images/contabilidad.png",
-          "images/login-box-backg.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "workshopjsconfmxrnapp",
       "name": "workshopJsconfmxRNApp",
       "title": "JSConf Mexico React Native Conference Companion",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 13,
-      "pageGroup": 4,
+      "rank": 9,
+      "pageGroup": 3,
       "category": "Mobile App",
       "tags": [
         "TypeScript",
@@ -7152,8 +5712,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 14,
-      "pageGroup": 4,
+      "rank": 10,
+      "pageGroup": 3,
       "category": "Web App / SaaS",
       "tags": [
         "TypeScript",
@@ -7203,8 +5763,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 15,
-      "pageGroup": 4,
+      "rank": 11,
+      "pageGroup": 3,
       "category": "AI / ML / Data Science",
       "tags": [
         "JavaScript",
@@ -7249,8 +5809,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 16,
-      "pageGroup": 4,
+      "rank": 12,
+      "pageGroup": 3,
       "category": "Web App / SaaS",
       "tags": [
         "TypeScript",
@@ -7294,70 +5854,14 @@
       }
     },
     {
-      "id": "newfitnesstrainingapp",
-      "name": "NewFitnessTrainingApp",
-      "title": "Fitness & Workout Routine Training App",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 17,
-      "pageGroup": 5,
-      "category": "Mobile App",
-      "tags": [
-        "TypeScript",
-        "React Native",
-        "Mobile",
-        "Health & Fitness"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 5,
-        "visualAppeal": 10,
-        "recency": 5,
-        "domainValue": 8,
-        "total": 38
-      },
-      "description": "Mobile fitness and workout tracking application built with React Native, supporting customized training routines, exercise logs, and biometric progress metrics.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/NewFitnessTrainingApp/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "android/app/src/main/res/drawable/screen.png",
-        "assetPaths": [
-          "android/app/src/main/res/drawable/screen.png",
-          "android/app/src/main/res/drawable-hdpi/screen.png",
-          "android/app/src/main/res/drawable-land/screen.png",
-          "android/app/src/main/res/drawable-land-hdpi/screen.png",
-          "android/app/src/main/res/drawable-land-ldpi/screen.png",
-          "android/app/src/main/res/drawable-land-mdpi/screen.png",
-          "android/app/src/main/res/drawable-land-xhdpi/screen.png",
-          "android/app/src/main/res/drawable-land-xxhdpi/screen.png",
-          "android/app/src/main/res/drawable-land-xxxhdpi/screen.png",
-          "android/app/src/main/res/drawable-ldpi/screen.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "sebastian-gomez",
       "name": "sebastian-gomez",
       "title": "Hexo Technical Engineering Publication",
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 18,
-      "pageGroup": 5,
+      "rank": 13,
+      "pageGroup": 4,
       "category": "Web App / SaaS",
       "tags": [
         "Hexo",
@@ -7407,8 +5911,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 19,
-      "pageGroup": 5,
+      "rank": 14,
+      "pageGroup": 4,
       "category": "AI / ML / Data Science",
       "tags": [
         "Python",
@@ -7459,8 +5963,8 @@
       "visibility": "public",
       "recommendation": "INCLUDED",
       "exclusionRationale": null,
-      "rank": 20,
-      "pageGroup": 5,
+      "rank": 15,
+      "pageGroup": 4,
       "category": "Mobile App",
       "tags": [
         "Dart",
@@ -7500,6 +6004,399 @@
           "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
           "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
           "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        ],
+        "needsAssetGeneration": false
+      }
+    },
+    {
+      "id": "maps-angular",
+      "name": "maps-angular",
+      "title": "Angular Real-Time Geolocation & Fleet Map",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 16,
+      "pageGroup": 4,
+      "category": "Web App / SaaS",
+      "tags": [
+        "TypeScript",
+        "Angular",
+        "Mapping / Geolocation",
+        "Firebase"
+      ],
+      "score": {
+        "completeness": 8,
+        "complexity": 5,
+        "visualAppeal": 6,
+        "recency": 10,
+        "domainValue": 8,
+        "total": 37
+      },
+      "description": "Real-time geolocation, vehicle route tracking, and interactive mapping interface developed with Angular and Firebase integration.",
+      "repoUrl": "https://github.com/seagomezar/maps-angular",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/maps-angular/",
+        "status": "OFFLINE",
+        "httpStatusCode": 404,
+        "platform": null
+      },
+      "embeddability": {
+        "mode": "IMAGE_CAROUSEL",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": false
+      },
+      "visualAssets": {
+        "hasAssets": true,
+        "primaryScreenshot": "src/assets/moto.png",
+        "assetPaths": [
+          "src/assets/moto.png",
+          "src/assets/photo.jpg"
+        ],
+        "needsAssetGeneration": false
+      }
+    },
+    {
+      "id": "uber-like-app-angular",
+      "name": "uber-like-app-angular",
+      "title": "Angular On-Demand Mobility Prototype",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 17,
+      "pageGroup": 5,
+      "category": "Web App / SaaS",
+      "tags": [
+        "TypeScript",
+        "Angular",
+        "Firebase",
+        "Geolocation",
+        "Real-time Tracking"
+      ],
+      "score": {
+        "completeness": 9,
+        "complexity": 5,
+        "visualAppeal": 5,
+        "recency": 10,
+        "domainValue": 7,
+        "total": 36
+      },
+      "description": "On-demand mobility and ride-hailing frontend prototype built with Angular, featuring real-time driver tracking and interactive map interfaces.",
+      "repoUrl": "https://github.com/seagomezar/uber-like-app-angular",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/uber-like-app-angular/",
+        "status": "OFFLINE",
+        "httpStatusCode": 404,
+        "platform": null
+      },
+      "embeddability": {
+        "mode": "IMAGE_CAROUSEL",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": false
+      },
+      "visualAssets": {
+        "hasAssets": true,
+        "primaryScreenshot": "src/assets/car.png",
+        "assetPaths": [
+          "src/assets/car.png",
+          "src/assets/photo.jpg"
+        ],
+        "needsAssetGeneration": false
+      }
+    },
+    {
+      "id": "tmux-game",
+      "name": "tmux-game",
+      "title": "Interactive Terminal & tmux Simulation Game",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 18,
+      "pageGroup": 5,
+      "category": "3D / Game / Creative Tech",
+      "tags": [
+        "JavaScript",
+        "HTML5 Canvas",
+        "Terminal Simulation",
+        "Vitest",
+        "Playwright"
+      ],
+      "score": {
+        "completeness": 8,
+        "complexity": 4,
+        "visualAppeal": 5,
+        "recency": 10,
+        "domainValue": 9,
+        "total": 36
+      },
+      "description": "Interactive terminal and tmux workspace simulation game running in the browser, featuring keyboard shortcut challenges and vitest/playwright test coverage.",
+      "repoUrl": "https://github.com/seagomezar/tmux-game",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/tmux-game/",
+        "status": "LIVE",
+        "httpStatusCode": 200,
+        "platform": "GitHub Pages"
+      },
+      "embeddability": {
+        "mode": "IFRAME_EMBED",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": true
+      },
+      "visualAssets": {
+        "hasAssets": false,
+        "primaryScreenshot": null,
+        "assetPaths": [],
+        "needsAssetGeneration": true
+      }
+    },
+    {
+      "id": "melodic-generator",
+      "name": "melodic-generator",
+      "title": "Melodic Generator Algorithmic Music Visualizer",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 19,
+      "pageGroup": 5,
+      "category": "AI / ML / Data Science",
+      "tags": [
+        "TypeScript",
+        "React",
+        "VexFlow",
+        "Tone.js",
+        "Vite"
+      ],
+      "score": {
+        "completeness": 7,
+        "complexity": 7,
+        "visualAppeal": 4,
+        "recency": 10,
+        "domainValue": 8,
+        "total": 36
+      },
+      "description": "Generative melody composer and algorithmic music notation visualizer built with TypeScript, React, Vite, and VexFlow sheet music rendering.",
+      "repoUrl": "https://github.com/seagomezar/melodic-generator",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/melodic-generator/",
+        "status": "LIVE",
+        "httpStatusCode": 200,
+        "platform": "GitHub Pages"
+      },
+      "embeddability": {
+        "mode": "IFRAME_EMBED",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": true
+      },
+      "visualAssets": {
+        "hasAssets": true,
+        "primaryScreenshot": "public/vite.svg",
+        "assetPaths": [
+          "public/vite.svg",
+          "src/assets/react.svg"
+        ],
+        "needsAssetGeneration": false
+      }
+    },
+    {
+      "id": "pettracker",
+      "name": "PetTracker",
+      "title": "PetTracker IoT GPS Geolocation Mobile App",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 20,
+      "pageGroup": 5,
+      "category": "Mobile App",
+      "tags": [
+        "Dart",
+        "Flutter",
+        "Mobile",
+        "Geolocation",
+        "IoT / Tracking"
+      ],
+      "score": {
+        "completeness": 6,
+        "complexity": 5,
+        "visualAppeal": 9,
+        "recency": 8,
+        "domainValue": 8,
+        "total": 36
+      },
+      "description": "IoT pet monitoring and GPS geolocation tracking mobile application built with Flutter and Firebase cloud services.",
+      "repoUrl": "https://github.com/seagomezar/PetTracker",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/PetTracker/",
+        "status": "OFFLINE",
+        "httpStatusCode": 404,
+        "platform": null
+      },
+      "embeddability": {
+        "mode": "IMAGE_CAROUSEL",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": false
+      },
+      "visualAssets": {
+        "hasAssets": true,
+        "primaryScreenshot": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "assetPaths": [
+          "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+          "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+          "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+          "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+          "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        ],
+        "needsAssetGeneration": false
+      }
+    },
+    {
+      "id": "gemini-pro-nextjs",
+      "name": "gemini-pro-nextjs",
+      "title": "Gemini Pro Multimodal Next.js Assistant",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 21,
+      "pageGroup": 6,
+      "category": "AI / ML / Data Science",
+      "tags": [
+        "TypeScript",
+        "Next.js",
+        "Google Gemini Pro API",
+        "Tailwind CSS"
+      ],
+      "score": {
+        "completeness": 6,
+        "complexity": 8,
+        "visualAppeal": 5,
+        "recency": 8,
+        "domainValue": 9,
+        "total": 36
+      },
+      "description": "Full-stack AI assistant and multimodal playground integrating Google Gemini Pro API within a Next.js App Router and Tailwind CSS interface.",
+      "repoUrl": "https://github.com/seagomezar/gemini-pro-nextjs",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/gemini-pro-nextjs/",
+        "status": "OFFLINE",
+        "httpStatusCode": 404,
+        "platform": null
+      },
+      "embeddability": {
+        "mode": "IMAGE_CAROUSEL",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": false
+      },
+      "visualAssets": {
+        "hasAssets": true,
+        "primaryScreenshot": "public/next.svg",
+        "assetPaths": [
+          "public/next.svg",
+          "public/vercel.svg"
+        ],
+        "needsAssetGeneration": false
+      }
+    },
+    {
+      "id": "fiestapwa",
+      "name": "fiestaPWA",
+      "title": "Fiesta Progressive Web App Event Manager",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 22,
+      "pageGroup": 6,
+      "category": "Web App / SaaS",
+      "tags": [
+        "React",
+        "PWA",
+        "Service Workers",
+        "Bulma CSS",
+        "Cloudinary",
+        "PawJS"
+      ],
+      "score": {
+        "completeness": 10,
+        "complexity": 3,
+        "visualAppeal": 9,
+        "recency": 5,
+        "domainValue": 8,
+        "total": 35
+      },
+      "description": "Progressive Web App (PWA) event invitation and party planning platform with offline caching, push notifications, and responsive Bulma CSS styling.",
+      "repoUrl": "https://github.com/seagomezar/fiestaPWA",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/fiestaPWA/",
+        "status": "OFFLINE",
+        "httpStatusCode": 404,
+        "platform": null
+      },
+      "embeddability": {
+        "mode": "IMAGE_CAROUSEL",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": false
+      },
+      "visualAssets": {
+        "hasAssets": true,
+        "primaryScreenshot": "src/resources/img/seo/home-splash-screen.png",
+        "assetPaths": [
+          "src/resources/img/seo/home-splash-screen.png"
+        ],
+        "needsAssetGeneration": false
+      }
+    },
+    {
+      "id": "react-vite-gemini-chrome-extension",
+      "name": "react-vite-gemini-chrome-extension",
+      "title": "Gemini AI Assistant Chrome Browser Extension",
+      "visibility": "public",
+      "recommendation": "INCLUDED",
+      "exclusionRationale": null,
+      "rank": 23,
+      "pageGroup": 6,
+      "category": "AI / ML / Data Science",
+      "tags": [
+        "TypeScript",
+        "React",
+        "Google Gemini API",
+        "Chrome Extension",
+        "Vite",
+        "Tailwind CSS"
+      ],
+      "score": {
+        "completeness": 7,
+        "complexity": 7,
+        "visualAppeal": 5,
+        "recency": 8,
+        "domainValue": 8,
+        "total": 35
+      },
+      "description": "Chrome browser extension integrating Google Gemini multimodal AI into the web browsing workflow, built with React, Vite, and Tailwind CSS.",
+      "repoUrl": "https://github.com/seagomezar/react-vite-gemini-chrome-extension",
+      "liveDeployment": {
+        "url": "https://seagomezar.github.io/react-vite-gemini-chrome-extension/",
+        "status": "OFFLINE",
+        "httpStatusCode": 404,
+        "platform": null
+      },
+      "embeddability": {
+        "mode": "IMAGE_CAROUSEL",
+        "xFrameOptions": null,
+        "cspFrameAncestors": null,
+        "isEmbeddable": false
+      },
+      "visualAssets": {
+        "hasAssets": true,
+        "primaryScreenshot": "images/icon-128.png",
+        "assetPaths": [
+          "images/icon-128.png",
+          "images/icon-16.png",
+          "images/icon-32.png",
+          "images/icon-48.png"
         ],
         "needsAssetGeneration": false
       }
@@ -7556,400 +6453,6 @@
       }
     },
     {
-      "id": "adaptai",
-      "name": "adaptai",
-      "title": "AdaptAI Intelligent Learning Management System",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 21,
-      "pageGroup": 6,
-      "category": "Web App / SaaS",
-      "tags": [
-        "JavaScript",
-        "React",
-        "Tailwind CSS",
-        "Vite",
-        "Firebase"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 4,
-        "visualAppeal": 7,
-        "recency": 8,
-        "domainValue": 8,
-        "total": 37
-      },
-      "description": "Personalized adaptive learning management web platform built with React, Tailwind CSS, and Firebase cloud authentication.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/adaptai/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": "GitHub Pages"
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "public/logo192.png",
-        "assetPaths": [
-          "public/logo192.png",
-          "public/logo512.png",
-          "public/vite.svg",
-          "src/logo.svg",
-          "src/assets/logo.webp"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "maps-angular",
-      "name": "maps-angular",
-      "title": "Angular Real-Time Geolocation & Fleet Map",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 22,
-      "pageGroup": 6,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "Angular",
-        "Mapping / Geolocation",
-        "Firebase"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 5,
-        "visualAppeal": 6,
-        "recency": 10,
-        "domainValue": 8,
-        "total": 37
-      },
-      "description": "Real-time geolocation, vehicle route tracking, and interactive mapping interface developed with Angular and Firebase integration.",
-      "repoUrl": "https://github.com/seagomezar/maps-angular",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/maps-angular/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "src/assets/moto.png",
-        "assetPaths": [
-          "src/assets/moto.png",
-          "src/assets/photo.jpg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "sgi",
-      "name": "sgi",
-      "title": "SGI Enterprise Resource Planning System",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 23,
-      "pageGroup": 6,
-      "category": "Web App / SaaS",
-      "tags": [
-        "PHP",
-        "CodeIgniter",
-        "MySQL"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 2,
-        "visualAppeal": 8,
-        "recency": 9,
-        "domainValue": 7,
-        "total": 36
-      },
-      "description": "Comprehensive enterprise resource planning (ERP) and internal administration system built with PHP, CodeIgniter, and MySQL.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/sgi/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "images/administracion.jpg",
-        "assetPaths": [
-          "images/administracion.jpg",
-          "images/bodega.png",
-          "images/compras.png",
-          "images/contabilidad.png",
-          "images/login-box-backg.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "uber-like-app-angular",
-      "name": "uber-like-app-angular",
-      "title": "Angular On-Demand Mobility Prototype",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 24,
-      "pageGroup": 6,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "Angular",
-        "Firebase",
-        "Geolocation",
-        "Real-time Tracking"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 5,
-        "visualAppeal": 5,
-        "recency": 10,
-        "domainValue": 7,
-        "total": 36
-      },
-      "description": "On-demand mobility and ride-hailing frontend prototype built with Angular, featuring real-time driver tracking and interactive map interfaces.",
-      "repoUrl": "https://github.com/seagomezar/uber-like-app-angular",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/uber-like-app-angular/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "src/assets/car.png",
-        "assetPaths": [
-          "src/assets/car.png",
-          "src/assets/photo.jpg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "tmux-game",
-      "name": "tmux-game",
-      "title": "Interactive Terminal & tmux Simulation Game",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 25,
-      "pageGroup": 7,
-      "category": "3D / Game / Creative Tech",
-      "tags": [
-        "JavaScript",
-        "HTML5 Canvas",
-        "Terminal Simulation",
-        "Vitest",
-        "Playwright"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 5,
-        "recency": 10,
-        "domainValue": 9,
-        "total": 36
-      },
-      "description": "Interactive terminal and tmux workspace simulation game running in the browser, featuring keyboard shortcut challenges and vitest/playwright test coverage.",
-      "repoUrl": "https://github.com/seagomezar/tmux-game",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/tmux-game/",
-        "status": "LIVE",
-        "httpStatusCode": 200,
-        "platform": "GitHub Pages"
-      },
-      "embeddability": {
-        "mode": "IFRAME_EMBED",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": true
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "melodic-generator",
-      "name": "melodic-generator",
-      "title": "Melodic Generator Algorithmic Music Visualizer",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 26,
-      "pageGroup": 7,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "TypeScript",
-        "React",
-        "VexFlow",
-        "Tone.js",
-        "Vite"
-      ],
-      "score": {
-        "completeness": 7,
-        "complexity": 7,
-        "visualAppeal": 4,
-        "recency": 10,
-        "domainValue": 8,
-        "total": 36
-      },
-      "description": "Generative melody composer and algorithmic music notation visualizer built with TypeScript, React, Vite, and VexFlow sheet music rendering.",
-      "repoUrl": "https://github.com/seagomezar/melodic-generator",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/melodic-generator/",
-        "status": "LIVE",
-        "httpStatusCode": 200,
-        "platform": "GitHub Pages"
-      },
-      "embeddability": {
-        "mode": "IFRAME_EMBED",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": true
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "public/vite.svg",
-        "assetPaths": [
-          "public/vite.svg",
-          "src/assets/react.svg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "pettracker",
-      "name": "PetTracker",
-      "title": "PetTracker IoT GPS Geolocation Mobile App",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 27,
-      "pageGroup": 7,
-      "category": "Mobile App",
-      "tags": [
-        "Dart",
-        "Flutter",
-        "Mobile",
-        "Geolocation",
-        "IoT / Tracking"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 5,
-        "visualAppeal": 9,
-        "recency": 8,
-        "domainValue": 8,
-        "total": 36
-      },
-      "description": "IoT pet monitoring and GPS geolocation tracking mobile application built with Flutter and Firebase cloud services.",
-      "repoUrl": "https://github.com/seagomezar/PetTracker",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/PetTracker/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
-        "assetPaths": [
-          "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
-          "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
-          "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
-          "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
-          "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "gemini-pro-nextjs",
-      "name": "gemini-pro-nextjs",
-      "title": "Gemini Pro Multimodal Next.js Assistant",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 28,
-      "pageGroup": 7,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "TypeScript",
-        "Next.js",
-        "Google Gemini Pro API",
-        "Tailwind CSS"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 8,
-        "visualAppeal": 5,
-        "recency": 8,
-        "domainValue": 9,
-        "total": 36
-      },
-      "description": "Full-stack AI assistant and multimodal playground integrating Google Gemini Pro API within a Next.js App Router and Tailwind CSS interface.",
-      "repoUrl": "https://github.com/seagomezar/gemini-pro-nextjs",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/gemini-pro-nextjs/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "public/next.svg",
-        "assetPaths": [
-          "public/next.svg",
-          "public/vercel.svg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "ionic4-music-starter",
       "name": "Ionic4-Music-Starter",
       "title": "Ionic4-Music-Starter",
@@ -7993,56 +6496,6 @@
           "src/assets/icon/favicon.png",
           "src/assets/img/logo.png",
           "src/assets/img/user.jpg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "huokan-frontend",
-      "name": "huokan-frontend",
-      "title": "HuoKan Full-Stack Gaming Analytics Platform",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 29,
-      "pageGroup": 8,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        "Python",
-        "Flask"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 2,
-        "visualAppeal": 9,
-        "recency": 7,
-        "domainValue": 7,
-        "total": 35
-      },
-      "description": "Full-stack gaming analytics and character telemetry platform featuring a React Vite frontend and Python Flask backend.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/huokan-frontend/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "frontend/public/assets/Specs/DPS/Demon Hunter.jpg",
-        "assetPaths": [
-          "frontend/public/assets/Specs/DPS/Demon Hunter.jpg",
-          "frontend/public/assets/Specs/DPS/Warlock-Demonology.jpg"
         ],
         "needsAssetGeneration": false
       }
@@ -8093,157 +6546,6 @@
           "public/opengraph-image.png",
           "public/sqEueLQ3e2XhSUAHYWS4Wh.jpg",
           "public/customers/amy-burns.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "file-system",
-      "name": "file-system",
-      "title": "Cloud Virtual Drive & File Management Web App",
-      "visibility": "private",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 30,
-      "pageGroup": 8,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "React",
-        "Firebase",
-        "Cloud Storage",
-        "Vite"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 5,
-        "visualAppeal": 6,
-        "recency": 8,
-        "domainValue": 7,
-        "total": 35
-      },
-      "description": "Cloud file management and virtual drive web application built with React, Vite, and Firebase Cloud Storage.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://data-connect-01.web.app",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": "Firebase"
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": ".idx/icon.png",
-        "assetPaths": [
-          ".idx/icon.png",
-          "public/vite.svg",
-          "src/assets/react.svg"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "fiestapwa",
-      "name": "fiestaPWA",
-      "title": "Fiesta Progressive Web App Event Manager",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 31,
-      "pageGroup": 8,
-      "category": "Web App / SaaS",
-      "tags": [
-        "React",
-        "PWA",
-        "Service Workers",
-        "Bulma CSS",
-        "Cloudinary",
-        "PawJS"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 3,
-        "visualAppeal": 9,
-        "recency": 5,
-        "domainValue": 8,
-        "total": 35
-      },
-      "description": "Progressive Web App (PWA) event invitation and party planning platform with offline caching, push notifications, and responsive Bulma CSS styling.",
-      "repoUrl": "https://github.com/seagomezar/fiestaPWA",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/fiestaPWA/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "src/resources/img/seo/home-splash-screen.png",
-        "assetPaths": [
-          "src/resources/img/seo/home-splash-screen.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "react-vite-gemini-chrome-extension",
-      "name": "react-vite-gemini-chrome-extension",
-      "title": "Gemini AI Assistant Chrome Browser Extension",
-      "visibility": "public",
-      "recommendation": "INCLUDED",
-      "exclusionRationale": null,
-      "rank": 32,
-      "pageGroup": 8,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "TypeScript",
-        "React",
-        "Google Gemini API",
-        "Chrome Extension",
-        "Vite",
-        "Tailwind CSS"
-      ],
-      "score": {
-        "completeness": 7,
-        "complexity": 7,
-        "visualAppeal": 5,
-        "recency": 8,
-        "domainValue": 8,
-        "total": 35
-      },
-      "description": "Chrome browser extension integrating Google Gemini multimodal AI into the web browsing workflow, built with React, Vite, and Tailwind CSS.",
-      "repoUrl": "https://github.com/seagomezar/react-vite-gemini-chrome-extension",
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/react-vite-gemini-chrome-extension/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "images/icon-128.png",
-        "assetPaths": [
-          "images/icon-128.png",
-          "images/icon-16.png",
-          "images/icon-32.png",
-          "images/icon-48.png"
         ],
         "needsAssetGeneration": false
       }
@@ -8488,132 +6790,6 @@
       }
     },
     {
-      "id": "crecere-greetings-agent",
-      "name": "crecere-greetings-agent",
-      "title": "crecere-greetings-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 33/50, 17 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 3,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 33
-      },
-      "description": "Machine learning exploration and agent implementation utilizing Python.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "crecere-identity-validation-agent",
-      "name": "crecere-identity-validation-agent",
-      "title": "crecere-identity-validation-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 33/50, 17 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 3,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 33
-      },
-      "description": "Machine learning exploration and agent implementation utilizing Python.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "crecere-negotiation-agent",
-      "name": "crecere-negotiation-agent",
-      "title": "crecere-negotiation-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 33/50, 17 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "Python"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 3,
-        "recency": 9,
-        "domainValue": 9,
-        "total": 33
-      },
-      "description": "Machine learning exploration and agent implementation utilizing Python.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
       "id": "gdgdevfestmed",
       "name": "gdgdevfestmed",
       "title": "gdgdevfestmed",
@@ -8709,50 +6885,6 @@
           "src/assets/img/carlos.jpg"
         ],
         "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "druckey",
-      "name": "druckey",
-      "title": "druckey",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 32/50, 55 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "TypeScript",
-        "Angular",
-        "Tone.js"
-      ],
-      "score": {
-        "completeness": 10,
-        "complexity": 8,
-        "visualAppeal": 3,
-        "recency": 2,
-        "domainValue": 9,
-        "total": 32
-      },
-      "description": "Machine learning exploration and agent implementation utilizing TypeScript, Angular, Tone.js.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
       }
     },
     {
@@ -9030,98 +7162,6 @@
       }
     },
     {
-      "id": "booking-shopify-app",
-      "name": "booking-shopify-app",
-      "title": "booking-shopify-app",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 31/50, 133 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "JavaScript",
-        "Express",
-        "Prisma"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 10,
-        "domainValue": 6,
-        "total": 31
-      },
-      "description": "Backend microservice and API architecture built with JavaScript, Express, Prisma.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://booking-shopify-app-962952534311.us-central1.run.app/health",
-        "status": "LIVE",
-        "httpStatusCode": 200,
-        "platform": "Google Cloud Run"
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "recomiendo-en-casa",
-      "name": "recomiendo-en-casa",
-      "title": "recomiendo-en-casa",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 31/50, 65 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "TypeScript",
-        "Angular",
-        "Firebase"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 5,
-        "visualAppeal": 6,
-        "recency": 4,
-        "domainValue": 7,
-        "total": 31
-      },
-      "description": "Software engineering project implemented with TypeScript, Angular, Firebase.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://ionicframework.com/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
-        "platform": "Firebase"
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": "default-src https: data: blob: 'unsafe-eval' 'unsafe-inline'; frame-src 'self' https://*;",
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "src/assets/logo.svg",
-        "assetPaths": [
-          "src/assets/logo.svg",
-          "src/assets/shapes.svg",
-          "src/assets/icon/favicon.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "springboot-curso-eafit",
       "name": "springboot-curso-eafit",
       "title": "springboot-curso-eafit",
@@ -9314,55 +7354,6 @@
       }
     },
     {
-      "id": "perkify_admin",
-      "name": "perkify_admin",
-      "title": "perkify_admin",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 30/50, 1001 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "PHP",
-        "CodeIgniter"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 4,
-        "visualAppeal": 8,
-        "recency": 2,
-        "domainValue": 7,
-        "total": 30
-      },
-      "description": "Software engineering project implemented with PHP, CodeIgniter.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "assets/grocery_crud/css/jquery_plugins/chosen/chosen-sprite.png",
-        "assetPaths": [
-          "assets/grocery_crud/css/jquery_plugins/chosen/chosen-sprite.png",
-          "assets/grocery_crud/css/jquery_plugins/chosen/chosen-sprite@2x.png",
-          "assets/grocery_crud/css/jquery_plugins/fancybox/blank.gif",
-          "assets/grocery_crud/css/jquery_plugins/fancybox/fancybox-x.png",
-          "assets/grocery_crud/css/jquery_plugins/fancybox/fancybox-y.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
       "id": "budget-app",
       "name": "budget-app",
       "title": "budget-app",
@@ -9438,104 +7429,6 @@
         "url": null,
         "status": "NONE",
         "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "perkify",
-      "name": "perkify",
-      "title": "perkify",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 29/50, 145 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "JavaScript"
-      ],
-      "score": {
-        "completeness": 9,
-        "complexity": 2,
-        "visualAppeal": 9,
-        "recency": 2,
-        "domainValue": 7,
-        "total": 29
-      },
-      "description": "Software engineering project implemented with JavaScript.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "resources/android/splash/drawable-land-hdpi-screen.png",
-        "assetPaths": [
-          "resources/android/splash/drawable-land-hdpi-screen.png",
-          "resources/android/splash/drawable-land-ldpi-screen.png",
-          "resources/android/splash/drawable-land-mdpi-screen.png",
-          "resources/android/splash/drawable-land-xhdpi-screen.png",
-          "resources/android/splash/drawable-land-xxhdpi-screen.png",
-          "resources/android/splash/drawable-land-xxxhdpi-screen.png",
-          "resources/android/splash/drawable-port-hdpi-screen.png",
-          "resources/android/splash/drawable-port-ldpi-screen.png",
-          "resources/android/splash/drawable-port-mdpi-screen.png",
-          "resources/android/splash/drawable-port-xhdpi-screen.png",
-          "resources/android/splash/drawable-port-xxhdpi-screen.png",
-          "resources/android/splash/drawable-port-xxxhdpi-screen.png"
-        ],
-        "needsAssetGeneration": false
-      }
-    },
-    {
-      "id": "harmony-adk-agent",
-      "name": "harmony-adk-agent",
-      "title": "harmony-adk-agent",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 28/50, 15 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "Python",
-        "FastAPI"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 10,
-        "domainValue": 6,
-        "total": 28
-      },
-      "description": "Backend microservice and API architecture built with Python, FastAPI.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://seagomezar.github.io/harmony-adk-agent/",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
         "platform": null
       },
       "embeddability": {
@@ -9683,49 +7576,6 @@
         "xFrameOptions": null,
         "cspFrameAncestors": null,
         "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "autoreserva",
-      "name": "autoreserva",
-      "title": "autoreserva",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 28/50, 9 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "JavaScript",
-        "Express"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 10,
-        "domainValue": 6,
-        "total": 28
-      },
-      "description": "Backend microservice and API architecture built with JavaScript, Express.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://autoreserva.vercel.app/",
-        "status": "LIVE",
-        "httpStatusCode": 200,
-        "platform": "Vercel"
-      },
-      "embeddability": {
-        "mode": "IFRAME_EMBED",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": true
       },
       "visualAssets": {
         "hasAssets": false,
@@ -10004,49 +7854,6 @@
       },
       "description": "Repository for the course on Software Architecture with Spring Boot + Thymeleaf",
       "repoUrl": "https://github.com/seagomezar/springboot-online-store",
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "crecere-tag-system",
-      "name": "crecere-tag-system",
-      "title": "crecere-tag-system",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 26/50, 1 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "AI / ML / Data Science",
-      "tags": [
-        "JavaScript",
-        "Express"
-      ],
-      "score": {
-        "completeness": 1,
-        "complexity": 6,
-        "visualAppeal": 2,
-        "recency": 9,
-        "domainValue": 8,
-        "total": 26
-      },
-      "description": "Machine learning exploration and agent implementation utilizing JavaScript, Express.",
-      "repoUrl": null,
       "liveDeployment": {
         "url": null,
         "status": "NONE",
@@ -10381,53 +8188,6 @@
         "primaryScreenshot": null,
         "assetPaths": [],
         "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "meetup-react",
-      "name": "meetup-react",
-      "title": "meetup-react",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Course exercise / tutorial / meetup talk (meetup-react): Educational practice exercise lacking standalone commercial or production value.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Academic / Course / Exercise",
-      "tags": [
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS"
-      ],
-      "score": {
-        "completeness": 7,
-        "complexity": 3,
-        "visualAppeal": 4,
-        "recency": 8,
-        "domainValue": 2,
-        "total": 24
-      },
-      "description": "Academic and tutorial exercises exploring TypeScript, Next.js, Tailwind CSS patterns and programming principles.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "IMAGE_CAROUSEL",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": true,
-        "primaryScreenshot": "public/next.svg",
-        "assetPaths": [
-          "public/next.svg",
-          "public/vercel.svg"
-        ],
-        "needsAssetGeneration": false
       }
     },
     {
@@ -10822,93 +8582,6 @@
       }
     },
     {
-      "id": "perkify_backend",
-      "name": "perkify_backend",
-      "title": "perkify_backend",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 22/50, 38 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Backend / API / Cloud",
-      "tags": [
-        "PHP",
-        "Laravel"
-      ],
-      "score": {
-        "completeness": 8,
-        "complexity": 4,
-        "visualAppeal": 2,
-        "recency": 2,
-        "domainValue": 6,
-        "total": 22
-      },
-      "description": "Backend microservice and API architecture built with PHP, Laravel.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "springboottutorial02",
-      "name": "SpringBootTutorial02",
-      "title": "SpringBootTutorial02",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Course exercise / tutorial / meetup talk (SpringBootTutorial02): Educational practice exercise lacking standalone commercial or production value.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Academic / Course / Exercise",
-      "tags": [
-        "Java",
-        "Spring Boot",
-        "Maven"
-      ],
-      "score": {
-        "completeness": 6,
-        "complexity": 3,
-        "visualAppeal": 2,
-        "recency": 9,
-        "domainValue": 2,
-        "total": 22
-      },
-      "description": "Academic and tutorial exercises exploring Java, Spring Boot, Maven patterns and programming principles.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
       "id": "clase-docker",
       "name": "Clase-Docker",
       "title": "Clase-Docker",
@@ -11155,50 +8828,6 @@
         "url": null,
         "status": "NONE",
         "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "springboottutorial01",
-      "name": "SpringBootTutorial01",
-      "title": "SpringBootTutorial01",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Course exercise / tutorial / meetup talk (SpringBootTutorial01): Educational practice exercise lacking standalone commercial or production value.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Academic / Course / Exercise",
-      "tags": [
-        "Java",
-        "Spring Boot",
-        "Maven"
-      ],
-      "score": {
-        "completeness": 5,
-        "complexity": 3,
-        "visualAppeal": 2,
-        "recency": 9,
-        "domainValue": 2,
-        "total": 21
-      },
-      "description": "Academic and tutorial exercises exploring Java, Spring Boot, Maven patterns and programming principles.",
-      "repoUrl": null,
-      "liveDeployment": {
-        "url": "https://sebastian-gomez.com",
-        "status": "OFFLINE",
-        "httpStatusCode": 404,
         "platform": null
       },
       "embeddability": {
@@ -11505,48 +9134,6 @@
       },
       "description": "An utility component to display charts with React using Chart.js and Typescript",
       "repoUrl": "https://github.com/seagomezar/ionchart",
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "testing-component",
-      "name": "testing-component",
-      "title": "testing-component",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Below portfolio threshold (Score: 20/50, 1 code files): Limited visual assets, historical codebase, or narrow utility better kept in repository archives.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Web App / SaaS",
-      "tags": [
-        "JavaScript"
-      ],
-      "score": {
-        "completeness": 1,
-        "complexity": 2,
-        "visualAppeal": 3,
-        "recency": 7,
-        "domainValue": 7,
-        "total": 20
-      },
-      "description": "Software engineering project implemented with JavaScript.",
-      "repoUrl": null,
       "liveDeployment": {
         "url": null,
         "status": "NONE",
@@ -12778,48 +10365,6 @@
       },
       "description": "Initial repository scaffold stub without implemented application source code.",
       "repoUrl": "https://github.com/seagomezar/cartasdeamor",
-      "liveDeployment": {
-        "url": null,
-        "status": "NONE",
-        "httpStatusCode": null,
-        "platform": null
-      },
-      "embeddability": {
-        "mode": "STATIC_CARD",
-        "xFrameOptions": null,
-        "cspFrameAncestors": null,
-        "isEmbeddable": false
-      },
-      "visualAssets": {
-        "hasAssets": false,
-        "primaryScreenshot": null,
-        "assetPaths": [],
-        "needsAssetGeneration": true
-      }
-    },
-    {
-      "id": "holamundoweb",
-      "name": "HolaMundoWeb",
-      "title": "HolaMundoWeb",
-      "visibility": "private",
-      "recommendation": "EXCLUDED",
-      "exclusionRationale": "Empty repository (0 code files): Contains only git metadata or non-code files; ineligible for portfolio showcase.",
-      "rank": null,
-      "pageGroup": null,
-      "category": "Empty / Stub",
-      "tags": [
-        "General"
-      ],
-      "score": {
-        "completeness": 0,
-        "complexity": 0,
-        "visualAppeal": 0,
-        "recency": 2,
-        "domainValue": 0,
-        "total": 2
-      },
-      "description": "Initial repository scaffold stub without implemented application source code.",
-      "repoUrl": null,
       "liveDeployment": {
         "url": null,
         "status": "NONE",

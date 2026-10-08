@@ -20,49 +20,50 @@ import { getServerSideProps as getIndexProps } from '../../pages/portafolio/inde
 import PortfolioPageView from '../../components/portfolio/PortfolioPageView';
 
 describe('Portfolio Service (services/portfolio.js)', () => {
-  it('returns 32 curated projects ordered by rank', () => {
+  it('returns 23 curated public projects ordered by rank', () => {
     const projects = getCuratedProjects();
-    expect(projects).toHaveLength(32);
+    expect(projects).toHaveLength(23);
     expect(projects[0].rank).toBe(1);
-    expect(projects[31].rank).toBe(32);
+    expect(projects[22].rank).toBe(23);
   });
 
-  it('redacts repoUrl for private repositories', () => {
+  it('includes only public repositories with valid GitHub repoUrl and zero private projects', () => {
     const projects = getCuratedProjects();
-    const privateProjects = projects.filter((p) => p.visibility === 'private');
-    expect(privateProjects.length).toBeGreaterThan(0);
-    privateProjects.forEach((p) => {
-      expect(p.repoUrl).toBeNull();
+    const privateProjects = projects.filter((p) => p.visibility !== 'public');
+    expect(privateProjects).toHaveLength(0);
+    projects.forEach((p) => {
+      expect(p.visibility).toBe('public');
+      expect(p.repoUrl).toMatch(/^https:\/\/github\.com\/seagomezar\//);
     });
   });
 
-  it('paginates into 8 pages of 4 projects each', () => {
+  it('paginates into 6 pages (4 projects per page, 3 on final page)', () => {
     const page1 = getPortfolioPageData(1);
     expect(page1).not.toBeNull();
     expect(page1.projects).toHaveLength(PROJECTS_PER_PAGE);
-    expect(page1.totalPages).toBe(8);
+    expect(page1.totalPages).toBe(6);
     expect(page1.nextPageNumber).toBe(2);
     expect(page1.prevPageNumber).toBe(0);
 
-    const page8 = getPortfolioPageData(8);
-    expect(page8).not.toBeNull();
-    expect(page8.projects).toHaveLength(4);
-    expect(page8.nextPageNumber).toBe(0);
-    expect(page8.prevPageNumber).toBe(7);
+    const page6 = getPortfolioPageData(6);
+    expect(page6).not.toBeNull();
+    expect(page6.projects).toHaveLength(3);
+    expect(page6.nextPageNumber).toBe(0);
+    expect(page6.prevPageNumber).toBe(5);
   });
 
   it('returns null for invalid or out-of-range page numbers', () => {
     expect(getPortfolioPageData('abc')).toBeNull();
     expect(getPortfolioPageData(0)).toBeNull();
     expect(getPortfolioPageData(-2)).toBeNull();
-    expect(getPortfolioPageData(9)).toBeNull();
+    expect(getPortfolioPageData(7)).toBeNull();
     expect(getPortfolioPageData(99)).toBeNull();
   });
 
   it('returns portfolio categories including Todos and Demos Interactivas Live', () => {
     const categories = getPortfolioCategories();
     expect(categories[0].slug).toBe('all');
-    expect(categories[0].count).toBe(32);
+    expect(categories[0].count).toBe(23);
     expect(categories[1].slug).toBe('live-demos');
     expect(categories[1].count).toBeGreaterThan(0);
   });
@@ -77,7 +78,7 @@ describe('Portfolio Routes getServerSideProps', () => {
   it('returns Page 1 props on /portafolio', async () => {
     const result = await getIndexProps({ locale: 'es' });
     expect(result.props.currentPage).toBe(1);
-    expect(result.props.totalPages).toBe(8);
+    expect(result.props.totalPages).toBe(6);
     expect(result.props.projects).toHaveLength(4);
   });
 
@@ -87,6 +88,9 @@ describe('Portfolio Routes getServerSideProps', () => {
     ).toEqual({ notFound: true });
     expect(
       await getPaginatedProps({ params: { pageNumber: '0' } })
+    ).toEqual({ notFound: true });
+    expect(
+      await getPaginatedProps({ params: { pageNumber: '7' } })
     ).toEqual({ notFound: true });
     expect(
       await getPaginatedProps({ params: { pageNumber: '99' } })
@@ -126,14 +130,14 @@ describe('PortfolioPageView & Dual Demo Mode UI', () => {
     expect(inlineButtons).toHaveLength(4);
     expect(fullscreenButtons).toHaveLength(4);
 
-    // Click "▶ Probar Demo Inline" on the 2nd card (music-journal-app, which is isEmbeddable: true)
-    fireEvent.click(inlineButtons[1]);
+    // Click "▶ Probar Demo Inline" on the 1st card (music-journal-app, which is Rank #1 and isEmbeddable: true)
+    fireEvent.click(inlineButtons[0]);
     expect(screen.getByText('✓ Demo Inline Activa')).toBeInTheDocument();
     expect(screen.getByText('● HTTP 200 • Live Iframe')).toBeInTheDocument();
 
-    // Click "⤢ Pantalla Completa" on the 2nd card to expand to 12-column Fullscreen mode
+    // Click "⤢ Pantalla Completa" on the 1st card to expand to 12-column Fullscreen mode
     const expandButtons = screen.getAllByText('⤢ Pantalla Completa');
-    fireEvent.click(expandButtons[1]);
+    fireEvent.click(expandButtons[0]);
 
     const minimizeButtons = screen.getAllByText('⤡ Minimizar a Tarjeta Inline');
     expect(minimizeButtons.length).toBeGreaterThan(0);
@@ -159,9 +163,7 @@ describe('PortfolioPageView & Dual Demo Mode UI', () => {
     const aiCategoryBtn = screen.getByText('AI & Machine Learning');
     fireEvent.click(aiCategoryBtn);
 
-    // Top AI project (#7 crecere-agents -> "Agent2Agent (A2A) Multi-Agent Ecosystem") should now appear on page 1 of filtered view
-    expect(
-      screen.getByText('Agent2Agent (A2A) Multi-Agent Ecosystem')
-    ).toBeInTheDocument();
+    // Top public AI project (#8 liteRT-LM) should now appear on page 1 of filtered view
+    expect(screen.getByText(/liteRT-LM/i)).toBeInTheDocument();
   });
 });

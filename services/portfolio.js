@@ -28,10 +28,14 @@ const CATEGORY_DEFINITIONS = [
 
 export const getCuratedProjects = () => {
     const rawProjects = (catalog.projects || [])
-        .filter((project) => project.recommendation === 'INCLUDED')
+        .filter(
+            (project) =>
+                project.recommendation === 'INCLUDED' &&
+                project.visibility === 'public'
+        )
         .sort((a, b) => a.rank - b.rank);
 
-    return rawProjects.map((project) => {
+    return rawProjects.map((project, idx) => {
         const assetEntry = assetsManifest[project.id] || {
             primaryImage: `/portfolio/${project.id}/cover.svg`,
             galleryImages: [`/portfolio/${project.id}/cover.svg`],
@@ -50,19 +54,21 @@ export const getCuratedProjects = () => {
             (def) => def.categoryName === project.category
         );
 
+        const rank = idx + 1;
+
         return {
             id: project.id,
             name: project.name,
             title: project.title || project.name,
-            visibility: project.visibility,
-            rank: project.rank,
-            pageGroup: project.pageGroup,
+            visibility: 'public',
+            rank,
+            pageGroup: Math.ceil(rank / PROJECTS_PER_PAGE),
             category: project.category,
             categorySlug: categoryDef ? categoryDef.slug : 'web-app-saas',
             tags: project.tags || [],
             score: project.score || { total: 40 },
             description: project.description || '',
-            repoUrl: project.visibility === 'public' ? project.repoUrl : null,
+            repoUrl: project.repoUrl || null,
             isLive,
             isEmbeddable,
             liveUrl: isLive ? project.liveDeployment.url : null,

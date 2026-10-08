@@ -921,19 +921,15 @@ Based on the survey audit of all 137 local repositories, this section outlines s
 
 | Rank | Repository | Current Status | Assets | Remediation Action Plan |
 |---|---|---|---|---|
-| **#1** | `practifactu` | OFFLINE (Private SaaS) | 17 PNGs in `docs/screenshots/` | **Staging Demo Deployment:** Next.js + Prisma app. Deploy sanitized demo on Vercel (`practifactu-demo.vercel.app`) using mock SQLite/PostgreSQL database with pre-seeded test invoices. Exclude real DIAN API keys. |
 | **#2** | `music-journal-app` | LIVE (HTTP 200) | 69 PNGs (8 high-res) | **Asset Optimization:** Web build is live at `https://seagomezar.github.io/music-journal-app/`. Convert 8 mobile PNGs to modern WebP thumbnails in `public/portfolio/screenshots/music-journal-*.webp`. |
-| **#3** | `herbalism-bot` | OFFLINE (Private) | 41 PNGs | **Showcase Mode:** Computer vision bot. Keep as Mode 2 Gallery card. Generate a 15-second compressed WebM/GIF demonstrating OpenCV minimap detection. |
 | **#4** | `sonoma-racing-coach` | LIVE (HTTP 200 API) | 11 PNGs | **Live Telemetry Connection:** Cloud Run backend is healthy at `https://apexai-812524149286.us-central1.run.app/events/telemetry`. Wire an interactive radar chart in Mode 3 modal displaying the real-time SSE stream. |
 | **#5** | `sebastian-gomez-next` | OFFLINE | 48 PNGs | **Static Architecture Mode:** Use rich existing screenshots for Mode 2 Gallery. Provide deep-link to GitHub source. |
 | **#6** | `real-time-coach-codelab` | OFFLINE (404) | 1 PNG | **Deploy to GitHub Pages:** Three.js + Chrome Gemini Nano AI app. Build static export (`npm run build`) and push to `gh-pages` branch. Capture 3 high-res 1080p screenshots. |
-| **#7** | `crecere-agents` | OFFLINE (Private) | 5 PNGs | **Protocol Architecture Mode:** Document Agent2Agent Google protocol. Render architecture diagram as primary asset. |
 | **#8** | `anthropometry-app` | LIVE (HTTP 200) | 7 PNGs | **Embed Verification:** Live at `https://anthropometry.sebastian-gomez.com`. Permissive headers verified. Enable Mode 3 Interactive Embed immediately. |
 | **#9** | `flutemodes` | LIVE (HTTP 200) | 15 PNGs | **Embed Verification:** Live at `https://seagomezar.github.io/flutemodes/`. Enable Mode 3 Interactive Embed. |
 | **#10**| `agendarcitademaquillaje` | LIVE (HTTP 200) | 32 PNGs | **Embed Verification:** Live at `https://seagomezar.github.io/agendarcitademaquillaje/`. Enable Mode 3 Interactive Embed. |
 | **Bonus**| `AI-Based-Music-Generator-ReactJS`| LIVE (HTTP 200) | 0 PNGs | **Automated Screenshot Capture:** Live on GitHub Pages but missing visual thumbnails. Execute automated Playwright script to capture UI at 1920x1080. |
 | **Bonus**| `tmux-game` | LIVE (HTTP 200) | 0 PNGs | **Automated Screenshot Capture:** Live on GitHub Pages. Capture terminal canvas screenshot at 1440x900. |
-| **Bonus**| `sgi-v2` | OFFLINE (Private) | 29 PNGs | **Deploy Demo on Vercel:** Next.js AgTech pumping controller. Deploy with simulated IoT sensors. |
 
 ### 5.2 Headless Browser Visual Asset Capture Automation
 
@@ -968,8 +964,6 @@ const TARGET_URLS = [
     waitFor: 2000,
   },
   {
-    slug: 'autoreserva',
-    url: 'https://autoreserva.vercel.app/',
     waitFor: 2000,
   },
   {
@@ -1080,12 +1074,10 @@ EOF
 vercel --prod --yes
 ```
 
-#### Blueprint C: `sgi-v2` & `practifactu` Demo Mock Blueprint (Vercel Environment)
 To deploy offline private apps without leaking credentials:
 1. Create a `demo/` branch.
 2. Replace private database connection strings with an in-memory SQLite (`sqlite://demo.db`) or local JSON mock database.
 3. Configure `vercel.json` with `NEXT_PUBLIC_DEMO_MODE=true`.
-4. Deploy to `https://practifactu-demo.vercel.app` and `https://sgi-v2-demo.vercel.app`.
 
 ---
 
