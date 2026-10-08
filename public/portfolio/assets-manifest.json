@@ -1,19 +1,4 @@
 {
-  "practifactu": {
-    "primaryImage": "/portfolio/practifactu/01_01_login.png",
-    "galleryImages": [
-      "/portfolio/practifactu/01_01_login.png",
-      "/portfolio/practifactu/02_02_dashboard.png",
-      "/portfolio/practifactu/03_03_nueva_factura.png",
-      "/portfolio/practifactu/04_04_facturas_list.png",
-      "/portfolio/practifactu/05_05_factura_detalle.png",
-      "/portfolio/practifactu/06_06_configuracion_empresa.png",
-      "/portfolio/practifactu/07_07_documentos_soporte.png",
-      "/portfolio/practifactu/08_08_proveedores_radian.png"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/practifactu/cover.svg"
-  },
   "music-journal-app": {
     "primaryImage": "/portfolio/music-journal-app/01_active_practice_screen.png",
     "galleryImages": [
@@ -28,16 +13,6 @@
     ],
     "hasRealScreenshots": true,
     "coverImage": "/portfolio/music-journal-app/cover.svg"
-  },
-  "herbalism-bot": {
-    "primaryImage": "/portfolio/herbalism-bot/01_circular_masked_minimap.png",
-    "galleryImages": [
-      "/portfolio/herbalism-bot/01_circular_masked_minimap.png",
-      "/portfolio/herbalism-bot/02_debug_analysis_result.png",
-      "/portfolio/herbalism-bot/04_debug_latest_window.png"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/herbalism-bot/cover.svg"
   },
   "sonoma-racing-coach": {
     "primaryImage": "/portfolio/sonoma-racing-coach/cover.svg",
@@ -66,14 +41,6 @@
     ],
     "hasRealScreenshots": true,
     "coverImage": "/portfolio/real-time-coach-codelab/cover.svg"
-  },
-  "crecere-agents": {
-    "primaryImage": "/portfolio/crecere-agents/01_a2a_demo_arch.png",
-    "galleryImages": [
-      "/portfolio/crecere-agents/01_a2a_demo_arch.png"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/crecere-agents/cover.svg"
   },
   "anthropometry-app": {
     "primaryImage": "/portfolio/anthropometry-app/01_Measurement_--_Measurement_On_Desktop__f.png",
@@ -117,18 +84,6 @@
     "hasRealScreenshots": true,
     "coverImage": "/portfolio/litert-lm/cover.svg"
   },
-  "sgi-v2": {
-    "primaryImage": "/portfolio/sgi-v2/01_administracion.jpg",
-    "galleryImages": [
-      "/portfolio/sgi-v2/01_administracion.jpg",
-      "/portfolio/sgi-v2/02_bodega.png",
-      "/portfolio/sgi-v2/03_compras.png",
-      "/portfolio/sgi-v2/04_contabilidad.png",
-      "/portfolio/sgi-v2/05_login-box-backg.png"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/sgi-v2/cover.svg"
-  },
   "workshopjsconfmxrnapp": {
     "primaryImage": "/portfolio/workshopjsconfmxrnapp/03_logo-ignite.png",
     "galleryImages": [
@@ -170,21 +125,6 @@
     "hasRealScreenshots": true,
     "coverImage": "/portfolio/rigare/cover.svg"
   },
-  "newfitnesstrainingapp": {
-    "primaryImage": "/portfolio/newfitnesstrainingapp/01_screen.png",
-    "galleryImages": [
-      "/portfolio/newfitnesstrainingapp/01_screen.png",
-      "/portfolio/newfitnesstrainingapp/02_screen.png",
-      "/portfolio/newfitnesstrainingapp/03_screen.png",
-      "/portfolio/newfitnesstrainingapp/04_screen.png",
-      "/portfolio/newfitnesstrainingapp/05_screen.png",
-      "/portfolio/newfitnesstrainingapp/06_screen.png",
-      "/portfolio/newfitnesstrainingapp/07_screen.png",
-      "/portfolio/newfitnesstrainingapp/08_screen.png"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/newfitnesstrainingapp/cover.svg"
-  },
   "sebastian-gomez": {
     "primaryImage": "/portfolio/sebastian-gomez/02_cover-green.png",
     "galleryImages": [
@@ -213,14 +153,6 @@
     "hasRealScreenshots": false,
     "coverImage": "/portfolio/flutter_gemma_test/cover.svg"
   },
-  "adaptai": {
-    "primaryImage": "/portfolio/adaptai/05_logo.webp",
-    "galleryImages": [
-      "/portfolio/adaptai/05_logo.webp"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/adaptai/cover.svg"
-  },
   "maps-angular": {
     "primaryImage": "/portfolio/maps-angular/cover.svg",
     "galleryImages": [
@@ -228,18 +160,6 @@
     ],
     "hasRealScreenshots": false,
     "coverImage": "/portfolio/maps-angular/cover.svg"
-  },
-  "sgi": {
-    "primaryImage": "/portfolio/sgi/01_administracion.jpg",
-    "galleryImages": [
-      "/portfolio/sgi/01_administracion.jpg",
-      "/portfolio/sgi/02_bodega.png",
-      "/portfolio/sgi/03_compras.png",
-      "/portfolio/sgi/04_contabilidad.png",
-      "/portfolio/sgi/05_login-box-backg.png"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/sgi/cover.svg"
   },
   "uber-like-app-angular": {
     "primaryImage": "/portfolio/uber-like-app-angular/cover.svg",
@@ -280,22 +200,6 @@
     ],
     "hasRealScreenshots": false,
     "coverImage": "/portfolio/gemini-pro-nextjs/cover.svg"
-  },
-  "huokan-frontend": {
-    "primaryImage": "/portfolio/huokan-frontend/cover.svg",
-    "galleryImages": [
-      "/portfolio/huokan-frontend/cover.svg"
-    ],
-    "hasRealScreenshots": false,
-    "coverImage": "/portfolio/huokan-frontend/cover.svg"
-  },
-  "file-system": {
-    "primaryImage": "/portfolio/file-system/03_react.svg",
-    "galleryImages": [
-      "/portfolio/file-system/03_react.svg"
-    ],
-    "hasRealScreenshots": true,
-    "coverImage": "/portfolio/file-system/cover.svg"
   },
   "fiestapwa": {
     "primaryImage": "/portfolio/fiestapwa/01_home-splash-screen.png",

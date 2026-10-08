@@ -37,7 +37,6 @@ His primary website, `sebastian-gomez-site` (built with Next.js 16, React 19, an
 ### 1.2 Core Problem Statement
 1. **The Invisibility Paradox:** Without a dedicated `/portafolio` route, 137 repositories of intellectual property remain obscured inside GitHub profiles or private client archives. Visitors cannot easily discover top-tier applications.
 2. **Static Resume Fatigue:** Traditional portfolios present static screenshots and bullet lists. Modern senior engineering evaluation requires interacting with live software, evaluating system architecture, and inspecting responsive execution in real time.
-3. **The Mixed-Repository Dilemma:** Of the 137 repositories, 111 are public and 26 are private. Among the curated top-tier projects, 12 represent proprietary or commercial client work (e.g., `practifactu`, `herbalism-bot`, `sgi-v2`, `crecere-agents`). A portfolio must proudly showcase these advanced systems while strictly honoring intellectual property boundaries, licensing, and client confidentiality.
 4. **Header & Embed Friction:** Many external deployments configure `X-Frame-Options` or Content Security Policies (`CSP`) that break naive `<iframe>` embeds. A production portfolio requires an intelligent, multi-tier preview hierarchy that gracefully falls back from live interactive workstations to rich image galleries and static architectural cards.
 
 ### 1.3 Solution Hypothesis & Product Vision
@@ -111,7 +110,6 @@ Understanding the distinct mindsets of visitors arriving at `/portafolio` dictat
 - **Profile:** Carlos, 38, Startup Founder seeking a fractional CTO or lead consultant to build a mission-critical SaaS.
 - **Needs:**
   - Looks for proof that Sebastián delivers complete, production-grade applications that handle auth, payments, database transactions, and real users.
-  - Cares about commercial viability, aesthetic polish, and professional domain execution (e.g., `practifactu`, `autoreserva`, `agendarcitademaquillaje`, `rigare`).
 - **Pain Points:** Theoretical open-source toys without real-world utility or polished user interfaces.
 - **Portfolio Delight Feature:** High-resolution multi-screenshot galleries (Mode 2) displaying real login flows, billing dashboards, and mobile views.
 
@@ -146,7 +144,6 @@ Understanding the distinct mindsets of visitors arriving at `/portafolio` dictat
 - **Acceptance Criteria:**
   - **AC-01.1:** The canonical URL `/portafolio` loads Page 1 returning HTTP `200 OK` with zero client-side redirection delays.
   - **AC-01.2:** The header highlights the "Portafolio" navigation link with active pink brand styling (`text-pink-600` or pink pill accent).
-  - **AC-01.3:** The page displays exactly 4 curated projects on Page 1 (`practifactu`, `music-journal-app`, `herbalism-bot`, `sonoma-racing-coach`), ranked #1 through #4.
   - **AC-01.4:** The page includes a Hero banner with Montserrat typography, title *"Portafolio de Proyectos"*, subtitle, and audit telemetry badge bar (*"137 Repositorios Auditados | 32 Proyectos Curados | 27 Demos en Vivo"*).
   - **AC-01.5:** The right sidebar (in 8+4 desktop layout) renders Sebastián's profile card, quick stats, and category shortcut counts.
 
@@ -191,7 +188,6 @@ Understanding the distinct mindsets of visitors arriving at `/portafolio` dictat
   - **AC-04.5:** If a project sends headers preventing framing (or triggers `onError`), an intelligent fallback banner appears: *"Esta aplicación requiere navegación directa por políticas de seguridad del navegador"* with an immediate direct launch button.
 
 #### US-05: Multi-Image Visual Gallery Exploration
-> **As an** evaluator reviewing an offline project or native mobile app (e.g., `music-journal-app`, `practifactu`),  
 > **I want to** swipe through high-resolution screenshots in an integrated carousel,  
 > **So that** I can assess UI/UX polish, typography, and functional layouts.
 
@@ -203,7 +199,6 @@ Understanding the distinct mindsets of visitors arriving at `/portafolio` dictat
   - **AC-05.5:** Clicking on a screenshot opens an expanded high-resolution lightbox view.
 
 #### US-06: Architecture Deep-Dive for Backend & Private Systems
-> **As an** architect reviewing a backend service or proprietary client application (e.g., `crecere-agents`, `herbalism-bot`, `sonoma-racing-coach`),  
 > **I want to** inspect architectural diagrams, complexity scores, and sanitized engineering summaries,  
 > **So that** I can appreciate the system design even without direct source code access.
 
@@ -458,26 +453,18 @@ Every curated project is assigned to exactly one primary category and tagged wit
 ├──────────────────────┬─────────────┬───────────────────────────────────┤
 │ Category Name        │ Slug        │ Representative Stack-Rank Projects│
 ├──────────────────────┼─────────────┼───────────────────────────────────┤
-│ Web Apps & SaaS      │ web         │ practifactu, sebastian-gomez-next,│
-│                      │             │ anthropometry-app, autoreserva,   │
 │                      │             │ agendarcitademaquillaje, rigare   │
 ├──────────────────────┼─────────────┼───────────────────────────────────┤
 │ Mobile Apps          │ mobile      │ music-journal-app,                │
-│                      │             │ NewFitnessTrainingApp,            │
 │                      │             │ workshopJsconfmxRNApp, PetTracker │
 ├──────────────────────┼─────────────┼───────────────────────────────────┤
-│ 3D & Creative Tech   │ creative    │ herbalism-bot,                    │
 │                      │             │ sonoma-racing-coach,              │
 │                      │             │ real-time-coach-codelab, tmux-game│
 ├──────────────────────┼─────────────┼───────────────────────────────────┤
-│ AI & ML / Edge AI    │ ai          │ crecere-agents, liteRT-LM,        │
-│                      │             │ adaptai, cognitive-guardian       │
 ├──────────────────────┼─────────────┼───────────────────────────────────┤
 │ Audio Tech & Sound   │ audio       │ AI-Based-Music-Generator-ReactJS, │
 │                      │             │ flutemodes, harmony-assistant     │
 ├──────────────────────┼─────────────┼───────────────────────────────────┤
-│ Systems & Cloud Infra│ systems     │ sgi-v2, sgi, huokan-frontend,     │
-│                      │             │ booking-shopify-app, file-system  │
 └──────────────────────┴─────────────┴───────────────────────────────────┘
 ```
 
@@ -501,25 +488,14 @@ A dedicated toolbar toggle switch allows visitors to immediately isolate interac
 
 ### 7.1 Security & Intellectual Property Safeguards
 Of the 32 curated projects, **12 are private repositories** containing proprietary commercial code, client intellectual property, or custom internal tooling:
-1. `practifactu` (Commercial DIAN electronic invoicing SaaS)
-2. `herbalism-bot` (Autonomous computer vision steering bot)
-3. `sgi-v2` (Enterprise management infrastructure)
-4. `NewFitnessTrainingApp` (Commercial fitness coaching client)
-5. `crecere-agents` (Proprietary Google Agent2Agent protocol system)
-6. `adaptai` (Private adaptive intelligence tool)
-7. `sgi` (Legacy enterprise core)
-8. `huokan-frontend` (Commercial e-commerce/procurement client)
-9. `file-system` (Proprietary storage engine)
 10. `family-wallet` (Private personal finance system)
 11. `cognitive-guardian` (Hackathon enterprise architecture)
-12. `harmony-adk-agent` (Private ADK agent orchestrator)
 
 ### 7.2 Sanitized Architecture Disclosures
 For all 12 private projects, the portfolio must adhere to strict redaction protocols:
 - **Zero GitHub Code Links:** The "Ver Código GitHub" button is strictly omitted or disabled.
 - **Zero Raw Config/Key Exposure:** No repository URLs, internal API endpoints, client credentials, or private commit hashes may appear in the catalog JSON or UI markup.
 - **Sanitized Case Study Format:** Projects are described through sanitized architecture summaries focusing on engineering challenges solved:
-  - *Example (`practifactu`):* Describes Next.js 16 architecture, asynchronous PDF generation, DIAN XML digital signing, and webhook resilience—without exposing proprietary business logic or private endpoints.
 
 ### 7.3 Visual Badging & Provenance Attribution
 All 12 private projects must be badged with a prominent security pill:
@@ -640,7 +616,6 @@ If an app fails to render or enforces `X-Frame-Options: SAMEORIGIN` (such as `gd
 - **Top Metadata Row:**
   - Left: Composite Rank `#01 Top Pick` + Domain Category chip.
   - Right: Complexity Score Badge: `Score: 94/100` (`bg-blue-50 text-blue-700 font-mono text-xs px-2.5 py-1 rounded-md`).
-- **Architectural Diagram Frame:** High-contrast technical SVG/PNG thumbnail illustrating system topology (e.g. `diagram_cognitive_guardian_architecture.jpeg` or OpenCV minimap masks for `herbalism-bot`).
 - **Architectural Highlights Section:** Bulleted breakdown covering data flow, security model, and latency optimizations.
 
 ---
@@ -692,9 +667,6 @@ Located at `docs/portfolio/projects_catalog.json`, this pre-compiled, version-co
 
 ```typescript
 export interface ProjectRecord {
-  id: string;                      // e.g. "proj-01-practifactu"
-  slug: string;                    // e.g. "practifactu"
-  title: string;                   // e.g. "PractiFactu - DIAN Electronic Invoicing SaaS"
   tagline: string;                 // Short subtitle
   description: string;             // Architectural excerpt
   category: "web" | "mobile" | "creative" | "ai" | "audio" | "systems";

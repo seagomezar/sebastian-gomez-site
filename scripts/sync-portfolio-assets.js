@@ -40,9 +40,7 @@ function generateCoverSvg(project) {
   const isLive = project.liveDeployment?.status === 'LIVE';
   const statusText = isLive
     ? `HTTP 200 • LIVE (${escapeXml(project.liveDeployment?.platform || 'Web')})`
-    : project.visibility === 'private'
-      ? 'PROYECTO PRIVADO / CLIENTE'
-      : 'ARQUITECTURA & CÓDIGO FUENTE';
+    : 'ARQUITECTURA & CÓDIGO FUENTE';
   const statusColor = isLive ? '#10b981' : '#ec4899';
   const tags = (project.tags || []).slice(0, 5);
 
@@ -92,10 +90,18 @@ function main() {
   const catalogRaw = fs.readFileSync(CATALOG_PATH, 'utf8');
   const catalog = JSON.parse(catalogRaw);
   const included = (catalog.projects || [])
-    .filter((p) => p.recommendation === 'INCLUDED')
+    .filter((p) => p.recommendation === 'INCLUDED' && p.visibility === 'public')
     .sort((a, b) => a.rank - b.rank);
 
   fs.mkdirSync(PUBLIC_PORTFOLIO_DIR, { recursive: true });
+  const allowedIds = new Set(included.map((p) => p.id));
+
+  fs.readdirSync(PUBLIC_PORTFOLIO_DIR, { withFileTypes: true }).forEach((entry) => {
+    if (entry.isDirectory() && !allowedIds.has(entry.name)) {
+      fs.rmSync(path.join(PUBLIC_PORTFOLIO_DIR, entry.name), { recursive: true, force: true });
+    }
+  });
+
   const manifest = {};
 
   included.forEach((project) => {

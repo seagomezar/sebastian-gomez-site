@@ -5,7 +5,7 @@ describe('Portfolio Page (/portafolio)', () => {
     cy.contains('Todos los Proyectos').should('be.visible');
     cy.contains('▶ Probar Demo Inline').should('be.visible');
     cy.contains('⤢ Pantalla Completa').should('be.visible');
-    cy.contains('Página 1 de 8').should('be.visible');
+    cy.contains('Página 1 de 6').should('be.visible');
   });
 
   it('shows the custom 404 page for an out-of-range portfolio page number', () => {

@@ -235,9 +235,7 @@ function ProjectCard({
               </span>
             ) : (
               <span className="bg-gray-900/80 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md">
-                {project.visibility === 'private'
-                  ? '🔒 Proyecto Privado'
-                  : `📸 ${gallery.length} Capturas`}
+                📸 {gallery.length} Capturas
               </span>
             )}
           </div>
@@ -299,9 +297,7 @@ function ProjectCard({
             </span>
           ) : (
             <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">
-              {project.visibility === 'private'
-                ? '🔒 Privado / Cliente'
-                : `📂 ${project.category}`}
+              📂 {project.category}
             </span>
           )}
         </div>
@@ -356,7 +352,7 @@ function ProjectCard({
             : '⤢ Pantalla Completa'}
         </button>
 
-        {project.repoUrl ? (
+        {project.repoUrl && (
           <a
             href={project.repoUrl}
             target="_blank"
@@ -365,10 +361,6 @@ function ProjectCard({
           >
             <span>Ver Repositorio</span>
           </a>
-        ) : (
-          <span className="inline-flex items-center gap-1.5 text-gray-500 font-medium text-sm px-4 py-2">
-            🔒 Repositorio Privado
-          </span>
         )}
       </div>
 
