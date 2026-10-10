@@ -82,6 +82,13 @@ function PortfolioPageView({
     setActiveCategory(slug);
     setFilteredPage(1);
     setActiveModes({});
+    if (
+      typeof window !== 'undefined' &&
+      typeof window.scrollTo === 'function' &&
+      !window.navigator?.userAgent?.includes('jsdom')
+    ) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const handleChangePreviewMode = (projectId, mode) => {
@@ -133,7 +140,7 @@ function PortfolioPageView({
       : null;
 
   return (
-    <div className="container mx-auto sm:px-4 md:px-10 mb-8">
+    <div className="container mx-auto px-4 sm:px-6 md:px-10 mb-8">
       <Head>
         <title>{pageTitle}</title>
         <meta property="og:title" content={pageTitle} key="title" />
@@ -144,7 +151,7 @@ function PortfolioPageView({
       </Head>
 
       {fullscreenProject ? (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           <div className="col-span-1 lg:col-span-12">
             <ProjectCard
               key={fullscreenProject.id}
@@ -160,7 +167,49 @@ function PortfolioPageView({
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          {/* Mobile-only Quick Category Filter Bar at top of feed */}
+          {categories.length > 0 && (
+            <div className="col-span-1 lg:hidden bg-white shadow-lg rounded-lg p-4">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-semibold text-gray-800">
+                  Filtrar por Categoría
+                </span>
+                <span className="text-xs font-semibold text-pink-600 bg-pink-50 px-2.5 py-0.5 rounded-full">
+                  {categories.length} Temas
+                </span>
+              </div>
+              <div className="flex items-center gap-2 overflow-x-auto pb-1">
+                {categories.map((category) => {
+                  const isActive = activeCategory === category.slug;
+                  return (
+                    <button
+                      key={`mobile-cat-${category.slug}`}
+                      type="button"
+                      onClick={() => handleSelectCategory(category.slug)}
+                      className={`flex-none inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3.5 py-2 cursor-pointer transition ${
+                        isActive
+                          ? 'bg-pink-600 text-white shadow-sm'
+                          : 'bg-gray-100 text-gray-700 hover:bg-pink-50 hover:text-pink-600'
+                      }`}
+                    >
+                      <span>{category.name}</span>
+                      <span
+                        className={`text-[11px] px-1.5 py-0.2 rounded-full ${
+                          isActive
+                            ? 'bg-white/20 text-white'
+                            : 'bg-white text-gray-600'
+                        }`}
+                      >
+                        {category.count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Main 8-Column Project Cards Feed */}
           <div className="lg:col-span-8 col-span-1">
             {displayedProjects.map((project, idx) => (
@@ -181,14 +230,14 @@ function PortfolioPageView({
               />
             ))}
 
-            {/* Pagination Bar (matching pages/index.js & Stitch design) */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-4 mb-8">
+            {/* Pagination Bar (responsive for 390px mobile and desktop) */}
+            <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 mt-4 mb-8">
               {isFiltered ? (
                 <button
                   type="button"
                   disabled={!prevPage}
                   onClick={() => setFilteredPage(prevPage)}
-                  className={`transition duration-500 ease transform inline-block text-lg font-medium rounded-full px-8 py-3 ${
+                  className={`transition duration-500 ease transform inline-block text-sm sm:text-lg font-medium rounded-full px-4 py-2.5 sm:px-8 sm:py-3 ${
                     prevPage
                       ? 'bg-pink-600 text-white hover:-translate-y-1 cursor-pointer'
                       : 'bg-pink-600/40 text-white/70 cursor-not-allowed'
@@ -204,17 +253,17 @@ function PortfolioPageView({
                       : `/portafolio/page/${prevPage}`
                   }
                 >
-                  <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
+                  <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-sm sm:text-lg font-medium rounded-full text-white px-4 py-2.5 sm:px-8 sm:py-3 cursor-pointer">
                     ← Anterior
                   </span>
                 </Link>
               ) : (
-                <span className="inline-block bg-pink-600/40 text-lg font-medium rounded-full text-white/70 px-8 py-3 cursor-not-allowed">
+                <span className="inline-block bg-pink-600/40 text-sm sm:text-lg font-medium rounded-full text-white/70 px-4 py-2.5 sm:px-8 sm:py-3 cursor-not-allowed">
                   ← Anterior
                 </span>
               )}
 
-              <span className="text-white font-semibold text-lg">
+              <span className="text-white font-semibold text-sm sm:text-lg">
                 Página {effectivePage} de {effectiveTotalPages}
               </span>
 
@@ -223,7 +272,7 @@ function PortfolioPageView({
                   type="button"
                   disabled={!nextPage}
                   onClick={() => setFilteredPage(nextPage)}
-                  className={`transition duration-500 ease transform inline-block text-lg font-medium rounded-full px-8 py-3 ${
+                  className={`transition duration-500 ease transform inline-block text-sm sm:text-lg font-medium rounded-full px-4 py-2.5 sm:px-8 sm:py-3 ${
                     nextPage
                       ? 'bg-pink-600 text-white hover:-translate-y-1 cursor-pointer'
                       : 'bg-pink-600/40 text-white/70 cursor-not-allowed'
@@ -233,12 +282,12 @@ function PortfolioPageView({
                 </button>
               ) : nextPage ? (
                 <Link href={`/portafolio/page/${nextPage}`}>
-                  <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
+                  <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-sm sm:text-lg font-medium rounded-full text-white px-4 py-2.5 sm:px-8 sm:py-3 cursor-pointer">
                     Más proyectos →
                   </span>
                 </Link>
               ) : (
-                <span className="inline-block bg-pink-600/40 text-lg font-medium rounded-full text-white/70 px-8 py-3 cursor-not-allowed">
+                <span className="inline-block bg-pink-600/40 text-sm sm:text-lg font-medium rounded-full text-white/70 px-4 py-2.5 sm:px-8 sm:py-3 cursor-not-allowed">
                   Más proyectos →
                 </span>
               )}

@@ -120,9 +120,10 @@ describe('PortfolioPageView & Dual Demo Mode UI', () => {
       />
     );
 
-    // Verify Categorías widget is rendered
+    // Verify Categorías widget and mobile filter bar are rendered
     expect(screen.getByText('Categorías')).toBeInTheDocument();
-    expect(screen.getByText('Todos los Proyectos')).toBeInTheDocument();
+    expect(screen.getByText('Filtrar por Categoría')).toBeInTheDocument();
+    expect(screen.getAllByText('Todos los Proyectos').length).toBeGreaterThan(0);
 
     // Verify 4 project cards and dual buttons render
     const inlineButtons = screen.getAllByText('▶ Probar Demo Inline');
@@ -147,7 +148,7 @@ describe('PortfolioPageView & Dual Demo Mode UI', () => {
     expect(screen.getByText('✓ Demo Inline Activa')).toBeInTheDocument();
   });
 
-  it('filters projects when clicking a category in PortfolioCategories', () => {
+  it('filters projects when clicking a category in PortfolioCategories or mobile filter bar', () => {
     const pageData = getPortfolioPageData(1);
     render(
       <PortfolioPageView
@@ -160,8 +161,8 @@ describe('PortfolioPageView & Dual Demo Mode UI', () => {
       />
     );
 
-    const aiCategoryBtn = screen.getByText('AI & Machine Learning');
-    fireEvent.click(aiCategoryBtn);
+    const aiCategoryBtns = screen.getAllByText('AI & Machine Learning');
+    fireEvent.click(aiCategoryBtns[0]);
 
     // Top public AI project (#8 liteRT-LM) should now appear on page 1 of filtered view
     expect(screen.getByText(/liteRT-LM/i)).toBeInTheDocument();

@@ -75,7 +75,7 @@ function ProjectCard({
 
             <div className="flex items-center gap-2 flex-wrap">
               {project.isEmbeddable && (
-                <div className="flex items-center bg-white border border-gray-200 rounded-full p-0.5 text-xs">
+                <div className="hidden sm:flex items-center bg-white border border-gray-200 rounded-full p-0.5 text-xs">
                   <button
                     type="button"
                     onClick={() => setViewport('desktop')}
@@ -154,14 +154,14 @@ function ProjectCard({
           {/* Interactive Viewport Canvas */}
           <div
             className={`w-full bg-slate-900 flex flex-col items-center justify-center relative overflow-hidden ${
-              isFullscreen ? 'h-[680px]' : 'h-96'
+              isFullscreen ? 'h-[75vh] sm:h-[680px]' : 'h-80 sm:h-96'
             }`}
           >
             {project.isEmbeddable ? (
               <iframe
                 src={project.liveUrl}
                 title={project.title}
-                style={{ width: VIEWPORT_WIDTHS[viewport] }}
+                style={{ width: VIEWPORT_WIDTHS[viewport], maxWidth: '100%' }}
                 className="h-full border-0 bg-white shadow-inner transition-all duration-300"
                 sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
                 loading="lazy"
@@ -222,11 +222,11 @@ function ProjectCard({
           </div>
         </div>
       ) : (
-        <div className="relative overflow-hidden shadow-md pb-80 mb-6 rounded-t-lg lg:rounded-lg bg-slate-900">
+        <div className="relative overflow-hidden shadow-md pb-56 sm:pb-80 mb-6 rounded-t-lg lg:rounded-lg bg-slate-900">
           <img
             src={currentImage}
             alt={project.title}
-            className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+            className="object-top absolute h-56 sm:h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
           />
           <div className="absolute top-4 right-4 flex items-center gap-2">
             {project.isLive ? (
@@ -265,17 +265,17 @@ function ProjectCard({
       {/* Centered Title (matches PostCard.jsx) */}
       <h2
         onClick={() => setMode(isInteractiveOpen ? 'static' : 'inline')}
-        className="transition duration-700 text-center mb-6 cursor-pointer hover:text-pink-600 text-3xl font-semibold px-4"
+        className="transition duration-700 text-center mb-6 cursor-pointer hover:text-pink-600 text-2xl sm:text-3xl font-semibold px-4"
       >
         {project.title}
       </h2>
 
       {/* Centered Metadata Row with pink-500 icons (matches PostCard.jsx) */}
-      <div className="flex flex-wrap text-center items-center justify-center gap-4 mb-6 w-full px-4">
-        <div className="flex items-center justify-center font-medium text-gray-700 text-base">
+      <div className="flex flex-wrap text-center items-center justify-center gap-3 sm:gap-4 mb-6 w-full px-4">
+        <div className="flex items-center justify-center font-medium text-gray-700 text-sm sm:text-base">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 inline mr-1.5 text-pink-500"
+            className="h-5 w-5 inline mr-1.5 text-pink-500 flex-none"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -305,7 +305,7 @@ function ProjectCard({
         <div className="flex items-center justify-center font-medium text-gray-700 text-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 inline mr-1 text-pink-500"
+            className="h-5 w-5 inline mr-1 text-pink-500 flex-none"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -322,18 +322,18 @@ function ProjectCard({
       </div>
 
       {/* Description Paragraph (matches PostCard.jsx) */}
-      <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8 text-justify">
+      <p className="text-base sm:text-lg text-gray-700 font-normal px-5 sm:px-8 lg:px-20 mb-8 text-left sm:text-justify">
         {project.description}
       </p>
 
       {/* Dual Action Buttons Row (Inline + Fullscreen + Repo Link) */}
-      <div className="text-center flex flex-wrap items-center justify-center gap-4 px-4">
+      <div className="text-center flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 px-5 sm:px-4">
         <button
           type="button"
           onClick={() =>
             setMode(previewMode === 'inline' ? 'static' : 'inline')
           }
-          className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 hover:bg-pink-700 text-base lg:text-lg font-medium rounded-full text-white px-7 py-3 cursor-pointer shadow-md"
+          className="w-full sm:w-auto transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 hover:bg-pink-700 text-base lg:text-lg font-medium rounded-full text-white px-6 py-3 sm:px-7 cursor-pointer shadow-md"
         >
           {previewMode === 'inline'
             ? '✓ Demo Inline Activa'
@@ -345,7 +345,7 @@ function ProjectCard({
           onClick={() =>
             setMode(isFullscreen ? 'inline' : 'fullscreen')
           }
-          className="transition duration-500 ease transform hover:-translate-y-1 inline-block border-2 border-pink-600 text-pink-600 hover:bg-pink-50 text-base lg:text-lg font-medium rounded-full px-7 py-2.5 cursor-pointer"
+          className="w-full sm:w-auto transition duration-500 ease transform hover:-translate-y-1 inline-block border-2 border-pink-600 text-pink-600 hover:bg-pink-50 text-base lg:text-lg font-medium rounded-full px-6 py-2.5 sm:px-7 cursor-pointer"
         >
           {isFullscreen
             ? '⤡ Minimizar a Tarjeta Inline'
@@ -357,7 +357,7 @@ function ProjectCard({
             href={project.repoUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-gray-700 hover:text-pink-600 font-medium text-base px-4 py-2 transition"
+            className="inline-flex items-center justify-center gap-1.5 text-gray-700 hover:text-pink-600 font-medium text-base px-4 py-2 transition"
           >
             <span>Ver Repositorio</span>
           </a>
