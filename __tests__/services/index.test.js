@@ -6,7 +6,35 @@ jest.mock('@apollo/client', () => ({
   HttpLink: jest.fn(),
 }));
 
-import { getConferenceDetails, submitConferenceFeedback, getCategoryPageData, getPostDetails } from '../../services';
+import { getConferenceDetails, submitConferenceFeedback, getCategoryPageData, getPostDetails, getCategories } from '../../services';
+
+describe('getCategories', () => {
+  beforeEach(() => mockQuery.mockReset());
+
+  it('returns categories enriched with post counts', async () => {
+    mockQuery.mockResolvedValue({
+      data: {
+        categories: [
+          { name: 'Inteligencia Artificial', slug: 'inteligencia-artificial' },
+          { name: 'Go', slug: 'go' },
+          { name: 'Vacía', slug: 'vacia' },
+        ],
+        posts: [
+          { slug: 'p1', categories: [{ slug: 'inteligencia-artificial' }] },
+          { slug: 'p2', categories: [{ slug: 'inteligencia-artificial' }, { slug: 'go' }] },
+        ],
+      },
+    });
+
+    const result = await getCategories();
+
+    expect(result).toEqual([
+      { name: 'Inteligencia Artificial', slug: 'inteligencia-artificial', count: 2 },
+      { name: 'Go', slug: 'go', count: 1 },
+      { name: 'Vacía', slug: 'vacia', count: 0 },
+    ]);
+  });
+});
 
 describe('getConferenceDetails', () => {
   beforeEach(() => mockQuery.mockReset());

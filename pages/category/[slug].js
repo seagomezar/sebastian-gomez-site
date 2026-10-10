@@ -42,7 +42,7 @@ function CategoryPost({ category, posts }) {
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
             <AdWidget />
-            <Categories />
+            <Categories activeCategory={category?.slug} />
           </div>
         </div>
       </div>

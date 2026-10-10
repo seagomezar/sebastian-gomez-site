@@ -40,7 +40,15 @@ export const getPostsPerPage = async (pageNumber) => {
 
 export const getCategories = async () => {
     const { data } = await client.query({ query: GET_CATEGORIES_QUERY });
-    return data.categories;
+    const categories = data?.categories || [];
+    const posts = data?.posts || [];
+
+    return categories.map((category) => ({
+        ...category,
+        count: posts.filter((post) =>
+            (post.categories || []).some((cat) => cat.slug === category.slug)
+        ).length,
+    }));
 };
 
 export const getPostDetails = async (slug, locale = 'es') => {
