@@ -1,6 +1,12 @@
 query GetCategories {
-  categories {
+  categories(first: 100) {
     name
     slug
+  }
+  posts(first: 1000) {
+    slug
+    categories {
+      slug
+    }
   }
 }
