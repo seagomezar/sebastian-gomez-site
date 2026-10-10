@@ -15,14 +15,14 @@ function Categories({ activeCategory = null }) {
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
-      <div className="flex items-center justify-between mb-8 border-b pb-4">
-        <h3 className="text-xl font-semibold">Categorías</h3>
+      <h3 className="text-xl mb-8 font-semibold border-b pb-4 flex items-center justify-between">
+        <span>Categorías</span>
         {categories.length > 0 && (
           <span className="text-xs font-semibold text-pink-600 bg-pink-50 px-3 py-1 rounded-full">
             {categories.length} Temas
           </span>
         )}
-      </div>
+      </h3>
       {categories.map((category, index) => {
         const isActive = activeSlug === category.slug;
         return (
